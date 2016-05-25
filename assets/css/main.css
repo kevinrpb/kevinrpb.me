@@ -2044,9 +2044,11 @@ body {
     background: #ccff99;
     border-radius: 15px; }
     #banner .container img {
+      margin: 10px;
       border-radius: 50%;
-      border-bottom-width: 1px;
-      border-bottom-style: solid; }
+      border-width: 10px;
+      border-style: solid;
+      border-color: #f6f6f6; }
   #banner h2 {
     font-size: 4em;
     line-height: 1em;
