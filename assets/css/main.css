@@ -1814,20 +1814,20 @@ button,
   input[type="button"].special,
   button.special,
   .button.special {
-    background-color: #5AA6ED;
-    color: #ffffff !important; }
+    background-color: #FF1A1A;
+    color: white !important; }
     input[type="submit"].special:hover,
     input[type="reset"].special:hover,
     input[type="button"].special:hover,
     button.special:hover,
     .button.special:hover {
-      background-color: #71b2f0; }
+      background-color: #ff4d4d; }
     input[type="submit"].special:active,
     input[type="reset"].special:active,
     input[type="button"].special:active,
     button.special:active,
     .button.special:active {
-      background-color: #439aea; }
+      background-color: #e60000; }
   input[type="submit"].disabled, input[type="submit"]:disabled,
   input[type="reset"].disabled,
   input[type="reset"]:disabled,
@@ -1956,7 +1956,7 @@ body {
   -ms-transition: -ms-transform 0.5s ease, box-shadow 0.5s ease, visibility 0.5s;
   transition: transform 0.5s ease, box-shadow 0.5s ease, visibility 0.5s;
   -webkit-overflow-scrolling: touch;
-  background: #3b3b3b;
+  background: #2388e7;
   box-shadow: none;
   color: #ffffff;
   height: 100%;
@@ -2040,6 +2040,13 @@ body {
   padding: 8em 0 6em 0;
   background: #f6f6f6;
   text-align: center; }
+  #banner .container {
+    background: #ccff99;
+    border-radius: 15px; }
+    #banner .container img {
+      border-radius: 50%;
+      border-bottom-width: 1px;
+      border-bottom-style: solid; }
   #banner h2 {
     font-size: 4em;
     line-height: 1em;

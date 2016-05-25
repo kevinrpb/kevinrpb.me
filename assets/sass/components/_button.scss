@@ -74,15 +74,15 @@
 		}
 
 		&.special {
-			background-color: _palette(accent1, bg);
-			color: _palette(accent1, fg-bold) !important;
+			background-color: _palette(accent3, bg);
+			color: _palette(accent3, fg-bold) !important;
 
 			&:hover {
-				background-color: lighten(_palette(accent1, bg), 5);
+				background-color: lighten(_palette(accent3, bg), 10);
 			}
 
 			&:active {
-				background-color: darken(_palette(accent1, bg), 5);
+				background-color: darken(_palette(accent3, bg), 10);
 			}
 		}
 

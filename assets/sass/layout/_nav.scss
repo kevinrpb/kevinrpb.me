@@ -6,9 +6,9 @@
 		@include vendor('transform', 'translateX(20em)');
 		@include vendor('transition', ('transform #{_duration(nav)} ease', 'box-shadow #{_duration(nav)} ease', 'visibility #{_duration(nav)}'));
 		-webkit-overflow-scrolling: touch;
-		background: darken(_palette(accent2, bg), 12);
+		background: darken(_palette(accent1, bg), 12);
 		box-shadow: none;
-		color: _palette(accent2, fg-bold);
+		color: _palette(accent1, fg-bold);
 		height: 100%;
 		max-width: 80%;
 		overflow-y: auto;

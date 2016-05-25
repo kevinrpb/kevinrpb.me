@@ -4,23 +4,8 @@
         <title>Untitled Document</title>
         <meta charset="UTF-8">
 		<link rel="stylesheet" href="assets/css/main.css" />
-        <script src="assets/js/main.js"></script>
-        <script src="assets/js/skel.js"></script>
-        <script src="assets/js/skel-viewport.js"></script>
-        <script>
-            skel.breakpoints({
-                xlarge: "(max-width: 1680px)",
-                large:  "(max-width: 1280px)",
-                medium: "(max-width: 980px)",
-                small:  "(max-width: 736px)",
-                xsmall: "(max-width: 480px)"
-            });
-            skel.layout({
-                reset: "normalize",
-                containers: true,
-                grid: true
-            });
-        </script>
+		<meta name="viewport" content="width=device-width, initial-scale=1" />
+
     </head>
     <body id="top">
 
@@ -43,7 +28,18 @@
             </ul>
         </nav>
 
+        <!-- Banner -->
+        <section id="banner">
+            <div class="container 125%">
+                <img src="/imgs/kevs.jpg">
+                <h2>Kevin Romero<br>Peces-Barba</h2>
+                <p>Los amigos son como las patatas.</p>
+            </div>
+        </section>
 
-
+        <!-- Scripts -->
+        <script src="assets/js/skel.js"></script>
+        <script src="assets/js/skel-viewport.js"></script>
+        <script src="assets/js/main.js"></script>
     </body>
 </html>

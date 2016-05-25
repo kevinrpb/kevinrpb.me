@@ -58,5 +58,16 @@
 			border-bg:		rgba(255,255,255,0.075),
 			border2:		rgba(255,255,255,0.5),
 			border2-bg:		rgba(255,255,255,0.2)
-		)
+		),
+
+        accent3: (
+            bg:             #FF1A1A,
+            fg:             mix(#FF1A1A, white, 25%),
+            fg-bold:        white,
+            fg-light:       mix(#FF1A1A, white, 40%),
+            border:         rgba(255,255,255,0.15),
+            border-bg:      rgba(255,255,255,0.075),
+            border2:        rgba(255,255,255,0.5),
+            border2-bg:     rgba(255,255,255,0.2)
+        )
 	);
