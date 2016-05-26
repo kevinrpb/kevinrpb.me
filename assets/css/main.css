@@ -1872,7 +1872,7 @@ body {
   background: #2388e7;
   color: #d6e9fb;
   cursor: default;
-  height: 3.25em;
+  height: 6vh;
   left: 0;
   line-height: 3.25em;
   position: fixed;
@@ -1903,6 +1903,18 @@ body {
     text-decoration: none; }
     #header > a:hover {
       color: #ffffff; }
+    #header > a[href=""] {
+      text-decoration: none; }
+      #header > a[href=""]:before {
+        content: "";
+        -moz-osx-font-smoothing: grayscale;
+        -webkit-font-smoothing: antialiased;
+        font-family: FontAwesome;
+        font-style: normal;
+        font-weight: normal;
+        text-transform: none !important; }
+      #header > a[href=""]:before {
+        margin: 0 0.5em 0 0; }
     #header > a[href="#nav"] {
       text-decoration: none;
       -webkit-tap-highlight-color: transparent; }
@@ -2039,9 +2051,11 @@ body {
 #banner {
   padding: 8em 0 6em 0;
   background: #f6f6f6;
-  text-align: center; }
+  text-align: center;
+  color: #d6e9fb;
+  height: 94vh; }
   #banner .container {
-    background: #ccff99;
+    background: #2388e7;
     border-radius: 15px; }
     #banner .container img {
       margin: 10px;
@@ -2050,6 +2064,7 @@ body {
       border-style: solid;
       border-color: #f6f6f6; }
   #banner h2 {
+    color: #d6e9fb;
     font-size: 4em;
     line-height: 1em;
     margin: 0 0 0.5em 0;
@@ -2081,7 +2096,8 @@ body {
 
 /* Main */
 #main {
-  padding: 4em 0 2em 0; }
+  padding: 4em 0 2em 0;
+  min-height: 94vh; }
   @media screen and (max-width: 736px) {
     #main {
       padding: 3em 0 1em 0; } }

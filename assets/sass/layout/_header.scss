@@ -10,7 +10,7 @@
 		background: darken(_palette(accent1, bg), 12);
 		color: _palette(accent1, fg);
 		cursor: default;
-		height: 3.25em;
+		height: 6vh;;
 		left: 0;
 		line-height: 3.25em;
 		position: fixed;
@@ -45,6 +45,13 @@
 			&:hover {
 				color: _palette(accent2, fg-bold);
 			}
+
+            &[href=""] {
+				@include icon('\f062');
+                &:before {
+					margin: 0 0.5em 0 0;
+				}
+            }
 
 			&[href="#nav"] {
 				@include icon('\f0c9');
