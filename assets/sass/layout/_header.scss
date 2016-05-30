@@ -7,8 +7,8 @@
 	}
 
 	#header {
-		background: darken(_palette(accent1, bg), 12);
-		color: _palette(accent1, fg);
+        background: rgba(255, 255, 255, 0.8);
+		color: gray;
 		cursor: default;
 		height: 6vh;;
 		left: 0;
@@ -19,8 +19,15 @@
 		width: 100%;
 		z-index: _misc(z-index-base) + 1;
 
+        #btn-top {
+            @include icon('\f062');
+            &:before {
+                margin: 0 0.5em 0 0;
+            }
+        }
+
 		> h1 {
-			color: _palette(accent2, fg-bold);
+			color: inherit;
 			display: inline-block;
 			height: inherit;
 			left: 1.25em;
@@ -32,6 +39,10 @@
 
 			a {
 				font-size: 1.25em;
+
+                &:hover {
+                    color: lightgray;
+                }
 			}
 		}
 
@@ -43,14 +54,7 @@
 			text-decoration: none;
 
 			&:hover {
-				color: _palette(accent2, fg-bold);
-			}
-
-            &[href="#top"] {
-				@include icon('\f062');
-                &:before {
-					margin: 0 0.5em 0 0;
-				}
+                color: lightgray;
             }
 
 			&[href="#nav"] {

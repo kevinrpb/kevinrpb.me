@@ -62,15 +62,6 @@
     // Vars.
     var $body = document.querySelector('body');
 
-    // Breakpoints.
-    skel.breakpoints({
-        xlarge: '(max-width: 1680px)',
-        large: '(max-width: 1280px)',
-        medium: '(max-width: 980px)',
-        small: '(max-width: 736px)',
-        xsmall: '(max-width: 480px)'
-    });
-
     // Disable animations/transitions until everything's loaded.
     $body.classList.add('is-loading');
 
@@ -133,10 +124,22 @@
     });
 
     //AnimateScroll
-    var $main = document.querySelector('#main'),
-        $mainToggle = document.querySelector('#btn-more');
+    var $logo = document.querySelector('#logo'),
+        $top = document.querySelector('#top'),
+        $main = document.querySelector('#main'),
+        $mainToggle = document.querySelector('#btn-more'),
+        $topToggle = document.querySelector('#btn-top');
+
+    $logo.addEventListener('click', function(event) {
+        animateScroll($top, 1000, "easeInOutQuint", 0, null);
+    });
+
+    $topToggle.addEventListener('click', function(event) {
+        animateScroll($top, 1000, "easeInOutQuint", 0, null);
+    });
+
     $mainToggle.addEventListener('click', function (event) {
-        animateScroll($main, 1000, "easeInOutQuint", 0, function () {})
+        animateScroll($main, 1000, "easeInOutQuint", 0, function () {});
     });
 
     //WOW

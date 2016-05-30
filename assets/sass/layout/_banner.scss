@@ -4,13 +4,12 @@
 
 	#banner {
 		@include padding(8em, 0);
-		background: #f6f6f6;
 		text-align: center;
-	    color: _palette(accent1, fg);
+        color: gray;
         height: 95vh;
 
         .container {
-            background: darken(_palette(accent1, bg), 12);
+            background: rgba(255, 255, 255, 0.5);
             border-radius: 15px;
 
             img {
@@ -18,12 +17,11 @@
                 border-radius: 50%;
                 border-width: 10px;
                 border-style: solid;
-                border-color: #f6f6f6;
+                border-color: gray;
             }
         }
 
 		h2 {
-	        color: _palette(accent1, fg);
 			font-size: 4em;
 			line-height: 1em;
 			margin: 0 0 0.5em 0;
