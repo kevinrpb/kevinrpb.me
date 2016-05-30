@@ -46,7 +46,7 @@
 				color: _palette(accent2, fg-bold);
 			}
 
-            &[href=""] {
+            &[href="#top"] {
 				@include icon('\f062');
                 &:before {
 					margin: 0 0.5em 0 0;

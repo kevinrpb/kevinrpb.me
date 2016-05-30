@@ -84,6 +84,13 @@
 					$nav.classList.remove('visible');
 
 				});
-    //
+        //
+            var $main = document.getElementById('#main'),
+                $mainToggle = document.getElementById('#btn-more');
+
+            $mainToggle.addEventListener('click', function(event) {
+
+            });
 
 })();
+
