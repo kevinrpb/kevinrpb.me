@@ -84,13 +84,16 @@
 					$nav.classList.remove('visible');
 
 				});
-        //
-            var $main = document.getElementById('#main'),
-                $mainToggle = document.getElementById('#btn-more');
 
+        //AnimateScroll
+            var $main = document.querySelector('#main'),
+                $mainToggle = document.querySelector('#btn-more');
             $mainToggle.addEventListener('click', function(event) {
-
+                animateScroll($main, 1000, "easeInOutQuint", 0, function(){})
             });
+
+        //WOW
+            new WOW().init();
 
 })();
 

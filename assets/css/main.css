@@ -2067,7 +2067,7 @@ body {
   background: #f6f6f6;
   text-align: center;
   color: #d6e9fb;
-  height: 94vh; }
+  height: 95vh; }
   #banner .container {
     background: #2388e7;
     border-radius: 15px; }
@@ -2111,10 +2111,14 @@ body {
 /* Main */
 #main {
   padding: 4em 0 2em 0;
-  min-height: 94vh; }
+  min-height: 95vh; }
   @media screen and (max-width: 736px) {
     #main {
       padding: 3em 0 1em 0; } }
+  #main section {
+    min-height: 10vh;
+    border-radius: 15px;
+    background: red; }
 
 /* Footer */
 #footer {
