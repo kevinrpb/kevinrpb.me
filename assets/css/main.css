@@ -1900,7 +1900,7 @@ body {
   background: rgba(255, 255, 255, 0.8);
   color: gray;
   cursor: default;
-  height: 6vh;
+  min-height: 6vh;
   left: 0;
   line-height: 3.25em;
   position: fixed;
@@ -2084,7 +2084,7 @@ body {
   padding: 8em 0 6em 0;
   text-align: center;
   color: gray;
-  height: 95vh; }
+  min-height: 95vh; }
   #banner .container .box img {
     margin: 10px;
     border-radius: 50%;
