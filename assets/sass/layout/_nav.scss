@@ -6,7 +6,7 @@
 		@include vendor('transform', 'translateX(20em)');
 		@include vendor('transition', ('transform #{_duration(nav)} ease', 'box-shadow #{_duration(nav)} ease', 'visibility #{_duration(nav)}'));
 		-webkit-overflow-scrolling: touch;
-        background: rgba(255, 255, 255, 1);
+        background: rgba(255, 255, 255, 0.8);
 		box-shadow: none;
 		color: gray;
 		height: 100%;
