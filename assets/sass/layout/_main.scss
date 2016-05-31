@@ -4,15 +4,12 @@
 
 	#main {
 		@include padding(4em, 0);
+		text-align: center;
+        color: gray;
         min-height: 95vh;
 
 		@include breakpoint(small) {
 			@include padding(3em, 0);
 		}
 
-        section {
-            min-height: 10vh;
-            border-radius: 15px;
-            background: rgba(255, 255, 255, 0.8);
-        }
 	}

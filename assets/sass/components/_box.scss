@@ -7,6 +7,7 @@
 		border: solid _size(border-width) _palette(border);
 		margin-bottom: _size(element-margin);
 		padding: 1.5em;
+        background: rgba(255, 255, 255, 0.7);
 
 		> :last-child,
 		> :last-child > :last-child,

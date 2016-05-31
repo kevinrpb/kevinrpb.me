@@ -184,64 +184,64 @@ body {
   margin: 0em 0 -1px 0em; }
 
 .row > * {
-  padding: 0 0 0 3em; }
+  padding: 0 0 0 2em; }
 
 .row {
-  margin: 0 0 -1px -3em; }
+  margin: 0 0 -1px -2em; }
 
 .row.uniform > * {
-  padding: 3em 0 0 3em; }
+  padding: 2em 0 0 2em; }
 
 .row.uniform {
-  margin: -3em 0 -1px -3em; }
+  margin: -2em 0 -1px -2em; }
 
 .row.\32 00\25  > * {
-  padding: 0 0 0 6em; }
+  padding: 0 0 0 4em; }
 
 .row.\32 00\25 {
-  margin: 0 0 -1px -6em; }
+  margin: 0 0 -1px -4em; }
 
 .row.uniform.\32 00\25  > * {
-  padding: 6em 0 0 6em; }
+  padding: 4em 0 0 4em; }
 
 .row.uniform.\32 00\25 {
-  margin: -6em 0 -1px -6em; }
+  margin: -4em 0 -1px -4em; }
 
 .row.\31 50\25  > * {
-  padding: 0 0 0 4.5em; }
+  padding: 0 0 0 3em; }
 
 .row.\31 50\25 {
-  margin: 0 0 -1px -4.5em; }
+  margin: 0 0 -1px -3em; }
 
 .row.uniform.\31 50\25  > * {
-  padding: 4.5em 0 0 4.5em; }
+  padding: 3em 0 0 3em; }
 
 .row.uniform.\31 50\25 {
-  margin: -4.5em 0 -1px -4.5em; }
+  margin: -3em 0 -1px -3em; }
 
 .row.\35 0\25  > * {
-  padding: 0 0 0 1.5em; }
+  padding: 0 0 0 1em; }
 
 .row.\35 0\25 {
-  margin: 0 0 -1px -1.5em; }
+  margin: 0 0 -1px -1em; }
 
 .row.uniform.\35 0\25  > * {
-  padding: 1.5em 0 0 1.5em; }
+  padding: 1em 0 0 1em; }
 
 .row.uniform.\35 0\25 {
-  margin: -1.5em 0 -1px -1.5em; }
+  margin: -1em 0 -1px -1em; }
 
 .row.\32 5\25  > * {
-  padding: 0 0 0 0.75em; }
+  padding: 0 0 0 0.5em; }
 
 .row.\32 5\25 {
-  margin: 0 0 -1px -0.75em; }
+  margin: 0 0 -1px -0.5em; }
 
 .row.uniform.\32 5\25  > * {
-  padding: 0.75em 0 0 0.75em; }
+  padding: 0.5em 0 0 0.5em; }
 
 .row.uniform.\32 5\25 {
-  margin: -0.75em 0 -1px -0.75em; }
+  margin: -0.5em 0 -1px -0.5em; }
 
 .\31 2u, .\31 2u\24 {
   width: 100%;
@@ -352,64 +352,64 @@ body {
 
 @media screen and (max-width: 1680px) {
   .row > * {
-    padding: 0 0 0 3em; }
+    padding: 0 0 0 2em; }
 
   .row {
-    margin: 0 0 -1px -3em; }
+    margin: 0 0 -1px -2em; }
 
   .row.uniform > * {
-    padding: 3em 0 0 3em; }
+    padding: 2em 0 0 2em; }
 
   .row.uniform {
-    margin: -3em 0 -1px -3em; }
+    margin: -2em 0 -1px -2em; }
 
   .row.\32 00\25  > * {
-    padding: 0 0 0 6em; }
+    padding: 0 0 0 4em; }
 
   .row.\32 00\25 {
-    margin: 0 0 -1px -6em; }
+    margin: 0 0 -1px -4em; }
 
   .row.uniform.\32 00\25  > * {
-    padding: 6em 0 0 6em; }
+    padding: 4em 0 0 4em; }
 
   .row.uniform.\32 00\25 {
-    margin: -6em 0 -1px -6em; }
+    margin: -4em 0 -1px -4em; }
 
   .row.\31 50\25  > * {
-    padding: 0 0 0 4.5em; }
+    padding: 0 0 0 3em; }
 
   .row.\31 50\25 {
-    margin: 0 0 -1px -4.5em; }
+    margin: 0 0 -1px -3em; }
 
   .row.uniform.\31 50\25  > * {
-    padding: 4.5em 0 0 4.5em; }
+    padding: 3em 0 0 3em; }
 
   .row.uniform.\31 50\25 {
-    margin: -4.5em 0 -1px -4.5em; }
+    margin: -3em 0 -1px -3em; }
 
   .row.\35 0\25  > * {
-    padding: 0 0 0 1.5em; }
+    padding: 0 0 0 1em; }
 
   .row.\35 0\25 {
-    margin: 0 0 -1px -1.5em; }
+    margin: 0 0 -1px -1em; }
 
   .row.uniform.\35 0\25  > * {
-    padding: 1.5em 0 0 1.5em; }
+    padding: 1em 0 0 1em; }
 
   .row.uniform.\35 0\25 {
-    margin: -1.5em 0 -1px -1.5em; }
+    margin: -1em 0 -1px -1em; }
 
   .row.\32 5\25  > * {
-    padding: 0 0 0 0.75em; }
+    padding: 0 0 0 0.5em; }
 
   .row.\32 5\25 {
-    margin: 0 0 -1px -0.75em; }
+    margin: 0 0 -1px -0.5em; }
 
   .row.uniform.\32 5\25  > * {
-    padding: 0.75em 0 0 0.75em; }
+    padding: 0.5em 0 0 0.5em; }
 
   .row.uniform.\32 5\25 {
-    margin: -0.75em 0 -1px -0.75em; }
+    margin: -0.5em 0 -1px -0.5em; }
 
   .\31 2u\28xlarge\29, .\31 2u\24\28xlarge\29 {
     width: 100%;
@@ -1194,19 +1194,32 @@ body {
 @media screen and (max-width: 480px) {
   html, body {
     min-width: 320px; } }
-body {
-  background: #fff; }
-  body.is-loading *, body.is-loading *:before, body.is-loading *:after {
-    -moz-animation: none !important;
-    -webkit-animation: none !important;
-    -ms-animation: none !important;
-    animation: none !important;
-    -moz-transition: none !important;
-    -webkit-transition: none !important;
-    -ms-transition: none !important;
-    transition: none !important; }
+body.is-loading *, body.is-loading *:before, body.is-loading *:after {
+  -moz-animation: none !important;
+  -webkit-animation: none !important;
+  -ms-animation: none !important;
+  animation: none !important;
+  -moz-transition: none !important;
+  -webkit-transition: none !important;
+  -ms-transition: none !important;
+  transition: none !important; }
 
-/* ScrollBarr */
+/* Background */
+body {
+  /* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#1e5799+0,c4fff7+0,9ec2ff+47,fa96fa+100 */
+  background: #1e5799;
+  /* Old browsers */
+  /* FF3.6-15 */
+  /* Chrome10-25,Safari5.1-6 */
+  background: -webkit-linear-gradient(bottom left, #1e5799 0%, #c4fff7 0%, #9ec2ff 47%, #fa96fa 100%);
+  background: -o-linear-gradient(bottom left, #1e5799 0%, #c4fff7 0%, #9ec2ff 47%, #fa96fa 100%);
+  background: linear-gradient(to top right, #1e5799 0%, #c4fff7 0%, #9ec2ff 47%, #fa96fa 100%);
+  /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#1e5799', endColorstr='#fa96fa',GradientType=1 );
+  /* IE6-9 fallback on horizontal gradient */
+  background-attachment: fixed; }
+
+/* Scrollbar */
 ::-webkit-scrollbar {
   width: 10px; }
 
@@ -1524,7 +1537,8 @@ input[type="radio"] + label:before {
   border-radius: 4px;
   border: solid 1px rgba(144, 144, 144, 0.25);
   margin-bottom: 2em;
-  padding: 1.5em; }
+  padding: 1.5em;
+  background: rgba(255, 255, 255, 0.7); }
   .box > :last-child,
   .box > :last-child > :last-child,
   .box > :last-child > :last-child > :last-child {
@@ -2071,15 +2085,12 @@ body {
   text-align: center;
   color: gray;
   height: 95vh; }
-  #banner .container {
-    background: rgba(255, 255, 255, 0.5);
-    border-radius: 15px; }
-    #banner .container img {
-      margin: 10px;
-      border-radius: 50%;
-      border-width: 10px;
-      border-style: solid;
-      border-color: gray; }
+  #banner .container .box img {
+    margin: 10px;
+    border-radius: 50%;
+    border-width: 10px;
+    border-style: solid;
+    border-color: gray; }
   #banner h2 {
     font-size: 4em;
     line-height: 1em;
@@ -2113,14 +2124,12 @@ body {
 /* Main */
 #main {
   padding: 4em 0 2em 0;
+  text-align: center;
+  color: gray;
   min-height: 95vh; }
   @media screen and (max-width: 736px) {
     #main {
       padding: 3em 0 1em 0; } }
-  #main section {
-    min-height: 10vh;
-    border-radius: 15px;
-    background: rgba(255, 255, 255, 0.8); }
 
 /* Footer */
 #footer {
@@ -2150,19 +2159,5 @@ body {
         border-left: 0;
         margin-left: 0;
         padding-left: 0; } }
-
-body {
-  /* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#1e5799+0,c4fff7+0,9ec2ff+47,fa96fa+100 */
-  background: #1e5799;
-  /* Old browsers */
-  /* FF3.6-15 */
-  /* Chrome10-25,Safari5.1-6 */
-  background: -webkit-linear-gradient(bottom left, #1e5799 0%, #c4fff7 0%, #9ec2ff 47%, #fa96fa 100%);
-  background: -o-linear-gradient(bottom left, #1e5799 0%, #c4fff7 0%, #9ec2ff 47%, #fa96fa 100%);
-  background: linear-gradient(to top right, #1e5799 0%, #c4fff7 0%, #9ec2ff 47%, #fa96fa 100%);
-  /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
-  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#1e5799', endColorstr='#fa96fa',GradientType=1 );
-  /* IE6-9 fallback on horizontal gradient */
-  background-attachment: fixed; }
 
 /*# sourceMappingURL=main.css.map */
