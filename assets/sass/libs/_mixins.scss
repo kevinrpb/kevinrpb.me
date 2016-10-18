@@ -1,0 +1,16 @@
+@import '../libs/vars';
+
+@mixin vendor($property, $value) {
+    -webkit-#{$property}: #{$value};
+    -ms-#{$property}: #{$value};
+    -moz-#{$property}: #{$value};
+    -o-#{$property}: #{$value};
+    #{$property}: #{$value};
+}
+
+@mixin breakpoint($bp) {
+    $b: map-get($breakpoints, $bp);
+    @media #{map-get($b, querie)} {
+        @content;
+    }
+}
