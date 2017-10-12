@@ -3,6 +3,7 @@
    v2.0 | 20110126
    License: none (public domain)
 */
+@import url("https://fonts.googleapis.com/css?family=Dancing+Script|Fjalla+One|Pacifico|Shadows+Into+Light");
 html, body, div, span, applet, object, iframe,
 h1, h2, h3, h4, h5, h6, p, blockquote, pre,
 a, abbr, acronym, address, big, cite, code,
@@ -53,19 +54,23 @@ table {
   border-spacing: 0;
 }
 
-/* The magic starts here */
+/* Base */
 body, html {
   height: 100%;
   width: 100%;
+  overflow: hidden;
 }
 
 body {
+  position: relative;
   background: gray;
 }
 
+/* The magic starts here */
 #slider {
   height: 100%;
   width: 100%;
+  z-index: -1;
 }
 #slider .photo {
   position: absolute;
@@ -82,6 +87,72 @@ body {
 }
 #slider .photo#B {
   left: 105%;
+}
+
+#card {
+  position: absolute;
+  z-index: 10;
+  background-color: rgba(255, 255, 255, 0.3);
+  backdrop-filter: blur(15px);
+  -webkit-backdrop-filter: blur(15px);
+}
+#card #img {
+  position: absolute;
+  border: 10px solid white;
+  border-radius: 50%;
+  background-image: url("../img/kevs.png");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+#card #name {
+  position: absolute;
+  text-align: center;
+  vertical-align: middle;
+  font-family: 'Pacifico', cursive;
+  color: #464646;
+}
+#card #links {
+  position: absolute;
+  text-align: center;
+  vertical-align: middle;
+  font-family: 'Pacifico', cursive;
+  background: #464646;
+  bottom: 0;
+}
+#card #links .link a {
+  text-decoration: none;
+}
+@media screen and (min-width: 1200px) {
+  #card {
+    height: 600px;
+    width: 1000px;
+    top: calc(50% - 300px);
+    left: calc(50% - 500px);
+    border-radius: 5px;
+  }
+  #card #img {
+    height: 300px;
+    width: 300px;
+    left: calc(50% - 150px);
+    top: -100px;
+  }
+  #card #name {
+    height: 120px;
+    width: 1000px;
+    left: calc(50% - 500px);
+    top: 250px;
+    line-height: 120px;
+    font-size: 50pt;
+  }
+  #card #links {
+    height: 120px;
+    width: 1000px;
+  }
+  #card #links .link {
+    height: 80px;
+    top: calc(50% - 40px);
+  }
 }
 
 /*# sourceMappingURL=main.css.map */

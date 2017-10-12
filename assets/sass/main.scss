@@ -1,5 +1,19 @@
 /* Reset browser styles */
 @import 'lib/reset';
 
+/* Base */
+@import url('https://fonts.googleapis.com/css?family=Dancing+Script|Fjalla+One|Pacifico|Shadows+Into+Light');
+body, html{
+	height: 100%;
+	width: 100%;
+	overflow: hidden;
+}
+
+body {
+	position: relative;
+	background: gray;
+}
+
 /* The magic starts here */
 @import 'components/slider';
+@import 'components/card';

@@ -36,7 +36,7 @@ $(function() {
 				show = hide;
 				hide = e;
 
-				$('#' + hide).css("background-image", "url(" + (url + i) + ")")
+				$('#' + hide).css("background-image", "url(" + (url + i) + ")");
 				i++;
 			});
 	}, 15000);
