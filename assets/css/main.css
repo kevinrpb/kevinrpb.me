@@ -1,67 +1,87 @@
-body {
+/* Reset browser styles */
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
   margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
 }
 
-nav.topbar {
-  position: fixed;
-  top: 0;
-  left: 0;
-  right: 0;
-  z-index: 9999;
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+  display: block;
+}
+
+body {
+  line-height: 1;
+}
+
+ol, ul {
+  list-style: none;
+}
+
+blockquote, q {
+  quotes: none;
+}
+
+blockquote:before, blockquote:after,
+q:before, q:after {
+  content: '';
+  content: none;
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+/* The magic starts here */
+body, html {
+  height: 100%;
   width: 100%;
-  height: 2.25em;
-  background-color: crimson;
-  color: gray;
-  cursor: default;
 }
-nav.topbar .nav-brand {
-  display: inline;
-  padding: 1em;
+
+body {
+  background: gray;
 }
-nav.topbar .nav-brand a {
-  font-size: 1.25em;
-  text-decoration: none;
-  color: black;
+
+#slider {
+  height: 100%;
+  width: 100%;
 }
-nav.topbar .nav-brand a:hover {
-  color: lightgray;
-}
-nav.topbar .menu-btn {
-  display: none;
-  font-size: 1.25em;
-}
-nav.topbar .nav-menu {
+#slider .photo {
   position: absolute;
-  right: 0;
-  top: 0;
-  list-style-type: none;
+  height: 110%;
+  width: 110%;
+  top: -5%;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
 }
-nav.topbar .nav-menu > li {
-  float: left;
-  padding-right: 2em;
+#slider .photo#A {
+  left: -5%;
+  opacity: 0;
 }
-nav.topbar .nav-menu > li > a {
-  font-size: 1.25em;
-  color: black;
-  text-decoration: none;
-}
-nav.topbar .nav-menu > li > a:hover {
-  color: lightgray;
-}
-@media only screen and (max-width: 767px) {
-  nav.topbar .menu-btn {
-    display: inline;
-    float: right;
-  }
-}
-
-section.page-content {
-  margin-top: 2.25em;
-}
-
-section.page-content {
-  max-width: 50em;
-  text-align: justify;
+#slider .photo#B {
+  left: 105%;
 }
 
 /*# sourceMappingURL=main.css.map */

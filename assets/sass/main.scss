@@ -1,6 +1,5 @@
-@import 'libs/vars';
-@import 'libs/functions';
-@import 'libs/mixins';
+/* Reset browser styles */
+@import 'lib/reset';
 
-@import 'layout/nav';
-@import 'layout/page';
+/* The magic starts here */
+@import 'components/slider';
