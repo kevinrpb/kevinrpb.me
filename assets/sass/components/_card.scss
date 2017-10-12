@@ -23,26 +23,15 @@
 		text-align: center;
 		vertical-align: middle;
 		font-family: 'Pacifico', cursive;
-		color: rgba(70, 70, 70, 1.0);
+		color: rgba(0, 0, 0, 1.0);
 	}
 
 	#links {
 		position: absolute;
-		text-align: center;
-		vertical-align: middle;
 		font-family: 'Pacifico', cursive;
-		background: rgba(70, 70, 70, 1.0);
-
-		bottom: 0;
 
 		.link {
-			i {
-
-			}
-			
-			a {
-				text-decoration: none;
-			}
+			float: left;
 		}
 	}
 
@@ -93,11 +82,17 @@
 
 		#links {
 			height: 120px;
-			width: 1000px;
+			margin-left: 320px;
+			bottom: 70px;
 
 			.link {
-				height: 80px;
-				top: calc(50% - 40px);
+				height: 120px;
+
+				img {
+					height: 80px;
+					width: 80px;
+					margin: 20px;
+				}
 			}
 		}
 	}
