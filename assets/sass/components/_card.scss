@@ -1,0 +1,104 @@
+#card {
+	position: absolute;
+	z-index: 10;
+
+  background-color: rgba(255, 255, 255, 0.3);
+
+  backdrop-filter: blur(15px);
+	-webkit-backdrop-filter: blur(15px);
+
+	#img {
+		position: absolute;
+		border: 10px solid white;
+		border-radius: 50%;
+
+		background-image: url('../img/kevs.png');	
+		background-position: center;
+		background-repeat: no-repeat;
+		background-size: cover;
+	}
+
+	#name {
+		position: absolute;
+		text-align: center;
+		vertical-align: middle;
+		font-family: 'Pacifico', cursive;
+		color: rgba(70, 70, 70, 1.0);
+	}
+
+	#links {
+		position: absolute;
+		text-align: center;
+		vertical-align: middle;
+		font-family: 'Pacifico', cursive;
+		background: rgba(70, 70, 70, 1.0);
+
+		bottom: 0;
+
+		.link {
+			i {
+
+			}
+			
+			a {
+				text-decoration: none;
+			}
+		}
+	}
+
+	// Extra Small devices
+	@media screen and (max-width: 575px) {
+
+	}
+	
+	// Small devices
+	@media screen and (min-width: 576px) and (max-width: 767px) {
+
+	}
+	
+	// Medium devices
+	@media screen and (min-width: 768px) and (max-width: 991px) {
+
+	}
+	
+	// Large devices
+	@media screen and (min-width: 992px) and (max-width: 1199px) {
+
+	}
+	
+	// Extra Large devices
+	@media screen and (min-width: 1200px) {
+		height: 600px;
+		width: 1000px;
+		top: calc(50% - 300px);
+		left: calc(50% - 500px);
+
+		border-radius: 5px;
+
+		#img {
+			height: 300px;
+			width: 300px;
+			left: calc(50% - 150px);
+			top: -100px;
+		}
+
+		#name {
+			height: 120px;
+			width: 1000px;
+			left: calc(50% - 500px);
+			top: 250px;
+			line-height: 120px;
+			font-size: 50pt;
+		}
+
+		#links {
+			height: 120px;
+			width: 1000px;
+
+			.link {
+				height: 80px;
+				top: calc(50% - 40px);
+			}
+		}
+	}
+}
