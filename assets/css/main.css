@@ -114,14 +114,10 @@ body {
 }
 #card #links {
   position: absolute;
-  text-align: center;
-  vertical-align: middle;
   font-family: 'Pacifico', cursive;
-  background: #464646;
-  bottom: 0;
 }
-#card #links .link a {
-  text-decoration: none;
+#card #links .link {
+  float: left;
 }
 @media screen and (min-width: 1200px) {
   #card {
@@ -147,11 +143,16 @@ body {
   }
   #card #links {
     height: 120px;
-    width: 1000px;
+    margin-left: 320px;
+    bottom: 70px;
   }
   #card #links .link {
+    height: 120px;
+  }
+  #card #links .link img {
     height: 80px;
-    top: calc(50% - 40px);
+    width: 80px;
+    margin: 20px;
   }
 }
 
