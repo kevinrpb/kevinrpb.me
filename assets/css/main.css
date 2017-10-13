@@ -92,6 +92,7 @@ body {
 #card {
   position: absolute;
   z-index: 10;
+  border-radius: 5px;
   background-color: rgba(255, 255, 255, 0.3);
   backdrop-filter: blur(15px);
   -webkit-backdrop-filter: blur(15px);
@@ -119,13 +120,82 @@ body {
 #card #links .link {
   float: left;
 }
-@media screen and (min-width: 1200px) {
+@media screen and (max-width: 575px) {
+  #card {
+    height: 100%;
+    width: 100%;
+    top: 0;
+    left: 0;
+  }
+  #card #img {
+    height: 200px;
+    width: 200px;
+    left: calc(50% - 100px);
+    top: 15%;
+  }
+  #card #name {
+    height: 200px;
+    width: 80%;
+    left: 10%;
+    top: calc(15% + 200px);
+    line-height: 200px;
+    font-size: 25pt;
+  }
+  #card #links {
+    height: 72px;
+    margin-left: calc(50% - 108px);
+    bottom: 100px;
+  }
+  #card #links .link {
+    height: 72px;
+  }
+  #card #links .link img {
+    height: 48px;
+    width: 48px;
+    margin: 12px;
+  }
+}
+@media screen and (min-width: 576px) and (max-width: 991px) {
+  #card {
+    height: 360px;
+    width: 600px;
+    top: calc(50% - 180px);
+    left: calc(50% - 300px);
+  }
+  #card #img {
+    height: 180px;
+    width: 180px;
+    left: calc(50% - 90px);
+    top: -60px;
+  }
+  #card #name {
+    height: 72px;
+    width: 600px;
+    left: calc(50% - 300px);
+    top: 150px;
+    line-height: 72px;
+    font-size: 30pt;
+  }
+  #card #links {
+    height: 72px;
+    margin-left: 192px;
+    bottom: 42px;
+  }
+  #card #links .link {
+    height: 72px;
+  }
+  #card #links .link img {
+    height: 48px;
+    width: 48px;
+    margin: 12px;
+  }
+}
+@media screen and (min-width: 992px) {
   #card {
     height: 600px;
     width: 1000px;
     top: calc(50% - 300px);
     left: calc(50% - 500px);
-    border-radius: 5px;
   }
   #card #img {
     height: 300px;
