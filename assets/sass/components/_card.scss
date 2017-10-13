@@ -36,7 +36,7 @@
 	}
 
 	// Extra Small devices
-	@media screen and (max-width: 575px) {
+	@media screen and (max-width: 733px) {
 		height: 100%;
 		width: 100%;
 		top: 0;
@@ -76,7 +76,7 @@
 	}
 	
 	// Small and medium devices
-	@media screen and (min-width: 576px) and (max-width: 991px) {
+	@media screen and (min-width: 734px) and (max-width: 991px) {
 		height: 360px;
 		width: 600px;
 		top: calc(50% - 180px);
