@@ -30,6 +30,10 @@
 		vertical-align: middle;
 		font-family: 'Pacifico', cursive;
 		color: rgba(0, 0, 0, 1.0);
+
+		&:hover {
+			text-shadow: -2px 0 white, 0 2px white, 2px 0 white, 0 -2px white;
+		}
 	}
 
 	#links {
@@ -38,10 +42,20 @@
 
 		.link {
 			float: left;
+
+			img {
+				border: 2px solid rgba(0,0,0,0.0);
+				border-radius: 50%;
+
+				&:hover {
+					background: white;
+					border: 2px solid rgba(255, 255, 255, 1.0);
+				}
+			}
 		}
 	}
 
-	// Extra Small devices
+	// Extra Small and Small devices
 	@media screen and (max-width: 733px) {
 		height: 100%;
 		width: 100%;
@@ -61,13 +75,13 @@
 			left: 10%;
 			top: calc(15% + 200px);
 			line-height: 200px;
-			font-size: 25pt;
+			font-size: 18pt;
 		}
 
 		#links {
 			height: 72px;
 			margin-left: calc(50% - 108px);
-			bottom: 100px;
+			bottom: 50px;
 
 			.link {
 				height: 72px;
@@ -75,13 +89,13 @@
 				img {
 					height: 48px;
 					width: 48px;
-					margin: 12px;
+					margin: 8px;
 				}
 			}
 		}
 	}
 	
-	// Small and medium devices
+	// Medium devices
 	@media screen and (min-width: 734px) and (max-width: 991px) {
 		height: 360px;
 		width: 600px;
@@ -115,7 +129,7 @@
 				img {
 					height: 48px;
 					width: 48px;
-					margin: 12px;
+					margin: 8px;
 				}
 			}
 		}
@@ -155,7 +169,7 @@
 				img {
 					height: 80px;
 					width: 80px;
-					margin: 20px;
+					margin: 16px;
 				}
 			}
 		}
