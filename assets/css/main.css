@@ -118,12 +118,23 @@ body {
   font-family: 'Pacifico', cursive;
   color: black;
 }
+#card #name:hover {
+  text-shadow: -2px 0 white, 0 2px white, 2px 0 white, 0 -2px white;
+}
 #card #links {
   position: absolute;
   font-family: 'Pacifico', cursive;
 }
 #card #links .link {
   float: left;
+}
+#card #links .link img {
+  border: 2px solid transparent;
+  border-radius: 50%;
+}
+#card #links .link img:hover {
+  background: white;
+  border: 2px solid white;
 }
 @media screen and (max-width: 733px) {
   #card {
@@ -144,12 +155,12 @@ body {
     left: 10%;
     top: calc(15% + 200px);
     line-height: 200px;
-    font-size: 25pt;
+    font-size: 18pt;
   }
   #card #links {
     height: 72px;
     margin-left: calc(50% - 108px);
-    bottom: 100px;
+    bottom: 50px;
   }
   #card #links .link {
     height: 72px;
@@ -157,7 +168,7 @@ body {
   #card #links .link img {
     height: 48px;
     width: 48px;
-    margin: 12px;
+    margin: 8px;
   }
 }
 @media screen and (min-width: 734px) and (max-width: 991px) {
@@ -192,7 +203,7 @@ body {
   #card #links .link img {
     height: 48px;
     width: 48px;
-    margin: 12px;
+    margin: 8px;
   }
 }
 @media screen and (min-width: 992px) {
@@ -227,7 +238,7 @@ body {
   #card #links .link img {
     height: 80px;
     width: 80px;
-    margin: 20px;
+    margin: 16px;
   }
 }
 
