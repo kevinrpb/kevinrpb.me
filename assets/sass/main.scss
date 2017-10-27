@@ -11,9 +11,10 @@ body, html{
 
 body {
 	position: relative;
-	background: gray;
 }
 
 /* The magic starts here */
 @import 'components/slider';
 @import 'components/card';
+@import 'components/clock';
+@import 'components/0bclock';

@@ -1,4 +1,9 @@
 $(function() {
+	// Clock
+	let clock = new createbClock('clock-wrapper');
+	startbClock(clock);
+	
+	// Slider
 	const url = 'https://source.unsplash.com/featured/?landscape&sig=';
 	let i = 2;
 

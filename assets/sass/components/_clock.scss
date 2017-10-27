@@ -1,0 +1,28 @@
+$wrapper-width: 100px;
+$wrapper-height: $wrapper-width * 0.6222222222;
+
+#clock-wrapper {
+	position: absolute;
+	right: 10px;
+	bottom: 10px;
+	height: $wrapper-height;
+	width: $wrapper-width;
+
+	z-index: 11;
+
+	border-radius: 5%;
+  background-color: rgba(255, 255, 255, 0.3);
+
+  backdrop-filter: blur(15px);
+	-webkit-backdrop-filter: blur(15px);
+
+  -webkit-transition: all 0.3s ease;                  
+  -moz-transition: all 0.3s ease;                 
+  -o-transition: all 0.3s ease;   
+  -ms-transition: all 0.3s ease;          
+  transition: all 0.3s ease;
+
+	&:hover, &:focus {
+    box-shadow: 0 4px 8px 0 rgba(255, 255, 255, 0.4), 0 6px 20px 0 rgba(255, 255, 255, 0.3);
+	}
+}
