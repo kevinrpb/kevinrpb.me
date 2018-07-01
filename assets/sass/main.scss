@@ -6,15 +6,31 @@
 body, html{
 	height: 100%;
 	width: 100%;
-	overflow: hidden;
+    margin: 0;
+    padding: 0;
 }
 
 body {
-	position: relative;
+
+    main#content {
+        display: block;
+        position: absolute;
+        height: 100%;
+        width: 100%;
+        top: 0;
+        left: 0;
+        z-index: 2;
+    }
+
+    canvas {
+        display: block;
+        position: absolute;
+        height: 100%;
+        width: 100%;
+        top: 0;
+        left: 0;
+        z-index: 1;
+    }
 }
 
 /* The magic starts here */
-@import 'components/slider';
-@import 'components/card';
-@import 'components/clock';
-@import 'components/0bclock';
