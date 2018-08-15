@@ -4,7 +4,7 @@ let canvas,
     BOUNDS,
     COUNT;
 
-const MAX_CIRCLES = 100,
+const MAX_CIRCLES = 20,
     MIN_POLIG = 3,
     MAX_POLIG = 7,
     MAX_COUNT = 3000;
