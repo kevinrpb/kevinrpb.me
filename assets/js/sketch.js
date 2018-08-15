@@ -4,10 +4,29 @@ let canvas,
     BOUNDS,
     COUNT;
 
-const MAX_CIRCLES = 35,
+const MAX_CIRCLES = 100,
     MIN_POLIG = 3,
     MAX_POLIG = 7,
     MAX_COUNT = 3000;
+
+const LIKELY_NICE_GENERATORS = [
+    0.7873906214284836,
+    0.00998040782852927,
+    0.5347525257286896,
+    0.46027654976572574,
+    0.17907679737853255,
+    0.864907315343393,
+    0.19730441481741678,
+    0.021041700709182987,
+    0.9506801129296709,
+    0.9113446690033127,
+    0.5491984991616168,
+    0.957026134737246,
+    0.6989879622798445,
+    0.17858558403789515,
+    0.4215404504252358,
+    0.6267346719088749
+];
 
 function Circle(gen) {
     if (gen)
@@ -36,25 +55,46 @@ function Circle(gen) {
     };
 
     this.move = (override, towards) => {
-        if (COUNT == 0 || outbounds(this) || override) {
+        if (COUNT == 0 || override) {
+            let r1 = random(),
+                r2 = random(),
+                r3 = random(),
+                dx = 0, dy = 0, dr = 0;
+
             if (! towards) {
-                let r1 = random(),
-                    r2 = random(),
-                    r3 = random();
-                if (between(r1, 0.00, 0.33)) this.movement.x = this.generator * random(0, 10);
-                if (between(r1, 0.33, 0.67)) this.movement.x = - this.generator * random(0, 10);
-                if (between(r2, 0.00, 0.33)) this.movement.y = this.generator * random(0, 10);
-                if (between(r2, 0.33, 0.67)) this.movement.y = - this.generator * random(0, 10);
-                if (between(r3, 0.00, 0.33)) this.movement.r = this.generator * random(0, 10);
-                if (between(r3, 0.33, 0.67)) this.movement.r = - this.generator * random(0, 10);
+                if (between(r1, 0.00, 0.33)) dx =   this.generator * random(0.1, 10);
+                if (between(r1, 0.33, 0.67)) dx = - this.generator * random(0.1, 10);
+                if (between(r2, 0.00, 0.33)) dy =   this.generator * random(0.1, 10);
+                if (between(r2, 0.33, 0.67)) dy = - this.generator * random(0.1, 10);
+                if (between(r3, 0.00, 0.33)) dr =   this.generator * random(0.0, 10);
+                if (between(r3, 0.33, 0.67)) dr = - this.generator * random(0.0, 10);
             } else {
-                // TODO
+                dx = normalize(this.position.x - towards.x, -1, 1) / 5;
+                dy = normalize(this.position.y - towards.y, -1, 1) / 5;
+                dr = this.position.r;
             }
+
+            this.movement.x = dx;
+            this.movement.y = dy;
+            this.movement.r = dr;
         }
 
         this.position.x += this.movement.x / 10;
         this.position.y += this.movement.y / 10;
         this.position.r += this.movement.r / 10;
+
+        if (this.position.x + this.radius < BOUNDS.x[0]) {
+            this.position.x = BOUNDS.x[1] + this.radius;
+        } else if (this.position.x - this.radius > BOUNDS.x[1]) {
+            this.position.x = BOUNDS.x[0] - this.radius;
+        }
+
+        if (this.position.y + this.radius < BOUNDS.y[0]) {
+            this.position.y = BOUNDS.y[1] + this.radius;
+        } else if (this.position.y - this.radius > BOUNDS.y[1]) {
+            this.position.y = BOUNDS.y[0] - this.radius;
+        }
+
     };
 
     this.position = {
@@ -76,6 +116,9 @@ function Circle(gen) {
     if (this.generator < 0.8) this.radius += 15;
     if (this.generator < 0.4) this.radius *= 3;
     if (this.generator < 0.1) this.radius *= 5;
+    if (this.radius    > 100) this.radius /= 10;
+    if (this.radius    > 80 ) this.radius /= 3.4;
+    if (this.radius    > 60 ) this.radius /= 2;
 
     this.shapes = [];
 
@@ -121,7 +164,8 @@ function setup() {
 
     circles = [];
     for (let i = 0; i < MAX_CIRCLES; i++) {
-        circles[i] = new Circle();
+        const G = LIKELY_NICE_GENERATORS[Math.floor(random(0, LIKELY_NICE_GENERATORS.length))];
+        circles[i] = new Circle(G);
     }
 
     frameRate(30);
@@ -151,7 +195,10 @@ function draw() {
         }
 
         if (d < 300) {
-            circle.tick(true, { x: mouseX, y: mouseY });
+            if (d < 90)
+                circle.tick(true, { x: mouseX - CENTER.x, y: mouseY - CENTER.y });
+            else
+                circle.tick()
 
             stroke(d * 2 / 3)
             drawLine({ x: mouseX, y: mouseY, r: 10 }, { x: circle.position.x + CENTER.x, y: circle.position.y + CENTER.y, r: 0 })
@@ -249,4 +296,8 @@ function shuffle(a, t) {
         [a[i], a[j]] = [a[j], a[i]];
     }
     return a;
+}
+
+function normalize(val, max, min) {
+    return (val - min) / (max - min);
 }
