@@ -13,13 +13,133 @@ body, html{
 body {
 
     main#content {
-        display: block;
         position: absolute;
-        height: 100%;
-        width: 100%;
+        height: 100vh;
+        width: 100vw;
         top: 0;
         left: 0;
         z-index: 2;
+        overflow: hidden;
+
+        // background-color: rgba(120, 0, 0, 0.6);
+        
+        div.content-section {
+            opacity: 0;
+            margin: auto;
+            box-shadow: 0px 0px 13px -1px rgba(0,0,0,0.76);
+            transition: all 0.5s cubic-bezier(0, 0, 0.2, 1);
+            // background-color: rgba(255, 255, 255, 0.3);
+        } 
+        
+        
+        div#card {
+            width: 120vw;
+            height: 120vh;
+            margin-left: -10vw;
+            margin-top: -10vh;
+
+            display: flex;
+            flex-direction: column;
+            text-align: center;
+
+            > div {
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
+            }
+
+            #image {
+                height: 40%;
+
+                img {
+                    display: block;
+                    height: calc(90% - 10px);
+                    margin-top: 5%;
+                    width: auto;
+                    border: 5px solid white;
+                    border-radius: 50%;
+                    box-shadow: 0px 0px 13px -1px rgba(0,0,0,0.76);
+                }
+            }
+
+            #name {
+                height: 20%;
+                h2 {
+                    transition: all 0.5s cubic-bezier(0, 0, 0.2, 1);
+                    font-family: 'Pacifico', cursive;
+                    font-size: 9vw;
+                }
+            }
+
+            #connections {
+                height: 20%;
+                flex-direction: row;
+                justify-content: center;
+
+                div {
+                    height: 100%;
+                    width: auto;
+
+                    a {
+                        max-height: 100%;
+                        max-width: 100%;
+
+                        img {
+                            display: block;
+                            height: 60%;
+                            width: auto;
+                            margin: auto;
+                            margin-top: calc(20% - 6px);
+                            border-radius: 50%;
+                            border: 3px solid rgba(0, 0, 0, 0);
+                            transition: all 0.5s cubic-bezier(0, 0, 0.2, 1);
+
+                            &:hover {
+                                background-color: white;
+                                border: 3px solid white;
+                            }
+                        }
+                    }
+                }
+            }
+
+            .nav {
+                height: 20%;
+
+                button {
+                    height: 50%;
+                    width: 50vw;
+                    border: 1px solid gray;
+                    border-radius: 5px;
+                    font-size: 6vw;
+                    box-shadow: 0px 0px 13px -1px rgba(0,0,0,0.76);
+                }
+            }
+        }
+
+        *:not(div#card) {
+            width: 80vw;
+            height: 80vh;
+            margin-top: 10vh;
+        }
+
+        &.show-card {
+            div#card {
+                opacity: 1;
+                margin-top: 0;
+                margin-left: 0;
+                width: 100vw;
+                height: 100vh;
+                z-index: 3;
+
+                #name {
+                    h2 {
+                        font-size: 7vw;
+                    }
+                }
+            }
+        }
     }
 
     canvas#backCanvas {
@@ -30,7 +150,9 @@ body {
         top: 0;
         left: 0;
         z-index: 1;
-        filter: blur(3px);
+
+        transition: all 0.5s ease;
+        filter: blur(5px);
     }
 }
 

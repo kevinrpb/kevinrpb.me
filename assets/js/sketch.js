@@ -151,7 +151,7 @@ function Circle(gen) {
 function setup() {
     canvas = createCanvas(windowWidth, windowHeight);
     canvas.canvas.id = "backCanvas"
-    // canvas.style('filter', 'blur(5px)');
+
     CENTER = {
         x: windowWidth / 2,
         y: windowHeight / 2
