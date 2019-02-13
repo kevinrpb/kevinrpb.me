@@ -24,6 +24,7 @@ main#main > div#card {
 
 canvas#canvas {
 	z-index: 1;
+	filter: blur(1px);
 }
 
 main#main {
@@ -44,9 +45,9 @@ main#main > div#card {
 
 	/* background-color: rgba(120, 120, 120, 0.8); */
 	/* background-color: white; */
-	backdrop-filter: blur(2px);
+	/* backdrop-filter: blur(2px);
 	-webkit-backdrop-filter: blur(2px);
-	transition-duration: 1500ms;
+	transition-duration: 1500ms; */
 
 	/* box-shadow: 1px 0px 20px rgba(207, 119, 243, 0.3),
 		0px 0px 20px rgba(0, 155, 255, 0.3), -1px 0px 20px rgba(42, 201, 219, 0.3); */
@@ -65,7 +66,7 @@ main#main > div#card.hide {
 		height: auto;
 		width: 80vw;
 		padding: 50px 25px;
-		background-color: white;
+		/* background-color: white; */
 		border-radius: 6px;
 	}
 }
@@ -131,7 +132,7 @@ main#main > div#card > h1 {
 @media screen and (min-width: 768px) {
 	main#main > div#card > h1 {
 		font-size: 2.6em;
-		color: rgb(7, 11, 32);
+		/* color: rgb(7, 11, 32); */
 	}
 }
 
@@ -205,17 +206,23 @@ main#main > div#card > ul > li > a {
 	}
 }
 
-main#main > div#card > ul > li > a > img {
-	width: 100%;
-	height: 100%;
+main#main > div#card > ul > li > a.at {
+	background-image: url('/assets/img/at.svg');
+}
+
+main#main > div#card > ul > li > a.gh {
+	background-image: url('/assets/img/gh.svg');
+}
+
+main#main > div#card > ul > li > a.in {
+	background-image: url('/assets/img/in.svg');
+}
+
+main#main > div#card > ul > li > a.cv {
+	background-image: url('/assets/img/cv.svg');
 }
 
 main#main > div#card > ul > li:hover {
-	background-color: white;
 	transform: scale(1.3);
 	box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23);
-}
-
-main#main > div#card > ul > li:hover > a {
-	border-color: white;
 }

@@ -21,6 +21,15 @@ function init() {
 		canvas.mouseX = e.clientX;
 		canvas.mouseY = e.clientY;
 	});
+	document.addEventListener('mouseenter', function(e) {
+		canvas.mouseX = e.clientX;
+		canvas.mouseY = e.clientY;
+	});
+	canvas.mouseX = window.innerWidth / 2;
+	canvas.mouseY = window.innerHeight / 2;
+
+	// Add initial stars
+	addStars(20, 30, 0.2);
 
 	// Start animation
 	requestAnimationFrame(draw);
@@ -53,6 +62,7 @@ function draw() {
 
 	// Add more stars
 	addStars(0, 3, 0.05);
+	addShootingStars(0, 3, 0.05);
 
 	requestAnimationFrame(draw);
 }
@@ -65,9 +75,24 @@ function addStars(min, max, p) {
 	}
 
 	for (let i = 0; i < a; i++) {
-		const x = Math.random() * canvas.el.width;
-		const y = Math.random() * canvas.el.height;
-		const l = Math.random() * 25 + 15;
+		const x = Math.random() * canvas.el.width - canvas.trans[0];
+		const y = Math.random() * canvas.el.height - canvas.trans[1];
+		const l = Math.random() * 500 + 100;
 		stars.push(new Star(x, y, l, 15));
+	}
+}
+
+function addShootingStars(min, max, p) {
+	let a = min;
+	for (let i = min; i < max; i++) {
+		const r = Math.random();
+		if (r < p) a++;
+	}
+
+	for (let i = 0; i < a; i++) {
+		const x = Math.random() * canvas.el.width - canvas.trans[0];
+		const y = Math.random() * canvas.el.height - canvas.trans[1];
+		const l = Math.random() * 25 + 15;
+		stars.push(new ShootingStar(x, y, l, 15));
 	}
 }

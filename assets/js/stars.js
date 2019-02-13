@@ -37,6 +37,33 @@ class Particle {
 }
 
 class Star {
+	constructor(x, y, lifespan) {
+		this.lifespan = lifespan;
+		this.life = 0;
+
+		const s = Math.random() * 2 + 1;
+		const a = Math.random() * 2 * Math.PI;
+		const f = Math.random() * 0.5 + 0.5;
+
+		this.particle = new Particle(x, y, s, s, a, f);
+	}
+
+	update() {
+		if (this.life >= this.lifespan) return;
+
+		this.particle.update();
+		this.life += 1;
+	}
+
+	render(canvas, ...color) {
+		const lived = this.life / this.lifespan;
+		const alpha = map(lived, 0, 1, 1, 0);
+
+		this.particle.render(canvas, ...color, alpha);
+	}
+}
+
+class ShootingStar {
 	constructor(x, y, lifespan, n) {
 		this.lifespan = lifespan;
 		this.life = 0;
