@@ -171,9 +171,15 @@ main#main > div#card > ul > li {
 	height: 46px;
 	width: 46px;
 	padding: 0;
-	background-color: transparent;
+	background-color: white;
 	border-radius: 50%;
 	transition: all 250ms ease-in-out;
+}
+
+@media screen and (min-width: 768px) {
+	main#main > div#card > ul > li {
+		background-color: transparent;
+	}
 }
 
 main#main > div#card > ul > li > a {
@@ -188,10 +194,15 @@ main#main > div#card > ul > li > a {
 
 	background-size: 100% 100%;
 	background-repeat: no-repeat;
-	border: 3px solid transparent;
+	border: 3px solid white;
 	border-radius: 50%;
 
 	transition: all 250ms ease-in-out;
+}
+@media screen and (min-width: 768px) {
+	main#main > div#card > ul > li > a {
+		border-color: transparent;
+	}
 }
 
 main#main > div#card > ul > li > a > img {
