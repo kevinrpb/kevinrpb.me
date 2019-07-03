@@ -45,6 +45,8 @@ main#main > div#card {
 
 	height: 100%;
 	width: 100%;
+
+	transform: scale(1) rotateY(0deg);
 }
 
 main#main > div#card.hide {
