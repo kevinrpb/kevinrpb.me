@@ -1,6 +1,24 @@
-let canvas;
+let canvas,
+	color_scheme = 'dark';
 
 function init() {
+	// Check initial color scheme
+	if (matchMedia('(prefers-color-scheme: light)').matches) {
+		color_scheme = 'light';
+	}
+	// Add listeners for color scheme
+	window.matchMedia('(prefers-color-scheme: light)').addListener(e => {
+		if (e.matches) color_scheme = 'light';
+	});
+
+	window.matchMedia('(prefers-color-scheme: dark)').addListener(e => {
+		if (e.matches) color_scheme = 'dark';
+	});
+
+	window.matchMedia('(prefers-color-scheme: no-preference)').addListener(e => {
+		if (e.matches) color_scheme = 'dark';
+	});
+
 	// Init canvas
 	canvas = createCanvas('canvas');
 
@@ -42,7 +60,7 @@ function init() {
 
 let stars = [];
 function draw() {
-	canvas.bg(7, 11, 32);
+	color_scheme === 'dark' ? canvas.bg(7, 11, 32) : canvas.bg(245, 245, 245);
 
 	// Update translation -> parallax
 	canvas.setTranslate(
@@ -52,7 +70,9 @@ function draw() {
 
 	// Update stars and delete if needed (if lifespan overlived)
 	for (let i = stars.length - 1; i > -1; i--) {
-		stars[i].render(canvas, 255);
+		color_scheme === 'dark'
+			? stars[i].render(canvas, 255)
+			: stars[i].render(canvas, 0);
 
 		stars[i].update();
 		if (stars[i].life >= stars[i].lifespan) {
