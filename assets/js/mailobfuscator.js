@@ -1,6 +1,6 @@
 const mail_coded = "p5WXLv3Y@lybwSXA.Vyw"
 const mail_key = "vudUoR3mBzKEhn2ca0GDWt46yO1wkiJelLPVSNHC9brsjxFMpXZ5A7fT8QIqgY"
-const mail_shift = coded.length
+const mail_shift = mail_coded.length
 
 let mail_link = ""
 let mail_ltr = ""
