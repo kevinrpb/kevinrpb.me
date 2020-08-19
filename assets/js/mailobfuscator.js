@@ -12,6 +12,6 @@ for (let i = 0; i < mail_coded.length; i++) {
   }
   else {     
     mail_ltr = (mail_key.indexOf(mail_coded.charAt(i)) - mail_shift + mail_key.length) % mail_key.length
-    mail_link += (mail_key.charAt(ltr))
+    mail_link += (mail_key.charAt(mail_ltr))
   }
 }
