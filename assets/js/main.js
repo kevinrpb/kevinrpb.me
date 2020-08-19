@@ -51,6 +51,9 @@ function init() {
 
 	// Start animation
 	requestAnimationFrame(draw);
+	
+	// Setup mail
+	document.getElementById("mail_anchor").href = `mailto:${mail_link}`
 
 	// Show card
 	setTimeout(function() {
