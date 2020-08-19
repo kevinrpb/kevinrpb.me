@@ -8,7 +8,7 @@ let mail_ltr = ""
 for (let i = 0; i < mail_coded.length; i++) {
   if (mail_key.indexOf(mail_coded.charAt(i)) == -1) {
     mail_ltr = mail_coded.charAt(i)
-    mail_link += (ltr)
+    mail_link += (mail_ltr)
   }
   else {     
     mail_ltr = (mail_key.indexOf(mail_coded.charAt(i)) - mail_shift + mail_key.length) % mail_key.length
