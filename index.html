@@ -27,43 +27,43 @@
 		<script src="assets/js/main.js"></script>
 	</head>
 	<body onload="init();">
-		<canvas id="canvas"></canvas>
+		<canvas id="canvas" aria-label="Background with moving stars."></canvas>
 		<main id="main">
 			<div id="card" class="hide">
 				<img
 					src="assets/img/k_small.webp"
 					onerror="this.onerror=null; this.src='assets/img/k_small.png'"
-					alt="Kevin Romero Peces-Barba"
+					alt="Kevin' picture."
 				/>
 				<h1>Kevin Romero Peces-Barba</h1>
 				<ul>
 					<li>
 						<a
-						   	id="mail_anchor"
-							class="at"
+						  id="mail_anchor"
 							href=""
 							target="_blank"
-						></a>
+							aria-label="Link to send Kevin an email."
+						><i class="at" role="icon" aria-label="Icon showing the @ symbol."></i>Email</a>
 					</li>
 					<li>
 						<a
-							class="gh"
 							href="https://github.com/kevinrpb"
 							target="_blank"
-						></a>
+							aria-label="Link to Kevin's Github profile."
+						><i class="gh" role="icon" aria-label="Icon showing Github's octocat."></i>GitHub</a>
 					</li>
 					<li>
 						<a
-							class="in"
 							href="https://linkedin.com/in/kevinrpb"
 							target="_blank"
-						></a>
+							aria-label="Link to Kevin's Linkedin profile."
+						><i class="in" role="icon" aria-label="Icon that resembles Linkedin's logo."></i>Linkedin</a>
 					</li>
 					<li>
 						<a
-							class="cv"
 							href="https://cv.kevinrpb.me"
-						></a>
+							aria-label="Link to Kevin's resume page."
+						><i class="cv" role="icon" aria-label="Icon showing a piece of paper."></i>Resume</a>
 					</li>
 				</ul>
 			</div>
