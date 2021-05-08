@@ -16,3 +16,7 @@ for (let i = 0; i < mail_coded.length; i++) {
     mail_link += mail_key.charAt(mail_ltr)
   }
 }
+
+function setMailById(elementId) {
+  document.getElementById(elementId).href = `mailto:${mail_link}`
+}

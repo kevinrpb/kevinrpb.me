@@ -45,11 +45,29 @@ const concatOptions = {
   build: {
     src: [
       'src/assets/kweb/js/util/mailobfuscator.js',
-      'src/assets/kweb/js/particles/util.js',
-      'src/assets/kweb/js/particles/stars.js',
       'src/assets/kweb/js/pages/home.js'
     ],
     dest: 'build/scripts.js'
+  }
+}
+
+const connectOptions = {
+  serve: {
+    options: {
+      base: 'build',
+      port: 8080,
+      livereload: true
+    }
+  }
+}
+
+const watchOptions = {
+  serve: {
+    options: {
+      livereload: true,
+    },
+    files: 'src/**/*',
+    tasks: 'default',
   }
 }
 
@@ -58,15 +76,18 @@ module.exports = function(grunt) {
     clean: cleanOptions,
     copy: copyOptions,
     sass: sassOptions,
-    concat: concatOptions
+    concat: concatOptions,
+    connect: connectOptions,
+    watch: watchOptions
   })
 
   grunt.loadNpmTasks('grunt-contrib-clean')
   grunt.loadNpmTasks('grunt-contrib-copy')
   grunt.loadNpmTasks('grunt-contrib-sass')
   grunt.loadNpmTasks('grunt-contrib-concat')
-  // grunt.loadNpmTasks('grunt-contrib-watch')
-  // grunt.loadNpmTasks('grunt-contrib-connect')
+  grunt.loadNpmTasks('grunt-contrib-connect')
+  grunt.loadNpmTasks('grunt-contrib-watch')
 
+  grunt.registerTask('serve', ['connect', 'watch'])
   grunt.registerTask('default', ['clean', 'copy', 'sass', 'concat'])
 }
