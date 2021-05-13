@@ -3,7 +3,7 @@
 @import 'elements/icons';
 
 body {
-  background-color: $alice-blue;
+  background-color: lighten($manatee, 25%);
 
   @include breakpoint(md) {
     background-color: $manatee
