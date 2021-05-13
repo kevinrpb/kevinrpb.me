@@ -17,6 +17,12 @@ for (let i = 0; i < mail_coded.length; i++) {
   }
 }
 
-function setMailById(elementId) {
-  document.getElementById(elementId).href = `mailto:${mail_link}`
+function setMailById(elementId, href=false, content=false) {
+  element = document.getElementById(elementId)
+
+  if (href)
+    element.href = `mailto:${mail_link}`
+
+  if (content)
+    element.text = `${mail_link}`
 }

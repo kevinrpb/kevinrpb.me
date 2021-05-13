@@ -14,6 +14,20 @@ const copyOptions = {
       },
       {
         expand: true,
+        cwd: 'src/assets/img/',
+        src: '*',
+        dest: 'build/img/',
+        filter: 'isFile'
+      },
+      {
+        expand: true,
+        cwd: 'src/assets/img/cats/',
+        src: '*',
+        dest: 'build/img/cats/',
+        filter: 'isFile'
+      },
+      {
+        expand: true,
         cwd: 'src/assets/kweb/img/',
         src: '*',
         dest: 'build/img/',

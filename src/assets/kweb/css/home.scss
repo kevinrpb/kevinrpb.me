@@ -11,20 +11,20 @@ body {
 }
 
 section {
-  margin: 1em;
-  padding: 1em;
-  width: calc(100% - 4em);
+  width: calc(100% - 2em);
+  margin: auto;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
 
   @include breakpoint(sm) {
-    width: calc(70% - 4em);
+    width: calc(70% - 2em);
   }
 
   @include breakpoint(md) {
-    width: calc(100% - 4em);
+    width: calc(100% - 2em);
+    padding: 1em;
 
     background-color: $alice-blue;
     border-radius: 0.25em;
@@ -77,11 +77,11 @@ section#card {
   }
 
   @include breakpoint(sm) {
-    width: calc(70% - 6em);
+    width: calc(70% - 4em);
   }
 
   @include breakpoint(md) {
-    width: calc(100% - 6em);
+    width: calc(100% - 4em);
 
     display: grid;
     grid-template-rows: auto auto;
@@ -107,10 +107,17 @@ section#card {
   }
 }
 
-section.info {
+article > section {
+  flex-direction: row;
+  flex-wrap: wrap;
+  align-items: flex-start;
   margin-top: 4em;
-  align-items: baseline;
   position: relative;
+
+  > * {
+    width: 100%;
+    color: $space-cadet;
+  }
 
   h2 {
     margin: 0;
@@ -120,11 +127,38 @@ section.info {
     font-size: 2em;
     position: absolute;
     top: -2em;
-    color: $space-cadet;
+  }
+
+  img {
+    width: 80%;
+    margin: 1em auto;
+    border-radius: 0.25em;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.19), 0 6px 6px rgba(0, 0, 0, 0.23);
+
+    &.left {
+      margin: 0;
+      padding: 0;
+      float: left;
+      width: 30%;
+
+      & + p {
+        width: calc(70% - 1em);
+        margin-left: 1em;
+        margin-top: -0.5em;
+
+        @include breakpoint(md) {
+          margin-top: 0.5em;
+        }
+      }
+    }
   }
 
   p {
     margin: 0;
     text-align: justify;
+
+    &:nth-child(n+3) {
+      margin-top: 0.5em;
+    }
   }
 }
