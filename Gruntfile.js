@@ -46,8 +46,8 @@ const sassOptions = {
     files: [
       {
         expand: true,
-        cwd: 'src/assets/kweb/css/',
-        src: 'home.scss',
+        cwd: 'src/assets/',
+        src: 'styles.scss',
         dest: 'build/',
         ext: '.css'
       }
@@ -60,7 +60,7 @@ const concatOptions = {
   build: {
     src: [
       'src/assets/kweb/js/util/mailobfuscator.js',
-      'src/assets/kweb/js/pages/home.js'
+      'src/assets/scripts.js'
     ],
     dest: 'build/scripts.js'
   }
@@ -106,6 +106,6 @@ module.exports = function(grunt) {
   grunt.loadNpmTasks('grunt-contrib-connect')
   grunt.loadNpmTasks('grunt-contrib-watch')
 
-  grunt.registerTask('serve', ['connect', 'watch'])
   grunt.registerTask('default', ['clean', 'copy', 'dart-sass', 'concat'])
+  grunt.registerTask('serve', ['default', 'connect', 'watch'])
 }
