@@ -55,6 +55,7 @@ const connectOptions = {
   serve: {
     options: {
       base: 'build',
+      hostname: 'localhost',
       port: 8080,
       livereload: true
     }
@@ -64,7 +65,7 @@ const connectOptions = {
 const watchOptions = {
   serve: {
     options: {
-      livereload: true,
+      livereload: 35729,
     },
     files: 'src/**/*',
     tasks: 'default',
