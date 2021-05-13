@@ -50,25 +50,27 @@ main section {
 }
 
 * {
+  color: #2a2c41;
   font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", Helvetica, Arial, sans-serif;
 }
 
+a {
+  color: #ef253c;
+}
+
 body {
-  background-color: #979797;
+  background-color: #8e9aaf;
 }
 
 header {
-  background-color: #ccccff;
+  background-color: #2a2c41;
 }
 
 i[role=icon] {
   width: 30px;
   height: 30px;
-  margin-bottom: 0.5em;
   background-size: 100% 100%;
   background-repeat: no-repeat;
-  background-color: white;
-  /* border-radius: 50%; */
 }
 
 i[role=icon].at {
@@ -91,28 +93,38 @@ i[role=icon].cv {
   mask-image: url("img/file-text.svg");
 }
 
+body {
+  background-color: #ecf1f3;
+  /* Medium devices (landscape tablets) */
+}
+@media only screen and (min-width: 768px) {
+  body {
+    background-color: #8e9aaf;
+  }
+}
+
 section {
-  margin: 1em;
-  padding: 1em;
-  width: calc(100% - 4em);
+  width: calc(100% - 2em);
+  margin: auto;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  background-color: white;
-  border-radius: 0.25em;
-  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.19), 0 6px 6px rgba(0, 0, 0, 0.23);
   /* Small devices (portrait tablets and large phones) */
   /* Medium devices (landscape tablets) */
 }
 @media only screen and (min-width: 600px) {
   section {
-    width: calc(70% - 4em);
+    width: calc(70% - 2em);
   }
 }
 @media only screen and (min-width: 768px) {
   section {
-    width: calc(100% - 4em);
+    width: calc(100% - 2em);
+    padding: 1em;
+    background-color: #ecf1f3;
+    border-radius: 0.25em;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.19), 0 6px 6px rgba(0, 0, 0, 0.23);
   }
 }
 
@@ -125,18 +137,20 @@ section#card {
 section#card img {
   display: block;
   width: 50%;
-  border: 0.5em solid black;
+  border: 0.5em solid #2a2c41;
   border-radius: 50%;
   box-shadow: 0 10px 20px rgba(0, 0, 0, 0.19), 0 6px 6px rgba(0, 0, 0, 0.23);
 }
 section#card h1 {
   font-size: 2em;
   text-align: center;
+  color: #2a2c41;
 }
 section#card nav {
   display: flex;
   justify-content: center;
   align-items: center;
+  flex-wrap: wrap;
   margin-top: 2em;
 }
 section#card nav a {
@@ -146,22 +160,22 @@ section#card nav a {
   justify-content: space-between;
   align-content: center;
   align-items: center;
-  color: black;
+  color: #2a2c41;
 }
 section#card nav a:not(:first-child) {
   margin-left: 1em;
 }
 section#card nav a i[role=icon] {
-  background-color: black;
+  background-color: #2a2c41;
 }
 @media only screen and (min-width: 600px) {
   section#card {
-    width: calc(70% - 6em);
+    width: calc(70% - 4em);
   }
 }
 @media only screen and (min-width: 768px) {
   section#card {
-    width: calc(100% - 6em);
+    width: calc(100% - 4em);
     display: grid;
     grid-template-rows: auto auto;
     grid-template-columns: 2fr 5fr;
@@ -181,12 +195,18 @@ section#card nav a i[role=icon] {
   }
 }
 
-section.info {
+article > section {
+  flex-direction: row;
+  flex-wrap: wrap;
+  align-items: flex-start;
   margin-top: 4em;
-  align-items: baseline;
   position: relative;
 }
-section.info h2 {
+article > section > * {
+  width: 100%;
+  color: #2a2c41;
+}
+article > section h2 {
   margin: 0;
   padding: 0;
   size: 2em;
@@ -194,18 +214,36 @@ section.info h2 {
   font-size: 2em;
   position: absolute;
   top: -2em;
-  color: #f2f2f2;
-  text-shadow: 0 10px 20px rgba(0, 0, 0, 0.19), 0 6px 6px rgba(0, 0, 0, 0.23);
 }
-section.info p {
+article > section img {
+  width: 80%;
+  margin: 1em auto;
+  border-radius: 0.25em;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.19), 0 6px 6px rgba(0, 0, 0, 0.23);
+}
+article > section img.left {
+  margin: 0;
+  padding: 0;
+  float: left;
+  width: 30%;
+}
+article > section img.left + p {
+  width: calc(70% - 1em);
+  margin-left: 1em;
+  margin-top: -0.5em;
+  /* Medium devices (landscape tablets) */
+}
+@media only screen and (min-width: 768px) {
+  article > section img.left + p {
+    margin-top: 0.5em;
+  }
+}
+article > section p {
   margin: 0;
   text-align: justify;
 }
-section.info p a {
-  color: #8080ff;
-}
-section.info:nth-child(2) {
-  margin-top: 6em;
+article > section p:nth-child(n+3) {
+  margin-top: 0.5em;
 }
 
 /*# sourceMappingURL=home.css.map */
