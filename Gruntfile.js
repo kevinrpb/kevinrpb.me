@@ -40,7 +40,8 @@ const copyOptions = {
 const sassOptions = {
   build: {
     options: {
-      style: 'expanded'
+      style: 'expanded',
+      sourceMap: false
     },
     files: [
       {
@@ -90,7 +91,8 @@ module.exports = function(grunt) {
   grunt.initConfig({
     clean: cleanOptions,
     copy: copyOptions,
-    sass: sassOptions,
+    // sass: sassOptions,
+    'dart-sass': sassOptions,
     concat: concatOptions,
     connect: connectOptions,
     watch: watchOptions
@@ -98,11 +100,12 @@ module.exports = function(grunt) {
 
   grunt.loadNpmTasks('grunt-contrib-clean')
   grunt.loadNpmTasks('grunt-contrib-copy')
-  grunt.loadNpmTasks('grunt-contrib-sass')
+  // grunt.loadNpmTasks('grunt-contrib-sass')
+  grunt.loadNpmTasks('grunt-dart-sass')
   grunt.loadNpmTasks('grunt-contrib-concat')
   grunt.loadNpmTasks('grunt-contrib-connect')
   grunt.loadNpmTasks('grunt-contrib-watch')
 
   grunt.registerTask('serve', ['connect', 'watch'])
-  grunt.registerTask('default', ['clean', 'copy', 'sass', 'concat'])
+  grunt.registerTask('default', ['clean', 'copy', 'dart-sass', 'concat'])
 }
