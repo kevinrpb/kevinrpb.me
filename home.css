@@ -1,0 +1,249 @@
+html,
+body {
+  margin: 0;
+  padding: 0;
+}
+
+header {
+  width: 100%;
+  /* Medium devices (landscape tablets) */
+}
+@media only screen and (min-width: 768px) {
+  header {
+    height: 7em;
+  }
+}
+
+main {
+  margin: auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  /* Medium devices (landscape tablets) */
+  /* Large devices (laptops/desktops) */
+  /* Extra large devices (large laptops and desktops) */
+}
+main section {
+  display: flex;
+  flex-direction: column;
+}
+@media only screen and (min-width: 768px) {
+  main {
+    width: 80vw;
+    transform: translateY(-2em);
+  }
+}
+@media only screen and (min-width: 992px) {
+  main {
+    width: 65vw;
+  }
+}
+@media only screen and (min-width: 1200px) {
+  main {
+    width: 60vw;
+  }
+}
+@media only screen and (min-width: 1400px) {
+  main {
+    width: 50vw;
+  }
+}
+
+* {
+  color: #2a2c41;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", Helvetica, Arial, sans-serif;
+}
+
+a {
+  color: #ef253c;
+}
+
+body {
+  background-color: #8e9aaf;
+}
+
+header {
+  background-color: #2a2c41;
+}
+
+i[role=icon] {
+  width: 30px;
+  height: 30px;
+  background-size: 100% 100%;
+  background-repeat: no-repeat;
+}
+
+i[role=icon].at {
+  -webkit-mask-image: url("img/at-sign.svg");
+  mask-image: url("img/at-sign.svg");
+}
+
+i[role=icon].gh {
+  -webkit-mask-image: url("img/github.svg");
+  mask-image: url("img/github.svg");
+}
+
+i[role=icon].in {
+  -webkit-mask-image: url("img/linkedin.svg");
+  mask-image: url("img/linkedin.svg");
+}
+
+i[role=icon].cv {
+  -webkit-mask-image: url("img/file-text.svg");
+  mask-image: url("img/file-text.svg");
+}
+
+body {
+  background-color: #d8dce3;
+  /* Medium devices (landscape tablets) */
+}
+@media only screen and (min-width: 768px) {
+  body {
+    background-color: #8e9aaf;
+  }
+}
+
+section {
+  width: calc(100% - 2em);
+  margin: auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  /* Small devices (portrait tablets and large phones) */
+  /* Medium devices (landscape tablets) */
+}
+@media only screen and (min-width: 600px) {
+  section {
+    width: calc(70% - 2em);
+  }
+}
+@media only screen and (min-width: 768px) {
+  section {
+    width: calc(100% - 2em);
+    padding: 1em;
+    background-color: #ecf1f3;
+    border-radius: 0.25em;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.19), 0 6px 6px rgba(0, 0, 0, 0.23);
+  }
+}
+
+section#card {
+  padding: 2em;
+  width: calc(100% - 6em);
+  /* Small devices (portrait tablets and large phones) */
+  /* Medium devices (landscape tablets) */
+}
+section#card img {
+  display: block;
+  width: 50%;
+  border: 0.5em solid #2a2c41;
+  border-radius: 50%;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.19), 0 6px 6px rgba(0, 0, 0, 0.23);
+}
+section#card h1 {
+  font-size: 2em;
+  text-align: center;
+  color: #2a2c41;
+}
+section#card nav {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  margin-top: 2em;
+}
+section#card nav a {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: nowrap;
+  justify-content: space-between;
+  align-content: center;
+  align-items: center;
+  color: #2a2c41;
+}
+section#card nav a:not(:first-child) {
+  margin-left: 1em;
+}
+section#card nav a i[role=icon] {
+  background-color: #2a2c41;
+}
+@media only screen and (min-width: 600px) {
+  section#card {
+    width: calc(70% - 4em);
+  }
+}
+@media only screen and (min-width: 768px) {
+  section#card {
+    width: calc(100% - 4em);
+    display: grid;
+    grid-template-rows: auto auto;
+    grid-template-columns: 2fr 5fr;
+    grid-template-areas: "image name" "image links";
+  }
+  section#card img {
+    grid-area: image;
+    width: calc(100% - 2em);
+  }
+  section#card h1 {
+    grid-area: name;
+    margin: 0.5em;
+  }
+  section#card nav {
+    grid-area: links;
+    margin-top: 0.5em;
+  }
+}
+
+article > section {
+  flex-direction: row;
+  flex-wrap: wrap;
+  align-items: flex-start;
+  margin-top: 4em;
+  position: relative;
+}
+article > section > * {
+  width: 100%;
+  color: #2a2c41;
+}
+article > section h2 {
+  margin: 0;
+  padding: 0;
+  size: 2em;
+  line-height: 2em;
+  font-size: 2em;
+  position: absolute;
+  top: -2em;
+}
+article > section img {
+  width: 80%;
+  margin: 1em auto;
+  border-radius: 0.25em;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.19), 0 6px 6px rgba(0, 0, 0, 0.23);
+}
+article > section img.left {
+  margin: 0;
+  padding: 0;
+  float: left;
+  width: 30%;
+}
+article > section img.left + p {
+  width: calc(70% - 1em);
+  margin-left: 1em;
+  margin-top: -0.5em;
+  /* Medium devices (landscape tablets) */
+}
+@media only screen and (min-width: 768px) {
+  article > section img.left + p {
+    margin-top: 0.5em;
+  }
+}
+article > section p {
+  margin: 0;
+  text-align: justify;
+}
+article > section p:nth-child(n+3) {
+  margin-top: 0.5em;
+}
+
+/*# sourceMappingURL=home.css.map */
