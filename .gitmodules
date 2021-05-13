@@ -1,0 +1,3 @@
+[submodule "kweb"]
+	path = src/assets/kweb
+	url = git@github.com:kevinrpb/kweb.git
