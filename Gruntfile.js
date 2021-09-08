@@ -52,8 +52,8 @@ const concatOptions = {
   options: {},
   build: {
     src: [
-      'src/assets/js/util/mailobfuscator.js',
-      'src/assets/js/util/colorscheme.js',
+      'src/assets/js/util/*.js',
+      'src/assets/js/particles/*.js',
       'src/assets/js/main.js',
       'src/assets/scripts.js'
     ],

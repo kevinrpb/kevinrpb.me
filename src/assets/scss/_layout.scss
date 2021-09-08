@@ -2,4 +2,137 @@ html,
 body {
 	margin: 0;
 	padding: 0;
+
+	overflow: hidden;
+}
+
+canvas#canvas {
+	position: absolute;
+	left: 0;
+	top: 0;
+	right: 0;
+	bottom: 0;
+
+	z-index: -1000;
+}
+
+main {
+	position: absolute;
+	left: 0;
+	top: 0;
+	right: 0;
+	bottom: 0;
+
+	z-index: 1000;
+
+	overflow-y: scroll;
+
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+
+	article {
+		margin: 1em;
+		padding: 2em;
+
+		section {
+
+			&[card] {
+				margin-bottom: 2em;
+
+				display: flex;
+				flex-direction: column;
+				justify-content: center;
+				align-items: center;
+
+				img {
+					display: block;
+					margin: 1em;
+					width: 10em;
+				}
+
+				nav {
+					display: flex;
+					justify-content: center;
+					align-items: center;
+					flex-wrap: wrap;
+
+					a {
+						display: flex;
+						flex-direction: column;
+						flex-wrap: nowrap;
+						justify-content: space-between;
+						align-content: center;
+						align-items: center;
+
+						&:not(:first-child) {
+							margin-left: 1em;
+						}
+					}
+				}
+			}
+		}
+	}
+}
+
+@include breakpoint(sm) {
+	main {
+		article {
+			margin: 1em 3em;
+		}
+	}
+}
+
+@include breakpoint(md) {
+	main {
+		article {
+			margin: 1em 4em;
+			padding: 3em;
+
+			section {
+				&[card] {
+					display: grid;
+					grid-template-rows: auto auto;
+					grid-template-columns: 2fr 5fr;
+					grid-template-areas:
+						"image empty1"
+						"image name"
+						"image links"
+						"image empty2";
+
+					img {
+						grid-area: image;
+						width: calc(100% - 2em);
+					}
+
+					h1 {
+						grid-area: name;
+						margin: 0;
+					}
+
+					nav {
+						grid-area: links;
+						margin-top: 2em;
+					}
+				}
+			}
+		}
+	}
+}
+
+@include breakpoint(lg) {
+	main {
+		article {
+			margin: 1em 8em;
+		}
+	}
+}
+
+@include breakpoint(xl) {
+	main {
+		article {
+			width: 50em;
+		}
+	}
 }

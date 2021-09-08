@@ -70,24 +70,12 @@ function map(val, min1, max1, min2, max2) {
 }
 
 let canvas,
-  color_scheme = 'dark'
+  color_scheme
+
 function setupParticleCanvas() {
   // Check initial color scheme
-  if (matchMedia('(prefers-color-scheme: light)').matches) {
-    color_scheme = 'light'
-  }
-  // Add listeners for color scheme
-  window.matchMedia('(prefers-color-scheme: light)').addListener((e) => {
-    if (e.matches) color_scheme = 'light'
-  })
-
-  window.matchMedia('(prefers-color-scheme: dark)').addListener((e) => {
-    if (e.matches) color_scheme = 'dark'
-  })
-
-  window.matchMedia('(prefers-color-scheme: no-preference)').addListener((e) => {
-    if (e.matches) color_scheme = 'dark'
-  })
+  color_scheme = getColorScheme()
+  handleColorScheme(scheme => color_scheme = scheme)
 
   // Init canvas
   canvas = createCanvas('canvas')
@@ -125,7 +113,9 @@ function setupParticleCanvas() {
 
 let stars = []
 function drawParticleCanvas() {
-  color_scheme === 'dark' ? canvas.bg(7, 11, 32) : canvas.bg(245, 245, 245)
+  color_scheme === 'dark'
+    ? canvas.bg(42, 44, 65) // Space Cadet
+    : canvas.bg(236, 241, 243) // Alice Blue
 
   // Update translation -> parallax
   canvas.setTranslate(
@@ -135,7 +125,9 @@ function drawParticleCanvas() {
 
   // Update stars and delete if needed (if lifespan overlived)
   for (let i = stars.length - 1; i > -1; i--) {
-    color_scheme === 'dark' ? stars[i].render(canvas, 255) : stars[i].render(canvas, 0)
+    color_scheme === 'dark'
+      ? stars[i].render(canvas, 255)
+      : stars[i].render(canvas, 0)
 
     stars[i].update()
     if (stars[i].life >= stars[i].lifespan) {
@@ -147,7 +139,7 @@ function drawParticleCanvas() {
   addStars(0, 3, 0.05)
   addShootingStars(0, 3, 0.05)
 
-  requestAnimationFrame(draw)
+  requestAnimationFrame(drawParticleCanvas)
 }
 
 function addStars(min, max, p) {
