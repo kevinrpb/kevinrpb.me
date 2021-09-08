@@ -25,13 +25,6 @@ const copyOptions = {
         src: '*',
         dest: 'build/img/cats/',
         filter: 'isFile'
-      },
-      {
-        expand: true,
-        cwd: 'src/assets/kweb/img/',
-        src: '*',
-        dest: 'build/img/',
-        filter: 'isFile'
       }
     ]
   }
@@ -59,7 +52,9 @@ const concatOptions = {
   options: {},
   build: {
     src: [
-      'src/assets/kweb/js/util/mailobfuscator.js',
+      'src/assets/js/util/mailobfuscator.js',
+      'src/assets/js/util/colorscheme.js',
+      'src/assets/js/main.js',
       'src/assets/scripts.js'
     ],
     dest: 'build/scripts.js'
