@@ -49,6 +49,7 @@ main {
 					display: block;
 					margin: 1em;
 					width: 10em;
+					height: 10em;
 				}
 
 				nav {
@@ -83,6 +84,12 @@ main {
 	}
 }
 
+@include breakpoint-h(sm) {
+	main {
+		justify-content: center;
+	}
+}
+
 @include breakpoint(md) {
 	main {
 		article {
@@ -102,7 +109,8 @@ main {
 
 					img {
 						grid-area: image;
-						width: calc(100% - 2em);
+						width: 16vw;
+						height: 16vw;
 					}
 
 					h1 {
@@ -124,6 +132,15 @@ main {
 	main {
 		article {
 			margin: 1em 8em;
+
+			section {
+				&[card] {
+					img {
+						width: 13vw;
+						height: 13vw;
+					}
+				}
+			}
 		}
 	}
 }
@@ -132,6 +149,15 @@ main {
 	main {
 		article {
 			width: 50em;
+
+			section {
+				&[card] {
+					img {
+						width: 10vw;
+						height: 10vw;
+					}
+				}
+			}
 		}
 	}
 }
