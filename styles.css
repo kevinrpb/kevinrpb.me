@@ -1,45 +1,54 @@
 i[role=icon] {
   width: 30px;
   height: 30px;
+  background: transparent;
+  background-position: center;
   background-size: 100% 100%;
   background-repeat: no-repeat;
 }
 
 i[role=icon].at {
-  -webkit-mask-image: url("img/at-sign.svg");
-  mask-image: url("img/at-sign.svg");
+  -webkit-mask-image: url("/img/icon/at-sign.svg");
+  mask-image: url("/img/icon/at-sign.svg");
 }
 
 i[role=icon].gh {
-  -webkit-mask-image: url("img/github.svg");
-  mask-image: url("img/github.svg");
+  -webkit-mask-image: url("/img/icon/github.svg");
+  mask-image: url("/img/icon/github.svg");
 }
 
 i[role=icon].in {
-  -webkit-mask-image: url("img/linkedin.svg");
-  mask-image: url("img/linkedin.svg");
+  -webkit-mask-image: url("/img/icon/linkedin.svg");
+  mask-image: url("/img/icon/linkedin.svg");
 }
 
 i[role=icon].cv {
-  -webkit-mask-image: url("img/file-text.svg");
-  mask-image: url("img/file-text.svg");
+  -webkit-mask-image: url("/img/icon/file-text.svg");
+  mask-image: url("/img/icon/file-text.svg");
 }
 
 i[role=icon].proj {
-  -webkit-mask-image: url("img/tool.svg");
-  mask-image: url("img/tool.svg");
+  -webkit-mask-image: url("/img/icon/tool.svg");
+  mask-image: url("/img/icon/tool.svg");
 }
 
 i[role=icon].blog {
-  -webkit-mask-image: url("img/edit-2.svg");
-  mask-image: url("img/edit-2.svg");
+  -webkit-mask-image: url("/img/icon/edit-2.svg");
+  mask-image: url("/img/icon/edit-2.svg");
+}
+
+i[role=icon].az {
+  background-image: url("/img/icon/amazon.png");
+}
+
+i[role=icon].kubii {
+  background-image: url("/img/icon/kubii.png");
 }
 
 html,
 body {
   margin: 0;
   padding: 0;
-  overflow: hidden;
 }
 
 canvas#canvas {
@@ -56,7 +65,7 @@ main {
   left: 0;
   top: 0;
   right: 0;
-  bottom: 0;
+  min-height: 100vh;
   z-index: 1000;
   overflow-y: scroll;
   display: flex;
@@ -126,7 +135,7 @@ main article section[card] nav a:not(:first-child) {
     width: 16vw;
     height: 16vw;
   }
-  main article section[card] h1 {
+  main article section[card] h1, main article section[card] h2 {
     grid-area: name;
     margin: 0;
   }
@@ -178,6 +187,12 @@ main article {
   border-radius: 6px;
   box-shadow: 0 10px 20px rgba(0, 0, 0, 0.19), 0 6px 6px rgba(0, 0, 0, 0.23);
 }
+main article h1 {
+  font-size: 2em;
+  text-align: center;
+  margin-top: 0;
+  margin-bottom: 2em;
+}
 main article section {
   color: #202231;
 }
@@ -194,11 +209,18 @@ main article section[card] h1 {
   font-size: 2em;
   text-align: center;
 }
+main article section[card] h2 {
+  font-size: 1.5em;
+  text-align: center;
+}
 main article section[card] nav a {
   color: #202231;
 }
 main article section[card] nav a i {
   background-color: #202231;
+}
+main article section[card] nav a i.no-bg {
+  background-color: transparent;
 }
 
 /* Large devices (laptops/desktops) */
