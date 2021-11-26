@@ -1,76 +1,93 @@
 * {
-	// color: $space-cadet;
-	font-family: "Fira Sans", -apple-system, BlinkMacSystemFont, "Segoe UI", "Apple Color Emoji", "Segoe UI Emoji",
-		"Segoe UI Symbol", Helvetica, Arial, sans-serif;
+  // color: $space-cadet;
+  font-family: "Fira Sans", -apple-system, BlinkMacSystemFont, "Segoe UI", "Apple Color Emoji", "Segoe UI Emoji",
+    "Segoe UI Symbol", Helvetica, Arial, sans-serif;
 }
 
 html,
 body,
 canvas#canvas {
-	background-color: $alice-blue;
+  background-color: $alice-blue;
 }
 
 @media screen and (prefers-color-scheme: 'dark') {
-	html,
-	body,
-	canvas#canvas {
-		background-color: $space-cadet;
-	}
+  html,
+  body,
+  canvas#canvas {
+    background-color: $space-cadet;
+  }
 }
 
 main {
 
-	article {
-		background-color: rgba(white, 0.5);
-		backdrop-filter: blur(6px);
-		border-radius: 6px;
-		box-shadow: 0 10px 20px rgba(0, 0, 0, 0.19), 0 6px 6px rgba(0, 0, 0, 0.23);
+  article {
+    background-color: rgba(white, 0.5);
+    backdrop-filter: blur(6px);
+    border-radius: 6px;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.19), 0 6px 6px rgba(0, 0, 0, 0.23);
 
-		section {
-			color: darken($space-cadet, 5%);
+    h1 {
+      font-size: 2em;
+      text-align: center;
 
-			a {
-				color: darken($amaranth-red, 10%);
-			}
+      margin-top: 0;
+      margin-bottom: 2em;
+    }
 
-			&[card] {
-				img {
-					border: 0.5em solid $space-cadet;
-					border-radius: 50%;
-					box-shadow: 0 10px 20px rgba(0, 0, 0, 0.19), 0 6px 6px rgba(0, 0, 0, 0.23);
-					background-color: $space-cadet;
-				}
+    section {
+      color: darken($space-cadet, 5%);
 
-				h1 {
-					font-size: 2em;
-					text-align: center;
-				}
+      a {
+        color: darken($amaranth-red, 10%);
+      }
 
-				nav {
-					a {
-						color: darken($space-cadet, 5%);
-						i {
-							background-color: darken($space-cadet, 5%);
-						}
-					}
-				}
-			}
-		}
-	}
+      &[card] {
+        img {
+          border: 0.5em solid $space-cadet;
+          border-radius: 50%;
+          box-shadow: 0 10px 20px rgba(0, 0, 0, 0.19), 0 6px 6px rgba(0, 0, 0, 0.23);
+          background-color: $space-cadet;
+        }
+
+        h1 {
+          font-size: 2em;
+          text-align: center;
+        }
+
+        h2 {
+          font-size: 1.5em;
+          text-align: center;
+        }
+
+        nav {
+          a {
+            color: darken($space-cadet, 5%);
+            i {
+              background-color: darken($space-cadet, 5%);
+
+              &.no-bg {
+                background-color: transparent;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
 }
 
 
 @include breakpoint(lg) {
-	main {
-		article {
+  main {
+    article {
 
-			section {
-				&[card] {
-					h1 {
-						font-size: 2.5em;
-					}
-				}
-			}
-		}
-	}
+      section {
+        &[card] {
+          h1 {
+            font-size: 2.5em;
+          }
+        }
+      }
+    }
+  }
 }

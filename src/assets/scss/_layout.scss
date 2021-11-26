@@ -1,163 +1,161 @@
 html,
 body {
-	margin: 0;
-	padding: 0;
-
-	overflow: hidden;
+  margin: 0;
+  padding: 0;
 }
 
 canvas#canvas {
-	position: absolute;
-	left: 0;
-	top: 0;
-	right: 0;
-	bottom: 0;
+  position: absolute;
+  left: 0;
+  top: 0;
+  right: 0;
+  bottom: 0;
 
-	z-index: -1000;
+  z-index: -1000;
 }
 
 main {
-	position: absolute;
-	left: 0;
-	top: 0;
-	right: 0;
-	bottom: 0;
+  position: absolute;
+  left: 0;
+  top: 0;
+  right: 0;
+  min-height: 100vh;
 
-	z-index: 1000;
+  z-index: 1000;
 
-	overflow-y: scroll;
+  overflow-y: scroll;
 
-	display: flex;
-	flex-direction: column;
-	align-items: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 
-	article {
-		margin: 1em;
-		padding: 2em;
+  article {
+    margin: 1em;
+    padding: 2em;
 
-		section {
+    section {
 
-			&[card] {
-				margin-bottom: 2em;
+      &[card] {
+        margin-bottom: 2em;
 
-				display: flex;
-				flex-direction: column;
-				justify-content: center;
-				align-items: center;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
 
-				img {
-					display: block;
-					margin: 1em;
-					width: 10em;
-					height: 10em;
-				}
+        img {
+          display: block;
+          margin: 1em;
+          width: 10em;
+          height: 10em;
+        }
 
-				nav {
-					display: flex;
-					justify-content: center;
-					align-items: center;
-					flex-wrap: wrap;
+        nav {
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          flex-wrap: wrap;
 
-					a {
-						display: flex;
-						flex-direction: column;
-						flex-wrap: nowrap;
-						justify-content: space-between;
-						align-content: center;
-						align-items: center;
+          a {
+            display: flex;
+            flex-direction: column;
+            flex-wrap: nowrap;
+            justify-content: space-between;
+            align-content: center;
+            align-items: center;
 
-						&:not(:first-child) {
-							margin-left: 1em;
-						}
-					}
-				}
-			}
-		}
-	}
+            &:not(:first-child) {
+              margin-left: 1em;
+            }
+          }
+        }
+      }
+    }
+  }
 }
 
 @include breakpoint(sm) {
-	main {
-		article {
-			margin: 1em 3em;
-		}
-	}
+  main {
+    article {
+      margin: 1em 3em;
+    }
+  }
 }
 
 @include breakpoint-h(sm) {
-	main {
-		justify-content: center;
-	}
+  main {
+    justify-content: center;
+  }
 }
 
 @include breakpoint(md) {
-	main {
-		article {
-			margin: 1em 4em;
-			padding: 3em;
+  main {
+    article {
+      margin: 1em 4em;
+      padding: 3em;
 
-			section {
-				&[card] {
-					display: grid;
-					grid-template-rows: auto auto;
-					grid-template-columns: 2fr 5fr;
-					grid-template-areas:
-						"image empty1"
-						"image name"
-						"image links"
-						"image empty2";
+      section {
+        &[card] {
+          display: grid;
+          grid-template-rows: auto auto;
+          grid-template-columns: 2fr 5fr;
+          grid-template-areas:
+            "image empty1"
+            "image name"
+            "image links"
+            "image empty2";
 
-					img {
-						grid-area: image;
-						width: 16vw;
-						height: 16vw;
-					}
+          img {
+            grid-area: image;
+            width: 16vw;
+            height: 16vw;
+          }
 
-					h1 {
-						grid-area: name;
-						margin: 0;
-					}
+          h1, h2 {
+            grid-area: name;
+            margin: 0;
+          }
 
-					nav {
-						grid-area: links;
-						margin-top: 2em;
-					}
-				}
-			}
-		}
-	}
+          nav {
+            grid-area: links;
+            margin-top: 2em;
+          }
+        }
+      }
+    }
+  }
 }
 
 @include breakpoint(lg) {
-	main {
-		article {
-			margin: 1em 8em;
+  main {
+    article {
+      margin: 1em 8em;
 
-			section {
-				&[card] {
-					img {
-						width: 13vw;
-						height: 13vw;
-					}
-				}
-			}
-		}
-	}
+      section {
+        &[card] {
+          img {
+            width: 13vw;
+            height: 13vw;
+          }
+        }
+      }
+    }
+  }
 }
 
 @include breakpoint(xl) {
-	main {
-		article {
-			width: 50em;
+  main {
+    article {
+      width: 50em;
 
-			section {
-				&[card] {
-					img {
-						width: 10vw;
-						height: 10vw;
-					}
-				}
-			}
-		}
-	}
+      section {
+        &[card] {
+          img {
+            width: 10vw;
+            height: 10vw;
+          }
+        }
+      }
+    }
+  }
 }

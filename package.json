@@ -4,6 +4,7 @@
   "description": "Personal website",
   "scripts": {
     "clean": "grunt clean",
+    "serve": "grunt serve",
     "build": "grunt"
   },
   "repository": {

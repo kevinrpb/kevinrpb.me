@@ -14,16 +14,16 @@ const copyOptions = {
       },
       {
         expand: true,
-        cwd: 'src/assets/img/',
+        cwd: 'src/wishlist',
         src: '*',
-        dest: 'build/img/',
+        dest: 'build/wishlist/',
         filter: 'isFile'
       },
       {
         expand: true,
-        cwd: 'src/assets/img/cats/',
-        src: '*',
-        dest: 'build/img/cats/',
+        cwd: 'src/assets/img/',
+        src: '**',
+        dest: 'build/img/',
         filter: 'isFile'
       }
     ]
