@@ -2,32 +2,33 @@ html,
 body {
   margin: 0;
   padding: 0;
+
+  // overflow-x: hidden;
 }
 
 canvas#canvas {
-  position: absolute;
+  position: fixed;
   left: 0;
   top: 0;
   right: 0;
   bottom: 0;
-
-  z-index: -1000;
 }
 
 main {
-  position: absolute;
-  left: 0;
-  top: 0;
-  right: 0;
   min-height: 100vh;
-
-  z-index: 1000;
-
-  overflow-y: scroll;
 
   display: flex;
   flex-direction: column;
   align-items: center;
+
+  z-index: 1000;
+
+  &[pad] {
+    $padding: 20vh;
+
+    min-height: #{100vh - 2*$padding};
+    padding: $padding 0;
+  }
 
   article {
     margin: 1em;

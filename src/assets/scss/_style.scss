@@ -21,6 +21,7 @@ canvas#canvas {
 main {
 
   article {
+    color: darken($space-cadet, 5%);
     background-color: rgba(white, 0.5);
     backdrop-filter: blur(6px);
     border-radius: 6px;
