@@ -4,8 +4,8 @@ import Head from 'next/head'
 import { NextSeo } from 'next-seo'
 
 
-export default function Page({ title, noFloating, children }) {
-  const _title = title ?? 'evin Romero Peces-Barba'
+export default function Page({ title, children }) {
+  const _title = title ?? 'Keevin Romero Peces-Barba'
 
   return (
     <>

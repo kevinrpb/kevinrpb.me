@@ -11,14 +11,14 @@ const Home = () => (
     <BackgroundCanvas id="canvas" />
 
     <main data-page="index">
-      <article>
+      <article className="deck">
         <section className='card'>
           <Image
             src="/img/kevin.png"
+            alt="Kevin' picture"
             width="500px"
             height="500px"
             layout="raw"
-            alt="Kevin' picture."
           />
           <h1>Kevin Romero Peces-Barba</h1>
           <nav>
