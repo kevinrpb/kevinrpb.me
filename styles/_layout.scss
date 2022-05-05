@@ -1,0 +1,54 @@
+html, body {
+  margin: 0;
+  padding: 0;
+}
+
+div#__next {
+  display: flex;
+  flex-direction: column;
+
+  main {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    min-height: 100vh;
+
+    z-index: 1000;
+  }
+}
+
+canvas.background-canvas {
+  width: 100vw;
+  height: 100vh;
+
+  position: fixed;
+  left: 0;
+  top: 0;
+  right: 0;
+  bottom: 0;
+
+  z-index: 0;
+}
+
+i.icon {
+  // width: 30px;
+  // height: 30px;
+
+  // background: transparent;
+  // background-position: center;
+  // background-size: 100% 100%;
+  // background-repeat: no-repeat;
+  svg {
+    width: 100%;
+    height: 100%;
+    stroke-width: 1;
+  }
+}
+
+h1, h2, h3, h4, h5, h6, button {
+  .icon svg {
+    width: auto;
+    height: auto;
+  }
+}
