@@ -1,6 +1,6 @@
 import React from 'react'
 
-import Image from 'next/image'
+import ExportedImage from 'next-image-export-optimizer'
 
 import Page from '@layouts/page'
 import BackgroundCanvas from '@components/background-canvas'
@@ -10,7 +10,7 @@ import wishlist from '@data/wishlist.json'
 
 const ItemCard = ({ imgSrc, imgAlt, title, links }) => (
   <section className='card item'>
-    <Image
+    <ExportedImage
       src={imgSrc}
       alt={imgAlt}
       width="500px"
