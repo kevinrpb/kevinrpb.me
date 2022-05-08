@@ -3,7 +3,7 @@
 // !
 
 @include breakpoint-h(sm) {
-  main[data-page="index"] {
+  main[data-page='index'] {
     justify-content: center;
   }
 }

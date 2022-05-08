@@ -5,7 +5,8 @@
       "url": "/",
       "icon": "website",
       "label": "kevinrpb.me"
-    }, {
+    },
+    {
       "url": "https://github.com/kevinrpb",
       "icon": "github",
       "label": "/kevinrpb"
@@ -36,7 +37,8 @@
           }
         }
       ]
-    }, {
+    },
+    {
       "title": "Work",
       "icon": "briefcase",
       "contents": [

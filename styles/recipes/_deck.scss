@@ -47,13 +47,11 @@ article.deck {
   }
 }
 
-
 @include breakpoint(sm) {
   article.deck {
     margin: 1em 3em;
   }
 }
-
 
 @include breakpoint(md) {
   article.deck {
@@ -65,10 +63,10 @@ article.deck {
       grid-template-rows: auto auto;
       grid-template-columns: 2fr 5fr;
       grid-template-areas:
-        "image empty1"
-        "image name"
-        "image links"
-        "image empty2";
+        'image empty1'
+        'image name'
+        'image links'
+        'image empty2';
 
       img {
         grid-area: image;
@@ -76,7 +74,8 @@ article.deck {
         height: 16vw;
       }
 
-      h1, h2 {
+      h1,
+      h2 {
         grid-area: name;
         margin: 0;
       }
@@ -114,7 +113,6 @@ article.deck {
     }
   }
 }
-
 
 // !
 // ! Theme

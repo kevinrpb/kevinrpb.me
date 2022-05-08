@@ -6,7 +6,6 @@ import Layout from '@layouts/base'
 
 import '@styles/main.scss'
 
-
 const MainApp = ({ Component, pageProps }) => (
   <Layout>
     <DefaultSeo

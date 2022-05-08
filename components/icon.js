@@ -2,7 +2,6 @@ import React from 'react'
 
 import dynamic from 'next/dynamic'
 
-
 const AiIcon = (name) =>
   dynamic(async () => {
     const _module = await import('react-icons/ai')
@@ -57,7 +56,7 @@ const _known_icons = {
   'map-signs': 'FaMapSigns',
   resume: 'FiFileText',
   school: 'FaGraduationCap',
-  twitter: 'FiTwitter'
+  twitter: 'FiTwitter',
 }
 
 const Icon = ({ name, className = '' }) => {

@@ -3,7 +3,7 @@
 // !
 
 @include breakpoint-h(sm) {
-  main[data-page="wishlist"] {
+  main[data-page='wishlist'] {
     justify-content: center;
   }
 }

@@ -10,7 +10,14 @@ const CV = () => (
     <BackgroundCanvas id='canvas' />
 
     <header data-page='cv'>
-      <SaneLink href='/files/kevinrpb_cv.pdf' className='pill percentage-100 shadow' target='_blank' rel='noopener noreferrer'>Download Resume</SaneLink>
+      <SaneLink
+        href='/files/kevinrpb_cv.pdf'
+        className='pill percentage-100 shadow'
+        target='_blank'
+        rel='noopener noreferrer'
+      >
+        Download Resume
+      </SaneLink>
     </header>
 
     <main data-page='cv'>
@@ -258,8 +265,8 @@ const CV = () => (
               </div>
               <div className='notes'>
                 <p>
-                  Collaborated with the University&apos;s Applied Artificial Intelligence Group (GIIA)
-                  and a telecommunications provider. My work consists in:
+                  Collaborated with the University&apos;s Applied Artificial Intelligence Group
+                  (GIIA) and a telecommunications provider. My work consists in:
                 </p>
                 <p className='item'>
                   Conducting research on the applications of machine learning for analyzing
@@ -412,8 +419,8 @@ const CV = () => (
               </div>
               <div className='notes'>
                 <p>
-                  Long 4me member in the student technology-focused club &quot;Imagineware&quot;. As part of
-                  this club, I have:
+                  Long 4me member in the student technology-focused club &quot;Imagineware&quot;. As
+                  part of this club, I have:
                 </p>
                 <p className='item'>Organized and taken part in different hackathons.</p>
                 <p className='item'>

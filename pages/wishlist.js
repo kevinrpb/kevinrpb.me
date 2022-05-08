@@ -10,23 +10,13 @@ import wishlist from '@data/wishlist.json'
 
 const ItemCard = ({ imgSrc, imgAlt, title, links }) => (
   <section className='card item'>
-    <ExportedImage
-      src={imgSrc}
-      alt={imgAlt}
-      width="500px"
-      height="500px"
-      layout="raw"
-    />
+    <ExportedImage src={imgSrc} alt={imgAlt} width='500px' height='500px' layout='raw' />
     <h2>{title}</h2>
     <nav>
       {links.map(({ site, icon, url }) => (
-        <a
-          key={url}
-          href={url}
-          target="_blank"
-          rel="noreferrer"
-        >
-          <Icon name={icon} />{site}
+        <a key={url} href={url} target='_blank' rel='noreferrer'>
+          <Icon name={icon} />
+          {site}
         </a>
       ))}
     </nav>
@@ -35,11 +25,13 @@ const ItemCard = ({ imgSrc, imgAlt, title, links }) => (
 
 const Wishlist = () => (
   <Page>
-    <BackgroundCanvas id="canvas" />
+    <BackgroundCanvas id='canvas' />
 
-    <main data-page="wishlist">
-      <article className="deck">
-        {wishlist.map((data) => <ItemCard key={data.title} {...data} />)}
+    <main data-page='wishlist'>
+      <article className='deck'>
+        {wishlist.map((data) => (
+          <ItemCard key={data.title} {...data} />
+        ))}
       </article>
     </main>
   </Page>

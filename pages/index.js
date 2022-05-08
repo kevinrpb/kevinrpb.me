@@ -7,6 +7,8 @@ import BackgroundCanvas from '@components/background-canvas'
 import Icon from '@components/icon'
 import SaneLink from '@components/link'
 
+import profilePicture from '@img/kevin.png'
+
 const Home = () => (
   <Page>
     <BackgroundCanvas id='canvas' />
@@ -15,19 +17,15 @@ const Home = () => (
       <article className='deck'>
         <section className='card'>
           <ExportedImage
-            src='/img/kevin.png'
+            src={profilePicture}
             alt="Kevin' picture"
-            width='500px'
-            height='500px'
+            // width='500px'
+            // height='500px'
             layout='raw'
           />
           <h1>Kevin Romero Peces-Barba</h1>
           <nav>
-            <SaneLink
-              id='mail_card'
-              href=''
-              aria-label='Link to send Kevin an email.'
-            >
+            <SaneLink id='mail_card' href='' aria-label='Link to send Kevin an email.'>
               <Icon name='email' />
               Email
             </SaneLink>
