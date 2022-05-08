@@ -22,4 +22,21 @@ module.exports = {
   env: {
     storePicturesInWEBP: true,
   },
+  async rewrites() {
+    return [
+      // {
+      //   source: '/resume',
+      //   destination: '/cv'
+      // },
+    ]
+  },
+  async redirects() {
+    return [
+      {
+        source: '/resume',
+        destination: '/cv',
+        permanent: true,
+      },
+    ]
+  },
 }

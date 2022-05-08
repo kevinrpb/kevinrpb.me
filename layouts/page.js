@@ -5,7 +5,7 @@ import { NextSeo } from 'next-seo'
 
 
 export default function Page({ title, children }) {
-  const _title = title ?? 'Keevin Romero Peces-Barba'
+  const _title = title ?? 'Kevin Romero Peces-Barba'
 
   return (
     <>

@@ -5,6 +5,7 @@ import ExportedImage from 'next-image-export-optimizer'
 import Page from '@layouts/page'
 import BackgroundCanvas from '@components/background-canvas'
 import Icon from '@components/icon'
+import SaneLink from '@components/link'
 
 const Home = () => (
   <Page>
@@ -22,38 +23,32 @@ const Home = () => (
           />
           <h1>Kevin Romero Peces-Barba</h1>
           <nav>
-            <a
+            <SaneLink
               id='mail_card'
               href=''
-              rel='noreferrer'
-              target='_blank'
               aria-label='Link to send Kevin an email.'
             >
               <Icon name='email' />
               Email
-            </a>
-            <a
+            </SaneLink>
+            <SaneLink
               href='https://github.com/kevinrpb'
-              rel='noreferrer'
-              target='_blank'
               aria-label="Link to Kevin's Github profile."
             >
               <Icon name='github' />
               GitHub
-            </a>
-            <a
+            </SaneLink>
+            <SaneLink
               href='https://twitter.com/kevinrpb'
-              rel='noreferrer'
-              target='_blank'
               aria-label="Link to Kevin's Github profile."
             >
               <Icon name='twitter' />
               Twitter{' '}
-            </a>
-            <a href='https://cv.kevinrpb.me' aria-label="Link to Kevin's resume page.">
+            </SaneLink>
+            <SaneLink href='/cv' aria-label="Link to Kevin's resume page.">
               <Icon name='resume' />
               Resume
-            </a>
+            </SaneLink>
             {/* <a
               href="https://projects.kevinrpb.me"
               aria-label="Link to Kevin's projects page."

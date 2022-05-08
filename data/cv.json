@@ -1,0 +1,59 @@
+{
+  "name": "Kevin Romero Peces-Barba",
+  "links": [
+    {
+      "url": "/",
+      "icon": "website",
+      "label": "kevinrpb.me"
+    }, {
+      "url": "https://github.com/kevinrpb",
+      "icon": "github",
+      "label": "/kevinrpb"
+    }
+  ],
+  "skillSets": [
+    {
+      "title": "Machine Learning",
+      "skills": [
+        {
+          "label": "Python",
+          "percent": "100"
+        }
+      ]
+    }
+  ],
+  "sections": [
+    {
+      "title": "Education",
+      "icon": "school",
+      "contents": [
+        {
+          "title": "M.S. in Computer Science & Technology",
+          "date": "2020 - 2022",
+          "place": {
+            "url": "https://uc3m.es",
+            "label": "University Carlos III of Madrid"
+          }
+        }
+      ]
+    }, {
+      "title": "Work",
+      "icon": "briefcase",
+      "contents": [
+        {
+          "title": "Research Assistant",
+          "date": "November 2020 - Present",
+          "place": {
+            "url": "https://uc3m.es",
+            "label": "University Carlos III of Madrid"
+          },
+          "notes": [
+            "Collaborated with the University&'s Applied Artificial Intelligence Group (GIIA) and a telecommunications provider. My work consists in:",
+            "> Conducting research on the applications of machine learning for analyzing spatio-temporal data.",
+            "> Providing counsel and advice to undegraduate students working on their B.S. theses."
+          ]
+        }
+      ]
+    }
+  ]
+}

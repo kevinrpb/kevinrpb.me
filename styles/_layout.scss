@@ -7,6 +7,10 @@ div#__next {
   display: flex;
   flex-direction: column;
 
+  header {
+    z-index: 1000;
+  }
+
   main {
     display: flex;
     flex-direction: column;
