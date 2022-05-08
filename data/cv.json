@@ -202,6 +202,20 @@
       "icon": "briefcase",
       "contents": [
         {
+          "title": "Solutions Architect",
+          "date": "August 2021 - Present",
+          "place": {
+            "url": "https://www.axa.com/",
+            "label": "AXA Madrid International Hub"
+          },
+          "notes": [
+            "Work in the regional Technology Office providing both technological and strategical support to insurance companies located in emerging markets (Americas, Africa, Asia). This includes:",
+            "> Helping design the technical aspects of key technological and transformation projects.",
+            "> Assisting on the development of the companies' IT maturity.",
+            "> Providing support on the management of the companies' infrastructure and technical debt."
+          ]
+        },
+        {
           "title": "Research Assistant",
           "date": "November 2020 - Present",
           "place": {
