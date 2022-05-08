@@ -41,7 +41,7 @@ main[data-page='cv'] {
 
   div#name {
     grid-area: name;
-    height: 100%; // If this is not here weird layout issues happen
+    height: 100%; // * If this is not here weird layout issues happen
   }
 
   div#links {
@@ -56,7 +56,7 @@ main[data-page='cv'] {
 
   div#sections {
     grid-area: sections;
-    // height: 100%; // Here is only needed for print
+    height: 100%;
 
     border-left: 1px solid rgba(0, 0, 0, 0.19);
 
@@ -393,7 +393,6 @@ main[data-page='cv'] div#sections > section {
 
     div#sections {
       margin-top: 0.6cm;
-      height: 100%;
     }
 
     @for $centimeters from 1 to 6 {
