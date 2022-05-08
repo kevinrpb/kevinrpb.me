@@ -1,7 +1,5 @@
 import React from 'react'
 
-import ExportedImage from 'next-image-export-optimizer'
-
 import Page from '@layouts/page'
 import BackgroundCanvas from '@components/background-canvas'
 import Icon from '@components/icon'
@@ -414,7 +412,7 @@ const CV = () => (
               </div>
               <div className='notes'>
                 <p>
-                  Long 4me member in the student technology-focused club "Imagineware". As part of
+                  Long 4me member in the student technology-focused club &quot;Imagineware&quot;. As part of
                   this club, I have:
                 </p>
                 <p className='item'>Organized and taken part in different hackathons.</p>
