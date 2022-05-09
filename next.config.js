@@ -3,7 +3,7 @@ const isLocal = process.env.HOSTNAME === 'localhost'
 const isPreview = process.env.VERCEL_PREVIEW || false
 
 let assetPrefix = ''
-if (isPreview) assetPrefix = 'https://kevinrpb-dev.vercel.app/'
+if (isPreview) assetPrefix = process.env.ASSET_PREFIX
 else if (isProd && !isLocal) assetPrefix = 'https://kevinrpb.me/'
 
 /**
