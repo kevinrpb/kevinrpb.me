@@ -48,6 +48,7 @@ const ImportedIcon = (name) => {
 const _known_icons = {
   amazon: 'FaAmazon',
   briefcase: 'FaBriefcase',
+  blog: 'FaBlog',
   code: 'FiCode',
   compass: 'FiCompass',
   email: 'FiAtSign',

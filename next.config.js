@@ -6,6 +6,9 @@ let assetPrefix = ''
 if (isPreview) assetPrefix = 'https://kevinrpb-dev.vercel.app/'
 else if (isProd && !isLocal) assetPrefix = 'https://kevinrpb.me/'
 
+/**
+ * @type {import('next').NextConfig}
+ */
 module.exports = {
   assetPrefix: assetPrefix,
   images: {
