@@ -1,9 +1,12 @@
 import React from 'react'
 
-import ExportedImage from 'next-image-export-optimizer'
+import Image from 'next/future/image'
+
+// import ExportedImage from 'next-image-export-optimizer'
+
+import getEmailAddress from '@lib/mailobfuscate'
 
 import Page from '@layouts/page'
-import BackgroundCanvas from '@components/background-canvas'
 import Icon from '@components/icon'
 import SaneLink from '@components/link'
 
@@ -11,21 +14,17 @@ import profilePicture from '@img/kevin.png'
 
 const Home = () => (
   <Page>
-    <BackgroundCanvas id='canvas' />
-
     <main data-page='index'>
       <article className='deck'>
         <section className='card'>
-          <ExportedImage
-            src={profilePicture}
-            alt="Kevin' picture"
-            // width='500px'
-            // height='500px'
-            layout='raw'
-          />
+          <Image src={profilePicture} alt="Kevin' picture" width="500px" height="500px" />
           <h1>Kevin Romero Peces-Barba</h1>
           <nav>
-            <SaneLink id='mail_card' href='' aria-label='Link to send Kevin an email.'>
+            <SaneLink
+              id='mail_card'
+              href={`mailto:${getEmailAddress()}`}
+              aria-label='Link to send Kevin an email.'
+            >
               <Icon name='email' />
               Email
             </SaneLink>
@@ -47,14 +46,10 @@ const Home = () => (
               <Icon name='resume' />
               Resume
             </SaneLink>
-            {/* <a
-              href="https://projects.kevinrpb.me"
-              aria-label="Link to Kevin's projects page."
-            ><Icon name="" />Projects</a> */}
-            {/* <a
-              href="https://blog.kevinrpb.me"
-              aria-label="Link to Kevin's blog."
-            ><Icon name="" />Blog</a> */}
+            {/* <SaneLink href='/blog' aria-label="Link to Kevin's blog.">
+              <Icon name='blog' />
+              Blog
+            </SaneLink> */}
           </nav>
         </section>
 

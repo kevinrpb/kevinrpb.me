@@ -1,5 +1,6 @@
 @import 'colors';
 @import 'breakpoints';
+@import 'mixins';
 @import 'layout';
 @import 'theme';
 
@@ -8,3 +9,5 @@
 @import 'pages/index';
 @import 'pages/cv';
 @import 'pages/wishlist';
+@import 'pages/blog/index';
+@import 'pages/blog/post';

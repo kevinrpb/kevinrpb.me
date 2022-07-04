@@ -1,5 +1,7 @@
 import React from 'react'
 
+import getEmailAddress from '@lib/mailobfuscate'
+
 import Icon from '@components/icon'
 import SaneLink from './link'
 
@@ -15,9 +17,9 @@ const Links = ({ links }) => (
 
     <div>
       {links.map(({ url, icon, label }) => (
-        <SaneLink href={url} key={url}>
+        <SaneLink href={url === '__mail__' ? `mailto:${getEmailAddress()}` : url} key={url}>
           <Icon name={icon} />
-          <p>{label}</p>
+          <p>{label === '__mail__' ? `${getEmailAddress()}` : label}</p>
         </SaneLink>
       ))}
     </div>

@@ -118,11 +118,7 @@ article.deck {
 // ! Theme
 // !
 article.deck {
-  color: darken($space-cadet, 5%);
-  background-color: rgba(white, 0.5);
-  backdrop-filter: blur(6px);
-  border-radius: 6px;
-  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.19), 0 6px 6px rgba(0, 0, 0, 0.23);
+  @include main-content-style;
 
   h1 {
     font-size: 2em;
