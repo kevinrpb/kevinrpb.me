@@ -1,10 +1,9 @@
-const isProd = process.env.NODE_ENV === 'production'
-const isLocal = process.env.HOSTNAME === 'localhost'
-const isPreview = process.env.VERCEL_PREVIEW || false
+const isVercel = process.env.VERCEL || false
+const isGithub = process.env.GITHUB_ACTIONS || false
 
 let assetPrefix = ''
-if (isPreview) assetPrefix = process.env.ASSET_PREFIX
-else if (isProd && !isLocal) assetPrefix = 'https://kevinrpb.me/'
+if (isVercel) assetPrefix = `https://${process.env.VERCEL_URL}/`
+else if (isGithub) assetPrefix = `https://${process.env.GITHUB_URL}/`
 
 /**
  * @type {import('next').NextConfig}
