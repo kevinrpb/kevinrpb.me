@@ -10,6 +10,11 @@
       "url": "https://github.com/kevinrpb",
       "icon": "github",
       "label": "/kevinrpb"
+    },
+    {
+      "url": "__mail__",
+      "icon": "email",
+      "label": "__mail__"
     }
   ],
   "skillSets": [
@@ -191,7 +196,7 @@
           "title": "B.S. in Business Administration",
           "date": "2018 - 2019",
           "place": {
-            "url": "https://gmu.edu",
+            "url": "https://www.gmu.edu",
             "label": "George Mason University"
           }
         }
@@ -314,17 +319,6 @@
             "> Organized and took part in different hackathons.",
             "> Organized several events with the purpose of bringing people and technology together. The main event we have organized is the Hour Of Code (<a href='https://hourofcode.com'>hourofcode.com</a>), a world-wide coordinated event. During this event, which we have hosted in Universidad Carlos III for several years, we invite students from high schools and prepare a series of tech-related activities for them to enjoy.",
             "> Organized different workshops and courses aimed at teaching office suites (such as MS Office), version control (git), and other development tools and languages. These were focused in the university and given to students of different majors."
-          ]
-        },
-        {
-          "title": "IEEE GMU Club",
-          "date": "2018 - 2019",
-          "place": {
-            "url": "https://gmuieee.github.io/",
-            "label": "gmuieee.github.io"
-          },
-          "notes": [
-            "During my program abroad in George Mason University I collaborated with the IEEE club to provide a series of workshops for students in the area of web development."
           ]
         }
       ]

@@ -2,11 +2,13 @@ import React from 'react'
 
 import ExportedImage from 'next-image-export-optimizer'
 
+import getEmailAddress from '@lib/mailobfuscate'
+
 import Page from '@layouts/page'
 import Icon from '@components/icon'
 import SaneLink from '@components/link'
 
-import profilePicture from '@img/kevin.png'
+// import profilePicture from '@img/kevin.png'
 
 const Home = () => (
   <Page>
@@ -14,15 +16,15 @@ const Home = () => (
       <article className='deck'>
         <section className='card'>
           <ExportedImage
-            src={profilePicture}
+            src="/img/kevin.png"
             alt="Kevin' picture"
-            // width='500px'
-            // height='500px'
+            width='500px'
+            height='500px'
             layout='raw'
           />
           <h1>Kevin Romero Peces-Barba</h1>
           <nav>
-            <SaneLink id='mail_card' href='' aria-label='Link to send Kevin an email.'>
+            <SaneLink id='mail_card' href={`mailto:${getEmailAddress()}`} aria-label='Link to send Kevin an email.'>
               <Icon name='email' />
               Email
             </SaneLink>
@@ -44,10 +46,10 @@ const Home = () => (
               <Icon name='resume' />
               Resume
             </SaneLink>
-            <SaneLink href='/blog' aria-label="Link to Kevin's blog.">
+            {/* <SaneLink href='/blog' aria-label="Link to Kevin's blog.">
               <Icon name='blog' />
               Blog
-            </SaneLink>
+            </SaneLink> */}
           </nav>
         </section>
 
