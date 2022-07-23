@@ -16,7 +16,7 @@ header[data-page='cv'] {
     width: auto;
     padding: 0 1em;
 
-    .icon svg {
+    .icon {
       width: 1.25em;
     }
   }
@@ -105,9 +105,7 @@ main[data-page='cv'] *.icon {
   margin-right: 5px;
   vertical-align: middle;
 
-  svg {
-    stroke-width: 2;
-  }
+  stroke-width: 2;
 }
 
 header[data-page='cv'] *.pill,
@@ -217,8 +215,14 @@ main[data-page='cv'] div#sections > section {
   div.title {
     display: flex;
     flex-direction: row;
+    align-items: center;
     margin-bottom: 0.5cm;
     padding-bottom: 10px;
+
+    .icon {
+      width: 20px;
+      height: 20px;
+    }
 
     h2 {
       margin: 0;

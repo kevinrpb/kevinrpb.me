@@ -1,9 +1,9 @@
 import React from 'react'
 
-import getEmailAddress from '@lib/mailobfuscate'
+import Icon from '@nextjs-utils/dynamic-icon'
+import Link from '@nextjs-utils/sane-link'
 
-import Icon from '@components/icon'
-import SaneLink from './link'
+import getEmailAddress from '@lib/mailobfuscate'
 
 const Name = ({ name }) => (
   <div id='name'>
@@ -17,10 +17,10 @@ const Links = ({ links }) => (
 
     <div>
       {links.map(({ url, icon, label }) => (
-        <SaneLink href={url === '__mail__' ? `mailto:${getEmailAddress()}` : url} key={url}>
-          <Icon name={icon} />
+        <Link href={url === '__mail__' ? `mailto:${getEmailAddress()}` : url} key={url}>
+          <Icon name={icon} className='icon' />
           <p>{label === '__mail__' ? `${getEmailAddress()}` : label}</p>
-        </SaneLink>
+        </Link>
       ))}
     </div>
     <span className='divider'></span>
@@ -30,7 +30,7 @@ const Links = ({ links }) => (
 const Skills = ({ skillSets }) => (
   <div id='skills'>
     <div className='title mobile'>
-      <Icon name='code' />
+      <Icon name='FiCode' className='icon' />
       <h2>Skills</h2>
     </div>
 
@@ -54,7 +54,7 @@ const Sections = ({ sections }) => (
     {sections.map(({ title, icon, contents }) => (
       <section key={title}>
         <div className='title'>
-          <Icon name={icon} />
+          <Icon name={icon} className='icon' />
           <h2>{title}</h2>
         </div>
 
@@ -65,7 +65,7 @@ const Sections = ({ sections }) => (
               <div className='info'>
                 <p className='date'>{date}</p>
                 <p className='place'>
-                  <SaneLink href={url}>{label}</SaneLink>
+                  <Link href={url}>{label}</Link>
                 </p>
               </div>
               {notes && (

@@ -1,20 +1,20 @@
 import React from 'react'
 
-import SaneLink from '@components/link'
-import Icon from '@components/icon'
+import Icon from '@nextjs-utils/dynamic-icon'
+import Link from '@nextjs-utils/sane-link'
 
 const BlogHeader = (props) => (
   <header {...props}>
-    <SaneLink href='/' className=''>
-      <Icon name='home' />
+    <Link href='/' className=''>
+      <Icon name='home' className='icon' />
       Home
-    </SaneLink>
+    </Link>
 
     <nav>
-      <SaneLink href='/blog' className=''>
-        <Icon name='blog' />
+      <Link href='/blog' className=''>
+        <Icon name='blog' className='icon' />
         Blog
-      </SaneLink>
+      </Link>
     </nav>
   </header>
 )
