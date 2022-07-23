@@ -1,9 +1,10 @@
 import React from 'react'
 
+import Link from '@nextjs-utils/sane-link'
+
 import Page from '@layouts/page'
 import BlogHeader from '@components/blog/header'
 import { getAllPostsMeta } from '@lib/blog'
-import SaneLink from '@components/link'
 
 export const getStaticProps = async () => {
   const posts = await getAllPostsMeta()
@@ -14,11 +15,11 @@ export const getStaticProps = async () => {
 }
 
 const PostItem = ({ slug, title }) => (
-  <SaneLink href={`/blog/post/${slug}`}>
+  <Link href={`/blog/post/${slug}`}>
     <article>
       <h1>{title}</h1>
     </article>
-  </SaneLink>
+  </Link>
 )
 
 const BlogHome = ({ posts }) => (

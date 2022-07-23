@@ -3,12 +3,12 @@ import React from 'react'
 import Image from 'next/future/image'
 
 // import ExportedImage from 'next-image-export-optimizer'
+import Icon from '@nextjs-utils/dynamic-icon'
+import Link from '@nextjs-utils/sane-link'
 
 import getEmailAddress from '@lib/mailobfuscate'
 
 import Page from '@layouts/page'
-import Icon from '@components/icon'
-import SaneLink from '@components/link'
 
 import profilePicture from '@img/kevin.png'
 
@@ -20,36 +20,36 @@ const Home = () => (
           <Image src={profilePicture} alt="Kevin' picture" width="500px" height="500px" />
           <h1>Kevin Romero Peces-Barba</h1>
           <nav>
-            <SaneLink
+            <Link
               id='mail_card'
               href={`mailto:${getEmailAddress()}`}
               aria-label='Link to send Kevin an email.'
             >
-              <Icon name='email' />
+              <Icon name='FiAtSign' />
               Email
-            </SaneLink>
-            <SaneLink
+            </Link>
+            <Link
               href='https://github.com/kevinrpb'
               aria-label="Link to Kevin's Github profile."
             >
-              <Icon name='github' />
+              <Icon name='FiGithub' />
               GitHub
-            </SaneLink>
-            <SaneLink
+            </Link>
+            <Link
               href='https://twitter.com/kevinrpb'
               aria-label="Link to Kevin's Github profile."
             >
-              <Icon name='twitter' />
+              <Icon name='FiTwitter' />
               Twitter{' '}
-            </SaneLink>
-            <SaneLink href='/cv' aria-label="Link to Kevin's resume page.">
-              <Icon name='resume' />
+            </Link>
+            <Link href='/cv' aria-label="Link to Kevin's resume page.">
+              <Icon name='FiFileText' />
               Resume
-            </SaneLink>
-            {/* <SaneLink href='/blog' aria-label="Link to Kevin's blog.">
-              <Icon name='blog' />
+            </Link>
+            {/* <Link href='/blog' aria-label="Link to Kevin's blog.">
+              <Icon name='FaBlog' />
               Blog
-            </SaneLink> */}
+            </Link> */}
           </nav>
         </section>
 

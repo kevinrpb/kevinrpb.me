@@ -13,6 +13,8 @@
     "lint": "next lint"
   },
   "dependencies": {
+    "@nextjs-utils/dynamic-icon": "0.0.2-9",
+    "@nextjs-utils/sane-link": "0.0.2-9",
     "dayjs": "^1.11.2",
     "glob": "^8.0.1",
     "gray-matter": "^4.0.3",

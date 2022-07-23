@@ -1,8 +1,9 @@
 import React from 'react'
 
+import Icon from '@nextjs-utils/dynamic-icon'
+import Link from '@nextjs-utils/sane-link'
+
 import Page from '@layouts/page'
-import SaneLink from '@components/link'
-import Icon from '@components/icon'
 import Resume from '@components/resume'
 
 import cv from '@data/cv.json'
@@ -10,12 +11,12 @@ import cv from '@data/cv.json'
 const CV = () => (
   <Page>
     <header data-page='cv'>
-      <SaneLink href='/' className=''>
+      <Link href='/' className=''>
         <Icon name='home' />
         Home
-      </SaneLink>
+      </Link>
 
-      <SaneLink
+      <Link
         href='/files/kevinrpb_cv.pdf'
         className='pill percentage-100 shadow'
         target='_blank'
@@ -23,7 +24,7 @@ const CV = () => (
       >
         <Icon name='download' />
         Download
-      </SaneLink>
+      </Link>
     </header>
 
     <main data-page='cv'>

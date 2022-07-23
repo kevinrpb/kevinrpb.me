@@ -1,6 +1,8 @@
 lockfileVersion: 5.4
 
 specifiers:
+  '@nextjs-utils/dynamic-icon': 0.0.2-9
+  '@nextjs-utils/sane-link': 0.0.2-9
   dayjs: ^1.11.2
   eslint: 8.19.0
   eslint-config-next: 12.2.0
@@ -22,6 +24,8 @@ specifiers:
   sass: ^1.51.0
 
 dependencies:
+  '@nextjs-utils/dynamic-icon': 0.0.2-9_sass@1.53.0
+  '@nextjs-utils/sane-link': 0.0.2-9_sass@1.53.0
   dayjs: 1.11.3
   glob: 8.0.3
   gray-matter: 4.0.3
@@ -253,6 +257,37 @@ packages:
     requiresBuild: true
     dev: false
     optional: true
+
+  /@nextjs-utils/dynamic-icon/0.0.2-9_sass@1.53.0:
+    resolution: {integrity: sha512-77X12A71JqTYPrc7NQsK75G1dvebt88m87GVHhDid9Bj422ULXWj79PThsBZtavXwCgK7wZmFjjiYJQtYPNGCw==}
+    dependencies:
+      core-js: 3.23.5
+      next: 12.2.0_b7sksnfkdyiidz7vzaadim75qm
+      react: 18.2.0
+      react-dom: 18.2.0_react@18.2.0
+      react-icons: 4.4.0_react@18.2.0
+    transitivePeerDependencies:
+      - '@babel/core'
+      - babel-plugin-macros
+      - fibers
+      - node-sass
+      - sass
+    dev: false
+
+  /@nextjs-utils/sane-link/0.0.2-9_sass@1.53.0:
+    resolution: {integrity: sha512-FWHE9OyIQlKYpdQEyKJ2uFZbjIdxXx8LxGaOr8HXfFPJCJ5ulrC8INS9a6HNrZopL+JRskgpKQE3KWRZXbEmbg==}
+    dependencies:
+      core-js: 3.23.5
+      next: 12.2.0_b7sksnfkdyiidz7vzaadim75qm
+      react: 18.2.0
+      react-dom: 18.2.0_react@18.2.0
+    transitivePeerDependencies:
+      - '@babel/core'
+      - babel-plugin-macros
+      - fibers
+      - node-sass
+      - sass
+    dev: false
 
   /@nodelib/fs.scandir/2.1.5:
     resolution: {integrity: sha512-vq24Bq3ym5HEQm2NKCr3yXDwjc7vTsEThRDnkp2DK9p1uqLR+DHurm/NOTo0KG7HYHU7eppKZj3MyqYuMBf62g==}
@@ -692,6 +727,11 @@ packages:
     resolution: {integrity: sha512-XpoouuqIj4P+GWtdyV8ZO3/u4KftkeDVMfvp+308eGMhCrA3lVDSmAxO0c6GGOcmgVlaKDrgWVMo49h2ab/TDA==}
     requiresBuild: true
     dev: true
+
+  /core-js/3.23.5:
+    resolution: {integrity: sha512-7Vh11tujtAZy82da4duVreQysIoO2EvVrur7y6IzZkH1IHPSekuDi8Vuw1+YKjkbfWLRD7Nc9ICQ/sIUDutcyg==}
+    requiresBuild: true
+    dev: false
 
   /cross-spawn/7.0.3:
     resolution: {integrity: sha512-iRDPJKUPVEND7dHPO8rkbOnPpyDygcDFtWjpeWNCgy8WP2rXcxXL8TskReQl6OrB2G7+UJrags1q15Fudc7G6w==}
