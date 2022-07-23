@@ -5,6 +5,7 @@
   "description": "kevinrpb.me",
   "author": "Kevin Romero Peces-Barba",
   "scripts": {
+    "preinstall": "npx only-allow pnpm",
     "dev": "next dev",
     "build": "next build",
     "export": "next export && next-image-export-optimizer",
