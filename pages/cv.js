@@ -12,7 +12,7 @@ const CV = () => (
   <Page>
     <header data-page='cv'>
       <Link href='/' className=''>
-        <Icon name='home' />
+        <Icon name='FiHome' className='icon' />
         Home
       </Link>
 
@@ -22,7 +22,7 @@ const CV = () => (
         target='_blank'
         rel='noopener noreferrer'
       >
-        <Icon name='download' />
+        <Icon name='FiDownload' className='icon' />
         Download
       </Link>
     </header>

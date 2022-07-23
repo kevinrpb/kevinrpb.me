@@ -3,17 +3,17 @@
   "links": [
     {
       "url": "/",
-      "icon": "compass",
+      "icon": "FiCompass",
       "label": "kevinrpb.me"
     },
     {
       "url": "https://github.com/kevinrpb",
-      "icon": "github",
+      "icon": "FiGithub",
       "label": "/kevinrpb"
     },
     {
       "url": "__mail__",
-      "icon": "email",
+      "icon": "FiAtSign",
       "label": "__mail__"
     }
   ],
@@ -152,7 +152,7 @@
   "sections": [
     {
       "title": "Education",
-      "icon": "school",
+      "icon": "FaGraduationCap",
       "contents": [
         {
           "title": "M.S. in Computer Science & Technology",
@@ -182,7 +182,7 @@
     },
     {
       "title": "Abroad",
-      "icon": "map-signs",
+      "icon": "FaMapSigns",
       "contents": [
         {
           "title": "B.S. in Computer Science & Engineering",
@@ -204,7 +204,7 @@
     },
     {
       "title": "Work",
-      "icon": "briefcase",
+      "icon": "FaBriefcase",
       "contents": [
         {
           "title": "Solutions Architect",
@@ -305,7 +305,7 @@
     },
     {
       "title": "Volunteer",
-      "icon": "heart",
+      "icon": "FiHeart",
       "contents": [
         {
           "title": "Imagineware",

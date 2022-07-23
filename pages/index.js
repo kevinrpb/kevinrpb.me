@@ -25,29 +25,29 @@ const Home = () => (
               href={`mailto:${getEmailAddress()}`}
               aria-label='Link to send Kevin an email.'
             >
-              <Icon name='FiAtSign' />
+              <Icon name='FiAtSign' className='icon' />
               Email
             </Link>
             <Link
               href='https://github.com/kevinrpb'
               aria-label="Link to Kevin's Github profile."
             >
-              <Icon name='FiGithub' />
+              <Icon name='FiGithub' className='icon' />
               GitHub
             </Link>
             <Link
               href='https://twitter.com/kevinrpb'
               aria-label="Link to Kevin's Github profile."
             >
-              <Icon name='FiTwitter' />
+              <Icon name='FiTwitter' className='icon' />
               Twitter{' '}
             </Link>
             <Link href='/cv' aria-label="Link to Kevin's resume page.">
-              <Icon name='FiFileText' />
+              <Icon name='FiFileText' className='icon' />
               Resume
             </Link>
             {/* <Link href='/blog' aria-label="Link to Kevin's blog.">
-              <Icon name='FaBlog' />
+              <Icon name='FaBlog' className='icon' />
               Blog
             </Link> */}
           </nav>

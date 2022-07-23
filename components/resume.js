@@ -18,7 +18,7 @@ const Links = ({ links }) => (
     <div>
       {links.map(({ url, icon, label }) => (
         <Link href={url === '__mail__' ? `mailto:${getEmailAddress()}` : url} key={url}>
-          <Icon name={icon} />
+          <Icon name={icon} className='icon' />
           <p>{label === '__mail__' ? `${getEmailAddress()}` : label}</p>
         </Link>
       ))}
@@ -30,7 +30,7 @@ const Links = ({ links }) => (
 const Skills = ({ skillSets }) => (
   <div id='skills'>
     <div className='title mobile'>
-      <Icon name='code' />
+      <Icon name='FiCode' className='icon' />
       <h2>Skills</h2>
     </div>
 
@@ -54,7 +54,7 @@ const Sections = ({ sections }) => (
     {sections.map(({ title, icon, contents }) => (
       <section key={title}>
         <div className='title'>
-          <Icon name={icon} />
+          <Icon name={icon} className='icon' />
           <h2>{title}</h2>
         </div>
 

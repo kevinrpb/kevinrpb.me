@@ -6,13 +6,13 @@ import Link from '@nextjs-utils/sane-link'
 const BlogHeader = (props) => (
   <header {...props}>
     <Link href='/' className=''>
-      <Icon name='home' />
+      <Icon name='home' className='icon' />
       Home
     </Link>
 
     <nav>
       <Link href='/blog' className=''>
-        <Icon name='blog' />
+        <Icon name='blog' className='icon' />
         Blog
       </Link>
     </nav>

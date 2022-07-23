@@ -16,7 +16,7 @@ const ItemCard = ({ imgSrc, imgAlt, title, links }) => (
     <nav>
       {links.map(({ site, icon, url }) => (
         <a key={url} href={url} target='_blank' rel='noreferrer'>
-          <Icon name={icon} />
+          <Icon name={icon} className='icon' />
           {site}
         </a>
       ))}
