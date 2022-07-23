@@ -1,3 +1,4 @@
+const isProduction = true//process.env.NODE_ENV === 'production'
 const isVercel = process.env.VERCEL || false
 const isGithub = process.env.GITHUB_ACTIONS || false
 
@@ -29,12 +30,7 @@ module.exports = {
     storePicturesInWEBP: true,
   },
   async rewrites() {
-    return [
-      // {
-      //   source: '/resume',
-      //   destination: '/cv'
-      // },
-    ]
+    return []
   },
   async redirects() {
     return [
@@ -43,6 +39,16 @@ module.exports = {
         destination: '/cv',
         permanent: true,
       },
+      {
+        source: '/blog',
+        destination: isProduction ? '/404' : '/blog',
+        permanent: false,
+      },
+      {
+        source: '/blog/:path*',
+        destination: isProduction ? '/404' : '/blog/:path*',
+        permanent: false,
+      }
     ]
   },
 }
