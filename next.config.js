@@ -38,16 +38,6 @@ module.exports = {
         source: '/resume',
         destination: '/cv',
         permanent: true,
-      },
-      {
-        source: '/blog',
-        destination: isProduction ? '/404' : '/blog',
-        permanent: false,
-      },
-      {
-        source: '/blog/:path*',
-        destination: isProduction ? '/404' : '/blog/:path*',
-        permanent: false,
       }
     ]
   },

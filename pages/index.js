@@ -53,10 +53,10 @@ const Home = () => (
               <Icon name='FiFileText' className='icon' />
               Resume
             </Link>
-            {/* <Link href='/blog' aria-label="Link to Kevin's blog.">
+            <Link href='/blog' aria-label="Link to Kevin's blog.">
               <Icon name='FaBlog' className='icon' />
               Blog
-            </Link> */}
+            </Link>
           </nav>
         </section>
 
