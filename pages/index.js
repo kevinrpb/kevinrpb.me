@@ -23,6 +23,7 @@ const Home = () => (
             <Link
               id='mail_card'
               href={`mailto:${getEmailAddress()}`}
+              className='pill shadow'
               aria-label='Link to send Kevin an email.'
             >
               <Icon name='FiAtSign' className='icon' />
@@ -30,6 +31,7 @@ const Home = () => (
             </Link>
             <Link
               href='https://github.com/kevinrpb'
+              className='pill shadow'
               aria-label="Link to Kevin's Github profile."
             >
               <Icon name='FiGithub' className='icon' />
@@ -37,12 +39,17 @@ const Home = () => (
             </Link>
             <Link
               href='https://twitter.com/kevinrpb'
+              className='pill shadow'
               aria-label="Link to Kevin's Github profile."
             >
               <Icon name='FiTwitter' className='icon' />
               Twitter{' '}
             </Link>
-            <Link href='/cv' aria-label="Link to Kevin's resume page.">
+            <Link
+              href='/cv'
+              className='pill shadow'
+              aria-label="Link to Kevin's resume page."
+            >
               <Icon name='FiFileText' className='icon' />
               Resume
             </Link>

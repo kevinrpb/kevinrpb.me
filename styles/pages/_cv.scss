@@ -308,8 +308,10 @@ main[data-page='cv'] div#sections > section {
   header[data-page='cv'] {
     margin: 0;
     width: calc(100% - 1em);
+
     // On mobile make if be 'above' the body to fix a visual issue
     // with the shadow of the pill icon
+    z-index: 1001 !important;
   }
 
   main[data-page='cv'] {
@@ -559,6 +561,13 @@ main[data-page='cv'] div#sections > section {
     border: none;
     justify-content: space-between;
     box-shadow: none;
+  }
+
+  header[data-page='cv'] {
+    .pill {
+      height: 18px;
+      line-height: 18px;
+    }
   }
 
   main[data-page='cv'] {

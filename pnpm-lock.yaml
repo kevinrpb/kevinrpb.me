@@ -13,6 +13,7 @@ specifiers:
   next-image-export-optimizer: ^0.10.1
   next-mdx-remote: ^4.0.3
   next-seo: ^5.4.0
+  object-hash: ^3.0.0
   react: 18.2.0
   react-dom: 18.2.0
   react-icons: ^4.3.1
@@ -33,6 +34,7 @@ dependencies:
   next-image-export-optimizer: 0.10.1_next@12.2.0
   next-mdx-remote: 4.0.3_biqbaboplfbrettd7655fr4n2y
   next-seo: 5.4.0_24lkarzjpo3wcmj2o6qyrkug4y
+  object-hash: 3.0.0
   react: 18.2.0
   react-dom: 18.2.0_react@18.2.0
   react-icons: 4.4.0_react@18.2.0
@@ -2393,6 +2395,11 @@ packages:
     resolution: {integrity: sha512-rJgTQnkUnH1sFw8yT6VSU3zD3sWmu6sZhIseY8VX+GRu3P6F7Fu+JNDoXfklElbLJSnc3FUQHVe4cU5hj+BcUg==}
     engines: {node: '>=0.10.0'}
     dev: true
+
+  /object-hash/3.0.0:
+    resolution: {integrity: sha512-RSn9F68PjH9HqtltsSnqYC1XXoWe9Bju5+213R98cNGttag9q9yAOTzdbsqvIa7aNm5WffBZFpWYr2aWrklWAw==}
+    engines: {node: '>= 6'}
+    dev: false
 
   /object-inspect/1.12.2:
     resolution: {integrity: sha512-z+cPxW0QGUp0mcqcsgQyLVRDoXFQbXOwBaqyF7VIgI4TWNQsDHrBpUQslRmIfAoYWdYzs6UlKJtB2XJpTaNSpQ==}
