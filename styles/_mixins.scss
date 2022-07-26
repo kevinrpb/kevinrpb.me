@@ -64,3 +64,9 @@
     width: 60vw;
   }
 }
+
+@mixin dark-scheme {
+  @media screen and (prefers-color-scheme: 'dark') {
+    @content;
+  }
+}

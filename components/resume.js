@@ -1,5 +1,7 @@
 import React from 'react'
 
+import hash from 'object-hash'
+
 import Icon from '@nextjs-utils/dynamic-icon'
 import Link from '@nextjs-utils/sane-link'
 
@@ -72,9 +74,9 @@ const Sections = ({ sections }) => (
                 <div className='notes'>
                   {notes.map((note) =>
                     note.startsWith('> ') ? (
-                      <p className='item' dangerouslySetInnerHTML={{ __html: note.slice(2) }} />
+                      <p className='item' dangerouslySetInnerHTML={{ __html: note.slice(2) }} key={hash(note)} />
                     ) : (
-                      <p dangerouslySetInnerHTML={{ __html: note }} />
+                      <p dangerouslySetInnerHTML={{ __html: note }} key={hash(note)} />
                     )
                   )}
                 </div>

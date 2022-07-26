@@ -2,15 +2,67 @@
 // ! Layout
 // !
 
-@include breakpoint-h(sm) {
-  main[data-page='index'] {
-    height: 100vh;
-    justify-content: center !important;
+main[data-page='index'] {
+  section.card h1 {
+    margin-bottom: 0.5em;
+  }
 
-    .icon {
-      width: 1.5em;
-      height: 1.5em;
-      stroke-width: 2;
+  section.card nav {
+    justify-content: space-around;
+    gap: 1em;
+    margin-top: 0.5em;
+
+    a {
+      @include flex-row;
+
+      width: 40%;
+      max-width: none;
+
+      &:not(:first-child) {
+        margin: 0;
+      }
+
+      &.pill {
+        border-color: $space-cadet;
+
+        &::before {
+          width: 100%;
+          background-color: lighten($space-cadet, 60%);
+          // Junky hack for @media print
+          box-shadow: inset 0 0 0 1000px lighten($space-cadet, 60%);
+        }
+      }
+
+      .icon {
+        width: 1.25em;
+        height: 1.25em;
+        margin-right: 0.5em;
+        stroke-width: 2;
+      }
+    }
+  }
+}
+
+@include breakpoint(sm) {
+  main[data-page='index'] {
+    min-height: 100vh;
+    justify-content: center !important;
+  }
+}
+
+@include breakpoint(lg) {
+  main[data-page='index'] {
+    section.card nav a {
+      width: 20%;
+      max-width: none;
+    }
+  }
+}
+
+@include dark-scheme {
+  main[data-page='index'] {
+    section.card nav a.pill {
+      border-color: white;
     }
   }
 }
