@@ -20,16 +20,37 @@
   box-shadow: 0 10px 20px rgba(0, 0, 0, 0.19), 0 6px 6px rgba(0, 0, 0, 0.23);
 }
 
-@mixin site-header {
-  @include flex-row;
-  @include main-content-style;
-
-  width: calc(100% - 2em);
+@mixin container-sizing {
+  width: 100%;
   max-width: 1000px;
-  height: 2em;
-  padding: 0.5em;
   margin: 0.5em auto;
   justify-content: space-between;
+  box-sizing: border-box;
+
+  @include breakpoint(md) {
+    width: 80vw;
+  }
+
+  @include breakpoint(lg) {
+    // width: 75vw;
+  }
+
+  @include breakpoint(xl) {
+    width: 70vw;
+  }
+
+  @include breakpoint(xxl) {
+    width: 60vw;
+  }
+}
+
+@mixin site-header {
+  @include flex-row;
+  @include container-sizing;
+  @include main-content-style;
+
+  height: 2em;
+  padding: 1.5em 0.5em;
 
   nav {
     @include flex-row;
@@ -46,22 +67,6 @@
 
       max-width: 2em;
     }
-  }
-
-  @include breakpoint(md) {
-    width: 80vw;
-  }
-
-  @include breakpoint(lg) {
-    // width: 75vw;
-  }
-
-  @include breakpoint(xl) {
-    width: 70vw;
-  }
-
-  @include breakpoint(xxl) {
-    width: 60vw;
   }
 }
 

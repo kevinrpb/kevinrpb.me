@@ -9,7 +9,8 @@
 header[data-page='cv'] {
   @include site-header;
 
-  max-width: calc(21cm - 1em);
+  // width: 100%;
+  max-width: 21cm;
 
   .pill {
     font-size: 0.8em;
@@ -25,6 +26,8 @@ header[data-page='cv'] {
 }
 
 main[data-page='cv'] {
+  @include container-sizing;
+
   margin: auto;
   margin-bottom: 1em;
   padding: 1cm;
@@ -40,7 +43,7 @@ main[data-page='cv'] {
 
   align-items: unset;
 
-  max-width: calc(21cm - 2cm);
+  max-width: 21cm;
 
   div {
     display: flex;
@@ -80,22 +83,6 @@ main[data-page='cv'] {
       width: 100%;
       text-align: center;
     }
-  }
-
-  @include breakpoint(md) {
-    width: 80vw;
-  }
-
-  @include breakpoint(lg) {
-    width: 65vw;
-  }
-
-  @include breakpoint(xl) {
-    width: 60vw;
-  }
-
-  @include breakpoint(xxl) {
-    width: 50vw;
   }
 }
 
@@ -295,7 +282,6 @@ main[data-page='cv'] div#sections > section {
 
 @media screen and (min-width: 25cm) {
   main[data-page='cv'] {
-    width: calc(21cm - 2cm);
     min-height: 27cm;
   }
 }
@@ -307,7 +293,6 @@ main[data-page='cv'] div#sections > section {
 @media screen and (max-width: 767px) {
   header[data-page='cv'] {
     margin: 0;
-    width: calc(100% - 1em);
 
     // On mobile make if be 'above' the body to fix a visual issue
     // with the shadow of the pill icon

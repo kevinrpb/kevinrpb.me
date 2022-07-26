@@ -3,8 +3,9 @@
 // !
 
 article.deck {
-  margin: 1em;
   padding: 2em;
+
+  width: calc(100% - 4em);
 
   section.card {
     margin-bottom: 2em;
@@ -49,14 +50,15 @@ article.deck {
 
 @include breakpoint(sm) {
   article.deck {
-    margin: 1em 3em;
+    // margin: 1em 3em;
   }
 }
 
 @include breakpoint(md) {
   article.deck {
-    margin: 1em 4em;
+    // margin: 1em 4em;
     padding: 3em;
+    width: calc(100% - 6em);
 
     section.card {
       display: grid;
@@ -90,7 +92,7 @@ article.deck {
 
 @include breakpoint(lg) {
   article.deck {
-    margin: 1em 8em;
+    // margin: 1em 8em;
 
     section.card {
       img {
@@ -103,7 +105,7 @@ article.deck {
 
 @include breakpoint(xl) {
   article.deck {
-    width: 50em;
+    // width: 50em;
 
     section.card {
       img {

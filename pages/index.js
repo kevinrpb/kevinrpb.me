@@ -23,7 +23,7 @@ const Home = () => (
             <Link
               id='mail_card'
               href={`mailto:${getEmailAddress()}`}
-              className='pill shadow'
+              className='pill button shadow'
               aria-label='Link to send Kevin an email.'
             >
               <Icon name='FiAtSign' className='icon' />
@@ -31,7 +31,7 @@ const Home = () => (
             </Link>
             <Link
               href='https://github.com/kevinrpb'
-              className='pill shadow'
+              className='pill button shadow'
               aria-label="Link to Kevin's Github profile."
             >
               <Icon name='FiGithub' className='icon' />
@@ -39,7 +39,7 @@ const Home = () => (
             </Link>
             <Link
               href='https://twitter.com/kevinrpb'
-              className='pill shadow'
+              className='pill button shadow'
               aria-label="Link to Kevin's Github profile."
             >
               <Icon name='FiTwitter' className='icon' />
@@ -47,16 +47,28 @@ const Home = () => (
             </Link>
             <Link
               href='/cv'
-              className='pill shadow'
+              className='pill button shadow'
               aria-label="Link to Kevin's resume page."
             >
               <Icon name='FiFileText' className='icon' />
               Resume
             </Link>
-            {/* <Link href='/blog' aria-label="Link to Kevin's blog.">
+            {/* <Link
+              href='/blog'
+              className='pill button shadow'
+              aria-label="Link to Kevin's blog."
+            >
               <Icon name='FaBlog' className='icon' />
               Blog
             </Link> */}
+            <Link
+              href='/portfolio'
+              className='pill button shadow'
+              aria-label="Link to Kevin's portfolio."
+            >
+              <Icon name='FaFolder' className='icon' />
+              Portfolio
+            </Link>
           </nav>
         </section>
 
@@ -66,8 +78,7 @@ const Home = () => (
             field of deep learning @{' '}
             <a href='https://www.uc3m.es/ss/Satellite/UC3MInstitucional/en/Detalle/Organismo_C/1422545966182/1371211778776/Applied_Artificial_Intelligence_Group_(GIAA)'>
               GIAA-UC3M
-            </a>{' '}
-            while working as a Tech Architect @ <a href='https://axa.es'>AXA</a>.
+            </a>.
           </p>
           <p>
             I majored in Computer Science and Business Managemente and I&apos;m currently pursuing a

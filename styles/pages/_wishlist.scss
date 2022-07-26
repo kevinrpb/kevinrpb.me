@@ -2,8 +2,12 @@
 // ! Layout
 // !
 
+main[data-page="wishlist"] {
+  @include container-sizing;
+}
+
 @include breakpoint-h(sm) {
-  main[data-page='wishlist'] {
+  main[data-page="wishlist"] {
     justify-content: center;
   }
 }
