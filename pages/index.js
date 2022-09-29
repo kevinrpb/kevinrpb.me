@@ -61,28 +61,20 @@ const Home = () => (
               <Icon name='FaBlog' className='icon' />
               Blog
             </Link> */}
-            <Link
+            {/*<Link
               href='/portfolio'
               className='pill button shadow'
               aria-label="Link to Kevin's portfolio."
             >
               <Icon name='FaFolder' className='icon' />
               Portfolio
-            </Link>
+            </Link> */}
           </nav>
         </section>
 
         <section className='about'>
           <p>
-            Hi! This is Kevin 😀. I&apos;m a CS geek from Spain, currently doing research in the
-            field of deep learning @{' '}
-            <a href='https://www.uc3m.es/ss/Satellite/UC3MInstitucional/en/Detalle/Organismo_C/1422545966182/1371211778776/Applied_Artificial_Intelligence_Group_(GIAA)'>
-              GIAA-UC3M
-            </a>.
-          </p>
-          <p>
-            I majored in Computer Science and Business Managemente and I&apos;m currently pursuing a
-            masters degree in CS and Technology, both @ <a href='https://uc3m.es'>UC3M</a>.
+            Hi! This is Kevin 😀. I&apos;m a CS geek from Spain. You can see what I&apos;m up to in my <a href="https://github.com/kevinrpb">GitHub</a> or <a href="https://twitter.com/kevinrpb">Twitter</a> profiles.
           </p>
         </section>
       </article>
