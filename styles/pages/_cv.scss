@@ -273,10 +273,6 @@ main[data-page='cv'] div#sections > section {
     *.mobile {
       display: none !important;
     }
-
-    div#sections {
-      margin-top: 0.6cm;
-    }
   }
 }
 
@@ -309,6 +305,7 @@ main[data-page='cv'] div#sections > section {
       'skills';
 
     padding-top: 0;
+    margin-bottom: 0;
 
     div#name {
       grid-area: name;
@@ -324,10 +321,15 @@ main[data-page='cv'] div#sections > section {
 
     div#skills {
       grid-area: skills;
+
+      > .title.mobile {
+        margin-bottom: 0;
+      }
     }
 
     div#sections {
       grid-area: sections;
+      height: auto;
       padding-left: 0.2cm !important;
       margin-top: 0.5cm;
     }
@@ -348,13 +350,13 @@ main[data-page='cv'] div#sections > section {
   }
 
   main[data-page='cv'] {
-    // width: 100vw;
-    // min-height: 100vh;
-    // height: 200vh;
     padding: 0;
+    margin-bottom: 0;
     border: none !important;
     box-shadow: none !important;
     border-radius: 0 !important;
+
+    // height: calc(2 * 27cm) !important;
 
     *.mobile {
       display: none !important;
@@ -362,6 +364,7 @@ main[data-page='cv'] div#sections > section {
 
     div#sections {
       margin-top: 0.6cm;
+      margin-bottom: 0.6cm;
     }
 
     @for $centimeters from 1 to 6 {
