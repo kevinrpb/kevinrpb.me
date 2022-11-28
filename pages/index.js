@@ -1,8 +1,6 @@
 import React from 'react'
 
-import Image from 'next/future/image'
-
-// import ExportedImage from 'next-image-export-optimizer'
+import ExportedImage from 'next-image-export-optimizer'
 import Icon from '@nextjs-utils/dynamic-icon'
 import Link from '@nextjs-utils/sane-link'
 
@@ -10,14 +8,19 @@ import getEmailAddress from '@lib/mailobfuscate'
 
 import Page from '@layouts/page'
 
-import profilePicture from '@img/kevin.png'
-
 const Home = () => (
   <Page>
     <main data-page='index'>
       <article className='deck'>
         <section className='card'>
-          <Image src={profilePicture} alt="Kevin' picture" width="500px" height="500px" />
+          <ExportedImage
+            src='/img/kevin.png'
+            alt="Kevin' picture"
+            width='500'
+            height='500'
+            layout='raw'
+            useWebp={process.env.nextImageExportOptimizer_storePicturesInWEBP}
+          />
           <h1>Kevin Romero Peces-Barba</h1>
           <nav>
             <Link
@@ -43,7 +46,7 @@ const Home = () => (
               aria-label="Link to Kevin's Github profile."
             >
               <Icon name='FiTwitter' className='icon' />
-              Twitter{' '}
+              Twitter
             </Link>
             <Link
               href='/cv'
@@ -74,7 +77,9 @@ const Home = () => (
 
         <section className='about'>
           <p>
-            Hi! This is Kevin 😀. I&apos;m a CS geek from Spain. You can see what I&apos;m up to in my <a href="https://github.com/kevinrpb">GitHub</a> or <a href="https://twitter.com/kevinrpb">Twitter</a> profiles.
+            Hi! This is Kevin 😀. I&apos;m a CS geek from Spain. You can see what I&apos;m up to in
+            my <a href='https://github.com/kevinrpb'>GitHub</a> or{' '}
+            <a href='https://twitter.com/kevinrpb'>Twitter</a> profiles.
           </p>
         </section>
       </article>

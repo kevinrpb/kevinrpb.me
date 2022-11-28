@@ -1,8 +1,8 @@
-const isProduction = true//process.env.NODE_ENV === 'production'
+const isProduction = true //process.env.NODE_ENV === 'production'
 const isVercel = process.env.VERCEL || false
 const isGithub = process.env.GITHUB_ACTIONS || false
 
-let assetPrefix = ''
+let assetPrefix = '/'
 if (isVercel) assetPrefix = `https://${process.env.VERCEL_URL}/`
 else if (isGithub) assetPrefix = `https://${process.env.GITHUB_URL}/`
 
@@ -11,23 +11,17 @@ else if (isGithub) assetPrefix = `https://${process.env.GITHUB_URL}/`
  */
 module.exports = {
   assetPrefix: assetPrefix,
-  // images: {
-  //   loader: 'custom',
-  //   imageSizes: [16, 32, 48, 64, 96, 128, 256, 384],
-  //   deviceSizes: [640, 750, 828, 1080, 1200, 1920, 2048, 3840],
-  //   nextImageExportOptimizer: {
-  //     imageFolderPath: 'public/img',
-  //     exportFolderPath: 'out',
-  //     quality: 75,
-  //   },
-  // },
-  experimental: {
-    images: {
-      allowFutureImage: true,
-    },
+  images: {
+    loader: 'custom',
+    imageSizes: [16, 32, 48, 64, 96, 128, 256, 384],
+    deviceSizes: [640, 750, 828, 1080, 1200, 1920, 2048, 3840],
   },
   env: {
-    storePicturesInWEBP: true,
+    nextImageExportOptimizer_imageFolderPath: 'public/img',
+    nextImageExportOptimizer_exportFolderPath: 'out',
+    nextImageExportOptimizer_quality: 75,
+    nextImageExportOptimizer_storePicturesInWEBP: false,
+    nextImageExportOptimizer_generateAndUseBlurImages: true,
   },
   async rewrites() {
     return []
@@ -48,7 +42,7 @@ module.exports = {
         source: '/blog/:path*',
         destination: isProduction ? '/404' : '/blog/:path*',
         permanent: false,
-      }
+      },
     ]
   },
 }

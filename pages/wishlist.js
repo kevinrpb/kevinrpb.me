@@ -1,8 +1,6 @@
 import React from 'react'
 
-import Image from 'next/future/image'
-
-// import ExportedImage from 'next-image-export-optimizer'
+import ExportedImage from 'next-image-export-optimizer'
 import Icon from '@nextjs-utils/dynamic-icon'
 
 import Page from '@layouts/page'
@@ -11,7 +9,14 @@ import wishlist from '@data/wishlist.json'
 
 const ItemCard = ({ imgSrc, imgAlt, title, links }) => (
   <section className='card item'>
-    <Image src={imgSrc} alt={imgAlt} width='500px' height='500px' layout='raw' />
+    <ExportedImage
+      src={imgSrc}
+      alt={imgAlt}
+      width='500'
+      height='500'
+      layout='raw'
+      useWebp={process.env.nextImageExportOptimizer_storePicturesInWEBP}
+    />
     <h2>{title}</h2>
     <nav>
       {links.map(({ site, icon, url }) => (
