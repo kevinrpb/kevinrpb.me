@@ -4,10 +4,24 @@
 
 main[data-page="wishlist"] {
   @include container-sizing;
+
+  article.deck {
+    section.card {
+      nav {
+        a {
+          svg {
+            max-width: 2rem;
+          }
+        }
+      }
+    }
+  }
 }
 
 @include breakpoint-h(sm) {
   main[data-page="wishlist"] {
+    margin: 0;
+
     justify-content: center;
   }
 }
