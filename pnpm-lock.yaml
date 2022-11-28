@@ -20,7 +20,7 @@ specifiers:
   reading-time: ^1.5.0
   rehype-autolink-headings: ^6.1.1
   rehype-code-titles: ^1.1.0
-  rehype-highlight: ^5.0.2
+  rehype-highlight: ^6.0.0
   rehype-slug: ^5.1.0
   sass: ^1.56.1
 
@@ -41,7 +41,7 @@ dependencies:
   reading-time: 1.5.0
   rehype-autolink-headings: 6.1.1
   rehype-code-titles: 1.1.0
-  rehype-highlight: 5.0.2
+  rehype-highlight: 6.0.0
   rehype-slug: 5.1.0
   sass: 1.56.1
 
@@ -2801,8 +2801,8 @@ packages:
       unist-util-visit: 4.1.1
     dev: false
 
-  /rehype-highlight/5.0.2:
-    resolution: {integrity: sha512-ZNm8V8BQUDn05cJPzAu/PjiloaFFrh+Pt3bY+NCcdCggI7Uyl5mW0FGR7RATeIz5/ECUd1D8Kvjt4HaLPmnOMw==}
+  /rehype-highlight/6.0.0:
+    resolution: {integrity: sha512-q7UtlFicLhetp7K48ZgZiJgchYscMma7XjzX7t23bqEJF8m6/s+viXQEe4oHjrATTIZpX7RG8CKD7BlNZoh9gw==}
     dependencies:
       '@types/hast': 2.3.4
       hast-util-to-text: 3.1.1
