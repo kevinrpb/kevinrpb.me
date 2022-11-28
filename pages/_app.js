@@ -1,5 +1,6 @@
 import React from 'react'
 
+import { Analytics } from '@vercel/analytics/react'
 import { DefaultSeo } from 'next-seo'
 
 import Layout from '@layouts/base'
@@ -33,6 +34,7 @@ const MainApp = ({ Component, pageProps }) => (
       }}
     />
     <Component {...pageProps} />
+    <Analytics />
   </Layout>
 )
 
