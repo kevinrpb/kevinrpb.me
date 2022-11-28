@@ -1,13 +1,105 @@
 [
   {
-    "imgSrc": "/img/wishlist/molinillo-cafe.jpg",
+    "title": " (~ €)",
+    "active": false,
+    "imgSrc": "/img/wishlist/.jpg",
     "imgAlt": "",
-    "title": "Molinillo de Café (~ 20€)",
     "links": [
       {
         "site": "Amazon",
         "icon": "FaAmazon",
-        "url": "https://www.amazon.es/Molinillo-Capacidad-El%C3%A9ctrico-Cuchillas-Inoxidable/dp/B07P1RMZ4F/ref=sr_1_6?__mk_es_ES=%C3%85M%C3%85%C5%BD%C3%95%C3%91&crid=12004HUVYJ7C2&keywords=molinillo+cafe+electrico&qid=1638015673&sprefix=molinillo+cafe%2Caps%2C186&sr=8-6"
+        "url": "https://www.amazon.es/dp/"
+      }
+    ]
+  },
+  {
+    "title": "Kit Micrófono PC (~ 50€)",
+    "active": true,
+    "imgSrc": "/img/wishlist/kit-microfono.jpg",
+    "imgAlt": "",
+    "links": [
+      {
+        "site": "Amazon",
+        "icon": "FaAmazon",
+        "url": "https://www.amazon.es/dp/B07NMJ84FW"
+      }
+    ]
+  },
+  {
+    "title": "Micrófono PC (~ 26€)",
+    "active": false,
+    "imgSrc": "/img/wishlist/microfono-pc.jpg",
+    "imgAlt": "",
+    "links": [
+      {
+        "site": "Amazon",
+        "icon": "FaAmazon",
+        "url": "https://www.amazon.es/dp/B08CVP2HXP"
+      }
+    ]
+  },
+  {
+    "title": "Brazo Micrófono (~ 20€)",
+    "active": false,
+    "imgSrc": "/img/wishlist/brazo-microfono.jpg",
+    "imgAlt": "",
+    "links": [
+      {
+        "site": "Amazon",
+        "icon": "FaAmazon",
+        "url": "https://www.amazon.es/dp/B08V1KWX37"
+      }
+    ]
+  },
+  {
+    "title": "Freidora de Aire (~ 50€)",
+    "active": true,
+    "imgSrc": "/img/wishlist/freidora-aire.jpg",
+    "imgAlt": "",
+    "links": [
+      {
+        "site": "Amazon",
+        "icon": "FaAmazon",
+        "url": "https://www.amazon.es/dp/B0BFB425XH"
+      }
+    ]
+  },
+  {
+    "title": "Soporte iPhone Coche (~ 15€)",
+    "active": true,
+    "imgSrc": "/img/wishlist/soporte-magsafe.jpg",
+    "imgAlt": "",
+    "links": [
+      {
+        "site": "Amazon",
+        "icon": "FaAmazon",
+        "url": "https://www.amazon.es/dp/B0BB2QLYNL/"
+      }
+    ]
+  },
+  {
+    "title": "Interfaz de Audio (~ 50€)",
+    "active": true,
+    "imgSrc": "/img/wishlist/interfaz-audio.jpg",
+    "imgAlt": "",
+    "links": [
+      {
+        "site": "Amazon",
+        "icon": "FaAmazon",
+        "url": "https://www.amazon.es/dp/B08Q1V77NR"
+      }
+    ]
+  },
+  {
+    "title": "Molinillo de Café (~ 20€)",
+    "active": true,
+    "imgSrc": "/img/wishlist/molinillo-cafe.jpg",
+    "imgAlt": "",
+    "links": [
+      {
+        "site": "Amazon",
+        "icon": "FaAmazon",
+        "url": "https://www.amazon.es/dp/B07P1RMZ4F"
       }
     ]
   }

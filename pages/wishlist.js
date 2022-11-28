@@ -9,14 +9,7 @@ import wishlist from '@data/wishlist.json'
 
 const ItemCard = ({ imgSrc, imgAlt, title, links }) => (
   <section className='card item'>
-    <ExportedImage
-      src={imgSrc}
-      alt={imgAlt}
-      width='500'
-      height='500'
-      layout='raw'
-      useWebp={process.env.nextImageExportOptimizer_storePicturesInWEBP}
-    />
+    <ExportedImage src={imgSrc} alt={imgAlt} width='500' height='500' useWebp={true} />
     <h2>{title}</h2>
     <nav>
       {links.map(({ site, icon, url }) => (
@@ -33,9 +26,11 @@ const Wishlist = () => (
   <Page>
     <main data-page='wishlist'>
       <article className='deck'>
-        {wishlist.map((data) => (
-          <ItemCard key={data.title} {...data} />
-        ))}
+        {wishlist
+          .filter((data) => data.active)
+          .map((data) => (
+            <ItemCard key={data.title} {...data} />
+          ))}
       </article>
     </main>
   </Page>

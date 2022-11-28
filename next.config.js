@@ -20,7 +20,7 @@ module.exports = {
     nextImageExportOptimizer_imageFolderPath: 'public/img',
     nextImageExportOptimizer_exportFolderPath: 'out',
     nextImageExportOptimizer_quality: 75,
-    nextImageExportOptimizer_storePicturesInWEBP: false,
+    nextImageExportOptimizer_storePicturesInWEBP: true,
     nextImageExportOptimizer_generateAndUseBlurImages: true,
   },
   async rewrites() {

@@ -18,8 +18,7 @@ const Home = () => (
             alt="Kevin' picture"
             width='500'
             height='500'
-            layout='raw'
-            useWebp={process.env.nextImageExportOptimizer_storePicturesInWEBP}
+            useWebp={true}
           />
           <h1>Kevin Romero Peces-Barba</h1>
           <nav>
