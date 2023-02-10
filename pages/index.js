@@ -40,12 +40,12 @@ const Home = () => (
               GitHub
             </Link>
             <Link
-              href='https://twitter.com/kevinrpb'
+              href='https://mastodon.social/@kevinrpb'
               className='pill button shadow'
-              aria-label="Link to Kevin's Github profile."
+              aria-label="Link to Kevin's Mastodon profile."
             >
-              <Icon name='FiTwitter' className='icon' />
-              Twitter
+              <Icon name='FaMastodon' className='icon' />
+              Mastodon
             </Link>
             <Link
               href='/cv'
