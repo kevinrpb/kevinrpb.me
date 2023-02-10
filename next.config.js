@@ -24,7 +24,12 @@ module.exports = {
     nextImageExportOptimizer_generateAndUseBlurImages: true,
   },
   async rewrites() {
-    return []
+    return [
+      {
+        source: '/.well-known/webfinger/:path*',
+        destination: '/api/well-known/webfinger/:path*',
+      },
+    ]
   },
   async redirects() {
     return [

@@ -8,6 +8,7 @@
       "@img/*": ["public/img/*"],
       "@layouts/*": ["layouts/*"],
       "@lib/*": ["lib/*"],
+      "@pages/*": ["pages/*"],
       "@styles/*": ["styles/*"]
     }
   }
