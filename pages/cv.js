@@ -8,6 +8,30 @@ import Resume from '@components/resume'
 
 import cv from '@data/cv.json'
 
+const DownloadLink = () => (
+  <Link
+    href='/files/kevinrpb_cv.pdf'
+    className='pill percentage-100 shadow'
+    target='_blank'
+    rel='noopener noreferrer'
+  >
+    <Icon name='FiDownload' className='icon' />
+    Download
+  </Link>
+)
+
+// eslint-disable-next-line no-unused-vars
+const DownloadButton = () => {
+  const handle = () => {}
+
+  return (
+    <button type='button' className='pill percentage-100 shadow' onClick={handle}>
+      <Icon name='FiDownload' className='icon' />
+      Download
+    </button>
+  )
+}
+
 const CV = () => (
   <Page>
     <header data-page='cv'>
@@ -16,15 +40,7 @@ const CV = () => (
         Home
       </Link>
 
-      <Link
-        href='/files/kevinrpb_cv.pdf'
-        className='pill percentage-100 shadow'
-        target='_blank'
-        rel='noopener noreferrer'
-      >
-        <Icon name='FiDownload' className='icon' />
-        Download
-      </Link>
+      <DownloadLink />
     </header>
 
     <main data-page='cv'>

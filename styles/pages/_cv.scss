@@ -12,6 +12,10 @@ header[data-page='cv'] {
   // width: 100%;
   max-width: 21cm;
 
+  button {
+    box-sizing: content-box;
+  }
+
   .pill {
     font-size: 0.8em;
     width: auto;
@@ -260,10 +264,18 @@ main[data-page='cv'] div#sections > section {
 // --------------------
 @media screen and (min-width: 768px) {
   header[data-page='cv'] {
-    a {
+    > * {
       &:hover {
+        cursor: pointer;
+
         transform: scale(1.04);
       }
+    }
+
+    > button:active {
+      transform: scale(1);
+
+      filter: brightness(0.8);
     }
   }
 
@@ -388,7 +400,7 @@ $n-cv-pages: 2;
 // --------------------
 
 header[data-page='cv'] {
-  a {
+  > * {
     color: black;
   }
 }

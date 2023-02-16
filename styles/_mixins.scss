@@ -57,7 +57,7 @@
     height: 100%;
   }
 
-  a {
+  > a, > button {
     @include flex-row;
 
     margin: 0 1em;
