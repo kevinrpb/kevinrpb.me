@@ -340,6 +340,8 @@ main[data-page='cv'] div#sections > section {
 // PRINT
 // --------------------
 
+$n-cv-pages: 2;
+
 @media print {
   canvas {
     display: none;
@@ -356,7 +358,9 @@ main[data-page='cv'] div#sections > section {
     box-shadow: none !important;
     border-radius: 0 !important;
 
-    // height: calc(2 * 27cm) !important;
+    // This will show weird when emulating @print in the browser but
+    // work fine when actually printing
+    height: calc(#{$n-cv-pages} * 100vh) !important;
 
     *.mobile {
       display: none !important;

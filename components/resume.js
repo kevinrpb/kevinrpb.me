@@ -53,45 +53,51 @@ const Skills = ({ skillSets }) => (
 
 const Sections = ({ sections }) => (
   <div id='sections'>
-    {sections.map(({ title, icon, contents }) => (
-      <section key={title}>
-        <div className='title'>
-          <Icon name={icon} className='icon' />
-          <h2>{title}</h2>
-        </div>
+    {sections
+      .filter(({ shows }) => shows)
+      .map(({ title, icon, contents }) => (
+        <section key={title}>
+          <div className='title'>
+            <Icon name={icon} className='icon' />
+            <h2>{title}</h2>
+          </div>
 
-        <div className='content'>
-          {contents.map(({ title, date, place: { url, label }, notes }) => (
-            <div key={`${title} - ${date}`}>
-              <h3 className='title'>{title}</h3>
-              <div className='info'>
-                <p className='date'>{date}</p>
-                <p className='place'>
-                  <Link href={url}>{label}</Link>
-                </p>
-              </div>
-              {notes && (
-                <div className='notes'>
-                  {notes.map((note) =>
-                    note.startsWith('> ') ? (
-                      <p className='item' dangerouslySetInnerHTML={{ __html: note.slice(2) }} key={hash(note)} />
-                    ) : (
-                      <p dangerouslySetInnerHTML={{ __html: note }} key={hash(note)} />
-                    )
+          <div className='content'>
+            {contents
+              .filter(({ shows }) => shows)
+              .map(({ title, date, place: { url, label }, notes }) => (
+                <div key={`${title} - ${date}`}>
+                  <h3 className='title'>{title}</h3>
+                  <div className='info'>
+                    <p className='date'>{date}</p>
+                    <p className='place'>
+                      <Link href={url}>{label}</Link>
+                    </p>
+                  </div>
+                  {notes && (
+                    <div className='notes'>
+                      {notes.map((note) =>
+                        note.startsWith('> ') ? (
+                          <p
+                            className='item'
+                            dangerouslySetInnerHTML={{ __html: note.slice(2) }}
+                            key={hash(note)}
+                          />
+                        ) : (
+                          <p dangerouslySetInnerHTML={{ __html: note }} key={hash(note)} />
+                        )
+                      )}
+                    </div>
                   )}
                 </div>
-              )}
-            </div>
-          ))}
-        </div>
-      </section>
-    ))}
+              ))}
+          </div>
+        </section>
+      ))}
   </div>
 )
 
 const Resume = ({ name, links, skillSets, sections }) => {
-  console.log(name)
-
   return (
     <>
       <Name name={name} />

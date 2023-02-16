@@ -153,10 +153,12 @@
     {
       "title": "Education",
       "icon": "FaGraduationCap",
+      "shows": true,
       "contents": [
         {
           "title": "M.S. in Computer Science & Technology",
           "date": "2020 - 2022",
+          "shows": true,
           "place": {
             "url": "https://uc3m.es",
             "label": "University Carlos III of Madrid"
@@ -165,6 +167,7 @@
         {
           "title": "B.S. in Computer Science & Engineering",
           "date": "2014 - 2020",
+          "shows": true,
           "place": {
             "url": "https://uc3m.es",
             "label": "University Carlos III of Madrid"
@@ -173,6 +176,7 @@
         {
           "title": "B.S. in Business Administration",
           "date": "2014 - 2020",
+          "shows": true,
           "place": {
             "url": "https://uc3m.es",
             "label": "University Carlos III of Madrid"
@@ -183,10 +187,12 @@
     {
       "title": "Abroad",
       "icon": "FaMapSigns",
+      "shows": true,
       "contents": [
         {
           "title": "B.S. in Computer Science & Engineering",
           "date": "2017 - 2018",
+          "shows": true,
           "place": {
             "url": "https://www.ucsc.edu/",
             "label": "University of California Santa Cruz"
@@ -195,6 +201,7 @@
         {
           "title": "B.S. in Business Administration",
           "date": "2018 - 2019",
+          "shows": true,
           "place": {
             "url": "https://www.gmu.edu",
             "label": "George Mason University"
@@ -205,16 +212,28 @@
     {
       "title": "Work",
       "icon": "FaBriefcase",
+      "shows": true,
       "contents": [
+        {
+          "title": "Software Developer Engineer",
+          "date": "October 2022 - Present",
+          "shows": false,
+          "place": {
+            "url": "https://amazon.es",
+            "label": "Amazon Services Spain"
+          },
+          "notes": []
+        },
         {
           "title": "Solutions Architect",
           "date": "August 2021 - August 2022",
+          "shows": true,
           "place": {
             "url": "https://www.axa.com/",
             "label": "AXA Madrid International Hub"
           },
           "notes": [
-            "Work in the regional Technology Office providing both technological and strategical support to insurance companies located in emerging markets (Americas, Africa, Asia). This includes:",
+            "Worked in the regional Technology Office providing both technological and strategical support to insurance companies located in emerging markets (Americas, Africa, Asia). This included:",
             "> Helping design the technical aspects of key technological and transformation projects.",
             "> Assisting on the development of the companies' IT maturity.",
             "> Providing support on the management of the companies' infrastructure and technical debt."
@@ -223,12 +242,13 @@
         {
           "title": "Research Assistant",
           "date": "November 2020 - October 2022",
+          "shows": true,
           "place": {
             "url": "https://uc3m.es",
             "label": "University Carlos III of Madrid"
           },
           "notes": [
-            "Collaborate with the University's Applied Artificial Intelligence Group (GIAA) and a telecommunications provider. My work consists in:",
+            "Collaborated with the University's Applied Artificial Intelligence Group (GIAA) and a telecommunications provider. My work consisted in:",
             "> Conducting research on the applications of machine learning for the analysis and usage of the company's data.",
             "> Providing counsel and advice to undegraduate students working on their B.S. theses."
           ]
@@ -236,6 +256,7 @@
         {
           "title": "Computer Technical Specialist",
           "date": "December 2019 - July 2020",
+          "shows": true,
           "place": {
             "url": "https://uc3m.es",
             "label": "University Carlos III of Madrid"
@@ -250,6 +271,7 @@
         {
           "title": "iOS Developer Intern",
           "date": "May 2019 - Aug 2019",
+          "shows": true,
           "place": {
             "url": "https://babel.es/",
             "label": "Babel S.I."
@@ -263,6 +285,7 @@
         {
           "title": "Computer Technical Specialist",
           "date": "Jun 2017 - Sep 2017",
+          "shows": true,
           "place": {
             "url": "https://uc3m.es",
             "label": "University Carlos III of Madrid"
@@ -277,6 +300,7 @@
         {
           "title": "Multimedia Intern",
           "date": "Sep 2016 - Jun 2017",
+          "shows": true,
           "place": {
             "url": "https://uc3m.es",
             "label": "University Carlos III of Madrid"
@@ -290,6 +314,7 @@
         {
           "title": "Helpdesk Intern",
           "date": "Jan 2016 - Sep 2016",
+          "shows": true,
           "place": {
             "url": "https://uc3m.es",
             "label": "University Carlos III of Madrid"
@@ -306,10 +331,12 @@
     {
       "title": "Volunteer",
       "icon": "FiHeart",
+      "shows": true,
       "contents": [
         {
           "title": "Imagineware",
           "date": "2014 - 2021",
+          "shows": true,
           "place": {
             "url": "https://imagineware.org",
             "label": "imagineware.org"
