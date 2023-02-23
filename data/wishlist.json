@@ -14,7 +14,7 @@
   },
   {
     "title": "Kit Micrófono PC (~ 50€)",
-    "active": true,
+    "active": false,
     "imgSrc": "/img/wishlist/kit-microfono.jpg",
     "imgAlt": "",
     "links": [
@@ -26,60 +26,8 @@
     ]
   },
   {
-    "title": "Micrófono PC (~ 26€)",
-    "active": false,
-    "imgSrc": "/img/wishlist/microfono-pc.jpg",
-    "imgAlt": "",
-    "links": [
-      {
-        "site": "Amazon",
-        "icon": "FaAmazon",
-        "url": "https://www.amazon.es/dp/B08CVP2HXP"
-      }
-    ]
-  },
-  {
-    "title": "Brazo Micrófono (~ 20€)",
-    "active": false,
-    "imgSrc": "/img/wishlist/brazo-microfono.jpg",
-    "imgAlt": "",
-    "links": [
-      {
-        "site": "Amazon",
-        "icon": "FaAmazon",
-        "url": "https://www.amazon.es/dp/B08V1KWX37"
-      }
-    ]
-  },
-  {
-    "title": "Freidora de Aire (~ 50€)",
-    "active": true,
-    "imgSrc": "/img/wishlist/freidora-aire.jpg",
-    "imgAlt": "",
-    "links": [
-      {
-        "site": "Amazon",
-        "icon": "FaAmazon",
-        "url": "https://www.amazon.es/dp/B0BFB425XH"
-      }
-    ]
-  },
-  {
-    "title": "Soporte iPhone Coche (~ 15€)",
-    "active": true,
-    "imgSrc": "/img/wishlist/soporte-magsafe.jpg",
-    "imgAlt": "",
-    "links": [
-      {
-        "site": "Amazon",
-        "icon": "FaAmazon",
-        "url": "https://www.amazon.es/dp/B0BB2QLYNL/"
-      }
-    ]
-  },
-  {
     "title": "Interfaz de Audio (~ 50€)",
-    "active": true,
+    "active": false,
     "imgSrc": "/img/wishlist/interfaz-audio.jpg",
     "imgAlt": "",
     "links": [
@@ -92,7 +40,7 @@
   },
   {
     "title": "Molinillo de Café (~ 20€)",
-    "active": true,
+    "active": false,
     "imgSrc": "/img/wishlist/molinillo-cafe.jpg",
     "imgAlt": "",
     "links": [
