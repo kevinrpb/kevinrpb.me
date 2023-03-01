@@ -18,7 +18,7 @@
     "@nextjs-utils/sane-link": "^0.1.1",
     "@vercel/analytics": "^0.1.5",
     "dayjs": "^1.11.6",
-    "glob": "^8.0.3",
+    "glob": "^9.1.0",
     "gray-matter": "^4.0.3",
     "next": "^13.0.5",
     "next-image-export-optimizer": "^1.0.1",
