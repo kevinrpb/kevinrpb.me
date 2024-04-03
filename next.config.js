@@ -8,9 +8,6 @@ else if (isGithub) assetPrefix = `https://${process.env.GITHUB_URL}/`
 
 /** @type {import('next').NextConfig} */
 const nextConfig = {
-  experimental: {
-    appDir: true,
-  },
   assetPrefix: assetPrefix,
   async rewrites() {
     return [
