@@ -7,10 +7,6 @@ import hash from 'object-hash'
 import Icon from '@nextjs-utils/dynamic-icon'
 import Link from '@nextjs-utils/sane-link'
 
-import { decodeObfuscated } from '@/components/obfuscated'
-
-import mailData from '@/data/mail.json'
-
 interface Link {
   url: string
   label: string
@@ -53,30 +49,12 @@ const Name: React.FC<{ name: string }> = ({ name }) => (
   </div>
 )
 
-const ResumeLink: React.FC<{ link: Link }> = ({ link: { url, icon, label } }) => {
-  const [href, setHref] = React.useState(url)
-  const [text, setText] = React.useState(label)
-
-  React.useEffect(() => {
-    if (url !== '__mail__') {
-      setHref(url)
-      setText(label)
-      return
-    }
-
-    const email = decodeObfuscated(mailData.coded, mailData.key)
-
-    setHref(`mailto:${email}`)
-    setText(email)
-  }, [url, label])
-
-  return (
-    <Link href={href}>
-      <Icon name={icon} className='icon' />
-      <p>{text}</p>
-    </Link>
-  )
-}
+const ResumeLink: React.FC<{ link: Link }> = ({ link: { url, icon, label } }) => (
+  <Link href={url}>
+    <Icon name={icon} className='icon' />
+    <p>{label}</p>
+  </Link>
+)
 
 const Links: React.FC<{ links: Link[] }> = ({ links }) => (
   <div id='links'>

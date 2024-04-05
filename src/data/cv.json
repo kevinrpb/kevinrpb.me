@@ -9,12 +9,12 @@
     {
       "url": "https://github.com/kevinrpb",
       "icon": "FiGithub",
-      "label": "/kevinrpb"
+      "label": "kevinrpb"
     },
     {
-      "url": "__mail__",
+      "url": "mailto:kevin@kevinrpb.me",
       "icon": "FiAtSign",
-      "label": "__mail__"
+      "label": "kevin@kevinrpb.me"
     }
   ],
   "skillSets": [
