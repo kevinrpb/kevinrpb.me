@@ -2,7 +2,6 @@ import React from 'react'
 
 import Image from 'next/image'
 
-import BackgroundCanvas from '@/components/background-canvas'
 import { SimpleCardLink } from '@/components/card-link'
 
 export const metadata = {
@@ -20,9 +19,7 @@ const Card: React.FC<React.PropsWithChildren> = ({ children, ...rest }) => (
 
 const HomePage = () => (
   <>
-    <BackgroundCanvas className='fixed -z-10' />
-
-    <main className='min-h-[100vh] flex flex-col items-center md:justify-center pt-2'>
+    <main className='min-h-[100vh] flex flex-col items-center md:justify-center'>
       <Card>
         <section className='grid grid-cols-1 md:grid-cols-home-card md:grid-rows-home-card gap-4 md:gapx-4 xl:gap-0 items-center justify-center'>
           <Image
