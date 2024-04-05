@@ -1,5 +1,6 @@
 {
   "name": "Kevin Romero Peces-Barba",
+  "position": "Software Engineer",
   "links": [
     {
       "url": "/",
@@ -19,210 +20,54 @@
   ],
   "skillSets": [
     {
-      "title": "Apple",
-      "skills": [
-        {
-          "label": "Xcode + Swift",
-          "percent": "100"
-        },
-        {
-          "label": "SwiftUI",
-          "percent": "100"
-        },
-        {
-          "label": "Combine",
-          "percent": "100"
-        },
-        {
-          "label": "UIKit",
-          "percent": "80"
-        },
-        {
-          "label": "AppKit",
-          "percent": "40"
-        }
-      ]
+      "title": "Services",
+      "skills": ["Java", "Kotlin", "NodeJS", "AWS", "REST", "RPC", "CI/CD"]
     },
     {
       "title": "Web",
-      "skills": [
-        {
-          "label": "HTML + CSS + JS",
-          "percent": "100"
-        },
-        {
-          "label": "NodeJS",
-          "percent": "100"
-        },
-        {
-          "label": "React",
-          "percent": "100"
-        },
-        {
-          "label": "Angular",
-          "percent": "80"
-        }
-      ]
+      "skills": ["HTML/CSS/JS", "TypeScript", "React", "NextJS", "jQuery", "Spring", "JSP"]
     },
     {
-      "title": "Machine Learning",
-      "skills": [
-        {
-          "label": "Python",
-          "percent": "100"
-        },
-        {
-          "label": "Tensorflow/Keras",
-          "percent": "100"
-        },
-        {
-          "label": "NLTK",
-          "percent": "80"
-        },
-        {
-          "label": "R",
-          "percent": "40"
-        }
-      ]
+      "title": "Apple",
+      "skills": ["Xcode", "Swift", "SwiftUI", "Combine", "AppKit", "XCTest", "Fastlane"]
     },
     {
-      "title": "Other Coding",
-      "skills": [
-        {
-          "label": "Git Flow"
-        },
-        {
-          "label": "Java SE"
-        },
-        {
-          "label": "Shell Script"
-        },
-        {
-          "label": "ReactiveX"
-        },
-        {
-          "label": "MVVM"
-        },
-        {
-          "label": "p5.js"
-        },
-        {
-          "label": "Godot"
-        }
-      ]
+      "title": "ML",
+      "skills": ["Python", "Tensorflow/Keras", "Airflow", "NLTK", "R"]
     },
     {
-      "title": "Other Skills",
-      "skills": [
-        {
-          "label": "UI & UX"
-        },
-        {
-          "label": "Algorithms"
-        },
-        {
-          "label": "Statistical Analysis"
-        },
-        {
-          "label": "Agile (Scrum)"
-        },
-        {
-          "label": "Leadership"
-        },
-        {
-          "label": "Teamwork"
-        },
-        {
-          "label": "Quick Learner"
-        }
-      ]
+      "title": "Other",
+      "skills": ["SOLID", "Git Flow", "Shell Scripting", "ReactiveX", "MVVM", "MVC", "p5.js", "Godot"]
+    },
+    {
+      "title": "Skills",
+      "skills": ["UI & UX", "Data Structures", "Algorithms", "Software Architecture", "Statistical Analysis", "Agile (Kanban/Scrum)", "Leadership", "Teamwork", "Quick Learner"]
     },
     {
       "title": "Languages",
-      "skills": [
-        {
-          "label": "Spanish (Native)"
-        },
-        {
-          "label": "English (Professional Proficiency)"
-        }
-      ]
+      "skills": ["Spanish (Native)", "English (Professional Proficiency)"]
     }
   ],
   "sections": [
     {
-      "title": "Education",
-      "icon": "FaGraduationCap",
-      "show": true,
-      "contents": [
-        {
-          "title": "M.S. in Computer Science & Technology",
-          "date": "2020 - 2022",
-          "show": true,
-          "place": {
-            "url": "https://uc3m.es",
-            "label": "University Carlos III of Madrid"
-          }
-        },
-        {
-          "title": "B.S. in Computer Science & Engineering",
-          "date": "2014 - 2020",
-          "show": true,
-          "place": {
-            "url": "https://uc3m.es",
-            "label": "University Carlos III of Madrid"
-          }
-        },
-        {
-          "title": "B.S. in Business Administration",
-          "date": "2014 - 2020",
-          "show": true,
-          "place": {
-            "url": "https://uc3m.es",
-            "label": "University Carlos III of Madrid"
-          }
-        }
-      ]
-    },
-    {
-      "title": "Abroad",
-      "icon": "FaMapSigns",
-      "show": true,
-      "contents": [
-        {
-          "title": "B.S. in Computer Science & Engineering",
-          "date": "2017 - 2018",
-          "show": true,
-          "place": {
-            "url": "https://www.ucsc.edu/",
-            "label": "University of California Santa Cruz"
-          }
-        },
-        {
-          "title": "B.S. in Business Administration",
-          "date": "2018 - 2019",
-          "show": true,
-          "place": {
-            "url": "https://www.gmu.edu",
-            "label": "George Mason University"
-          }
-        }
-      ]
-    },
-    {
-      "title": "Work",
+      "title": "Work Experience",
       "icon": "FaBriefcase",
       "show": true,
       "contents": [
         {
-          "title": "Software Developer Engineer",
+          "title": "Software Developer Engineer II",
           "date": "October 2022 - Present",
-          "show": false,
+          "show": true,
           "place": {
             "url": "https://amazon.es",
             "label": "Amazon Services Spain"
           },
-          "notes": []
+          "notes": [
+            "Work developing services and features for both external and interal customers. This includes:",
+            "> Delivering features and widgets displayed on the product page on Amazon using modern technologies based on TypeScript, as well as mature ones like JSP.",
+            "> Implementing backend services supporting those features, using both in-house solutions and based on AWS services.",
+            "> Implementing metrics and monitoring stacks for feature validation and operational resiliency."
+          ]
         },
         {
           "title": "Solutions Architect",
@@ -329,6 +174,65 @@
       ]
     },
     {
+      "title": "Education",
+      "icon": "FaGraduationCap",
+      "show": true,
+      "contents": [
+        {
+          "title": "M.S. in Computer Science & Technology",
+          "date": "2020 - 2022",
+          "show": true,
+          "place": {
+            "url": "https://uc3m.es",
+            "label": "University Carlos III of Madrid"
+          }
+        },
+        {
+          "title": "B.S. in Computer Science & Engineering",
+          "date": "2014 - 2020",
+          "show": true,
+          "place": {
+            "url": "https://uc3m.es",
+            "label": "University Carlos III of Madrid"
+          }
+        },
+        {
+          "title": "B.S. in Business Administration",
+          "date": "2014 - 2020",
+          "show": true,
+          "place": {
+            "url": "https://uc3m.es",
+            "label": "University Carlos III of Madrid"
+          }
+        }
+      ]
+    },
+    {
+      "title": "Abroad",
+      "icon": "FaMapSigns",
+      "show": true,
+      "contents": [
+        {
+          "title": "B.S. in Computer Science & Engineering",
+          "date": "2017 - 2018",
+          "show": true,
+          "place": {
+            "url": "https://www.ucsc.edu/",
+            "label": "University of California Santa Cruz"
+          }
+        },
+        {
+          "title": "B.S. in Business Administration",
+          "date": "2018 - 2019",
+          "show": true,
+          "place": {
+            "url": "https://www.gmu.edu",
+            "label": "George Mason University"
+          }
+        }
+      ]
+    },
+    {
       "title": "Volunteer",
       "icon": "FiHeart",
       "show": true,
@@ -342,7 +246,7 @@
             "label": "imagineware.org"
           },
           "notes": [
-            "Long 4me member in the student technology-focused club 'Imagineware';. As part of this club, I have:",
+            "Long time member in the student technology-focused club 'Imagineware'. As part of this club, I have:",
             "> Organized and took part in different hackathons.",
             "> Organized several events with the purpose of bringing people and technology together. The main event we have organized is the Hour Of Code (<a href='https://hourofcode.com'>hourofcode.com</a>), a world-wide coordinated event. During this event, which we have hosted in Universidad Carlos III for several years, we invite students from high schools and prepare a series of tech-related activities for them to enjoy.",
             "> Organized different workshops and courses aimed at teaching office suites (such as MS Office), version control (git), and other development tools and languages. These were focused in the university and given to students of different majors."

@@ -11,14 +11,9 @@ interface Link {
   icon: string
 }
 
-interface Skill {
-  label: string
-  percent?: string
-}
-
 interface SkillSet {
   title: string
-  skills: Skill[]
+  skills: string[]
 }
 
 interface SectionContentPlace {
@@ -41,9 +36,10 @@ interface Section {
   contents: SectionContent[]
 }
 
-const Name: React.FC<{ name: string }> = ({ name }) => (
+const Name: React.FC<{ name: string; position: string }> = ({ name, position }) => (
   <div id='name'>
-    <h1>{name}</h1>
+    <h1 className='name'>{name}</h1>
+    <span className='position'>{position}</span>
   </div>
 )
 
@@ -69,23 +65,28 @@ const Links: React.FC<{ links: Link[] }> = ({ links }) => (
 
 const Skills: React.FC<{ skillSets: SkillSet[] }> = ({ skillSets }) => (
   <div id='skills'>
-    <div className='title mobile'>
-      <Icon name='FiCode' className='icon' />
-      <h2>Skills</h2>
+    <div className='sets'>
+      {skillSets.map(({ title, skills }) => {
+        const key = hash(title)
+
+        return (
+          <>
+            <h2 className='title' key={`${key}-title`}>
+              {title}
+            </h2>
+
+            <div className='skills' key={`${key}-skills`}>
+              {skills.map((label) => (
+                <div className='skill' key={hash(label)}>
+                  <p>{label}</p>
+                </div>
+              ))}
+            </div>
+          </>
+        )
+      })}
     </div>
-
-    {skillSets.map(({ title, skills }) => (
-      <div className='set' key={title}>
-        <h2>{title}</h2>
-
-        {skills.map(({ label, percent }) => (
-          <div className='skill' key={label}>
-            <p>{label}</p>
-            {percent && <span className={`pill percentage-${percent} shadow`}></span>}
-          </div>
-        ))}
-      </div>
-    ))}
+    <span className='divider'></span>
   </div>
 )
 
@@ -137,15 +138,16 @@ const Sections: React.FC<{ sections: Section[] }> = ({ sections }) => (
 
 interface ResumeProps {
   name: string
+  position: string
   links: Link[]
   skillSets: SkillSet[]
   sections: Section[]
 }
 
-const Resume: React.FC<ResumeProps> = ({ name, links, skillSets, sections }) => {
+const Resume: React.FC<ResumeProps> = ({ name, position, links, skillSets, sections }) => {
   return (
     <>
-      <Name name={name} />
+      <Name name={name} position={position} />
       <Links links={links} />
       <Skills skillSets={skillSets} />
       <Sections sections={sections} />

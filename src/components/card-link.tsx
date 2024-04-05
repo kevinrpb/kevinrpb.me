@@ -32,7 +32,7 @@ export const CardLink: React.FC<CardLinkProps> = ({
     aria-label={ariaLabel}
     {...rest}
   >
-    <Icon name={icon} className='mr-1 h-[2em]' />
+    <Icon name={icon} className='mr-1 w-[16px]' />
     <span className='h-[2em]'>{children}</span>
   </Link>
 )
