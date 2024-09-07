@@ -16,7 +16,7 @@ const { title, background = true } = Astro.props
 		<Head title={title} />
 	</head>
 	<body class='bg-ebony-clay'>
-		{background && <BackgroundCanvas className='fixed' client:load />}
+		{background && <BackgroundCanvas className='fixed -z-50' client:load />}
 		<slot />
 	</body>
 </html>

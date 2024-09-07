@@ -1,0 +1,14 @@
+---
+import Layout from '@/layouts/BaseLayout.astro'
+
+import PrintablePage from '@/components/PrintablePage.astro'
+import Resume from '@/components/Resume.astro'
+
+import cvData from '@/data/cv.json'
+---
+
+<Layout title="Kevin's resume">
+	<PrintablePage>
+		<Resume {...cvData} />
+	</PrintablePage>
+</Layout>

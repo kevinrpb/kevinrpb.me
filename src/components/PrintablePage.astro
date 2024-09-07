@@ -1,0 +1,29 @@
+<main
+	class:list={[
+		// Regular (mobile+)
+		'w-screen max-w-[1000px] mx-auto p-[1cm] pt-0 bg-white',
+		// Medium+
+		'md:w-[80vw] md:my-8 md:pt-[1cm] md:rounded md:drop-shadow',
+		// Large+
+		'lg:w-[70vw]',
+		// XLarge+
+		'xl:w-[60vw]',
+		// Print
+		'print:w-screen print:h-screen print:m-0 print:p-0 print:rounded-none print:drop-shadow-none',
+	]}
+>
+	<slot />
+</main>
+
+<style lang='scss' is:global>
+	@media print {
+		body {
+			background: none;
+			background-color: unset !important;
+		}
+
+		body canvas {
+			display: none !important;
+		}
+	}
+</style>

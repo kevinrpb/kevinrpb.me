@@ -1,0 +1,127 @@
+---
+interface Link {
+	url: string
+	label: string
+	icon: string
+}
+
+interface SkillSet {
+	title: string
+	skills: string[]
+}
+
+interface SectionContentPlace {
+	url: string
+	label: string
+}
+
+interface SectionContent {
+	title: string
+	date: string
+	show: boolean
+	place: SectionContentPlace
+	notes?: string[]
+}
+
+interface Section {
+	title: string
+	icon: string
+	show: boolean
+	contents: SectionContent[]
+}
+
+export interface Props {
+	name: string
+	position: string
+	links: Link[]
+	skillSets: SkillSet[]
+	sections: Section[]
+}
+
+const { name, position, links, skillSets, sections } = Astro.props
+---
+
+<div id='name'>
+	<h1 class='name'>{name}</h1>
+	<span class='position'>{position}</span>
+</div>
+
+<div id='links'>
+	<span class='divider'></span>
+
+	<div>
+		{
+			links.map(({ url, icon, label }) => (
+				<a href={url}>
+					{/* TODO: Add icon */}
+					{/* <Icon name={icon} class="icon" /> */}
+					<p>{label}</p>
+				</a>
+			))
+		}
+	</div>
+	<span class='divider'></span>
+</div>
+
+<div id='skills'>
+	<div class='sets'>
+		{
+			skillSets.map(({ title, skills }) => {
+				return (
+					<>
+						<h2 class='title'>{title}</h2>
+
+						<div class='skills'>
+							{skills.map((label) => (
+								<div class='skill'>
+									<p>{label}</p>
+								</div>
+							))}
+						</div>
+					</>
+				)
+			})
+		}
+	</div>
+
+	<span class='divider'></span>
+</div>
+
+<div id='sections'>
+	{
+		sections
+			.filter(({ show }) => show)
+			.map(({ title, icon, contents }) => (
+				<section>
+					<div class='title'>
+						{/* TODO: Add icon */}
+						{/* <Icon name={icon} class="icon" /> */}
+						<h2>{title}</h2>
+					</div>
+
+					<div class='content'>
+						{contents
+							.filter(({ show }) => show)
+							.map(({ title, date, place: { url, label }, notes }) => (
+								<div>
+									<h3 class='title'>{title}</h3>
+									<div class='info'>
+										<p class='date'>{date}</p>
+										<p class='place'>
+											<a href={url}>{label}</a>
+										</p>
+									</div>
+									{notes && (
+										<div class='notes'>
+											{notes.map((note) =>
+												note.startsWith('> ') ? <p class='item'>{note.slice(2)}</p> : <p>{note}</p>,
+											)}
+										</div>
+									)}
+								</div>
+							))}
+					</div>
+				</section>
+			))
+	}
+</div>
