@@ -1,3 +1,7 @@
+---
+const { ...rest } = Astro.props
+---
+
 <main
 	class:list={[
 		// Regular (mobile+)
@@ -11,6 +15,7 @@
 		// Print
 		'print:w-screen print:max-w-full print:h-screen print:m-0 print:p-0 print:rounded-none print:drop-shadow-none',
 	]}
+	{...rest}
 >
 	<slot />
 </main>

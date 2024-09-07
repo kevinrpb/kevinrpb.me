@@ -1,4 +1,6 @@
 ---
+import { ViewTransitions } from 'astro:transitions'
+
 import Head from '@/components/Head.astro'
 import BackgroundCanvas from '@/components/BackgroundCanvas'
 
@@ -11,12 +13,20 @@ const { title, background = true } = Astro.props
 ---
 
 <!doctype html>
-<html lang='en'>
+<html lang='en' transition:animate='none'>
 	<head>
 		<Head title={title} />
+		<ViewTransitions fallback='swap' />
 	</head>
 	<body class='bg-ebony-clay'>
-		{background && <BackgroundCanvas className='fixed -z-50' client:load />}
+		<!-- Background -->
+		{
+			background && (
+				<BackgroundCanvas className='fixed -z-50' client:load transition:name='background-canvas' transition:persist />
+			)
+		}
+
+		<!-- Content -->
 		<slot />
 	</body>
 </html>
