@@ -4,17 +4,17 @@
 	"links": [
 		{
 			"url": "/",
-			"icon": "FiCompass",
+			"icon": "material-symbols:link",
 			"label": "kevinrpb.me"
 		},
 		{
 			"url": "https://github.com/kevinrpb",
-			"icon": "FiGithub",
+			"icon": "cib:github",
 			"label": "kevinrpb"
 		},
 		{
 			"url": "mailto:kevin@kevinrpb.me",
-			"icon": "FiAtSign",
+			"icon": "material-symbols:alternate-email-rounded",
 			"label": "kevin@kevinrpb.me"
 		}
 	],
@@ -61,7 +61,7 @@
 	"sections": [
 		{
 			"title": "Work Experience",
-			"icon": "FaBriefcase",
+			"icon": "mdi:briefcase-outline",
 			"show": true,
 			"contents": [
 				{
@@ -73,10 +73,11 @@
 						"label": "Amazon Services Spain"
 					},
 					"notes": [
-						"Work developing services and features for both external and interal customers. This includes:",
+						"Worked developing services and features for both external and interal customers. This included:",
 						"> Delivering features and widgets displayed on the product page on Amazon using modern technologies based on TypeScript, as well as mature ones like JSP.",
-						"> Implementing backend services supporting those features, using both in-house solutions and based on AWS services.",
-						"> Implementing metrics and monitoring stacks for feature validation and operational resiliency."
+						"> Implementing backend services supporting those features, using both in-house solutions and AWS services.",
+						"> Implementing metrics and monitoring stacks for feature validation and operational resiliency.",
+						"> Working with automated UI tests to validate deployments and monitor UX delivery."
 					]
 				},
 				{
@@ -185,7 +186,7 @@
 		},
 		{
 			"title": "Education",
-			"icon": "FaGraduationCap",
+			"icon": "mdi:academic-cap-outline",
 			"show": true,
 			"contents": [
 				{
@@ -219,7 +220,7 @@
 		},
 		{
 			"title": "Abroad",
-			"icon": "FaMapSigns",
+			"icon": "material-symbols:globe",
 			"show": true,
 			"contents": [
 				{
@@ -244,7 +245,7 @@
 		},
 		{
 			"title": "Volunteer",
-			"icon": "FiHeart",
+			"icon": "mdi:heart-outline",
 			"show": true,
 			"contents": [
 				{

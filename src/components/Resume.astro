@@ -1,4 +1,6 @@
 ---
+import Icon, { type IconName } from './Icon.astro'
+
 interface Link {
 	url: string
 	label: string
@@ -30,7 +32,7 @@ interface Section {
 	contents: SectionContent[]
 }
 
-export interface Props {
+interface ResumeData {
 	name: string
 	position: string
 	links: Link[]
@@ -38,42 +40,55 @@ export interface Props {
 	sections: Section[]
 }
 
-const { name, position, links, skillSets, sections } = Astro.props
+export interface Props {
+	data: ResumeData
+}
+
+const {
+	data: { name, position, links, skillSets, sections },
+} = Astro.props
 ---
 
-<div id='name'>
-	<h1 class='name'>{name}</h1>
-	<span class='position'>{position}</span>
-</div>
+<article
+	class="grid [grid-template-areas:'title''div-title-links''links''div-links-skills''skills''div-skills-sections''sections']"
+>
+	<!-- Title -->
+	<div class='[grid-area:title] flex flex-col font-sans'>
+		<h1 class='text-center text-3xl'>{name}</h1>
+		<p class='text-center text-sm italic'>{position}</p>
+	</div>
 
-<div id='links'>
-	<span class='divider'></span>
+	<hr class='[grid-area:div-title-links] w-4/5 mx-auto my-3' />
 
-	<div>
+	<!-- Links -->
+	<div
+		class='[grid-area:links] flex flex-col md:flex-row print:flex-row items-center justify-center md:gap-8 print:gap-8'
+	>
 		{
 			links.map(({ url, icon, label }) => (
-				<a href={url}>
-					{/* TODO: Add icon */}
-					{/* <Icon name={icon} class="icon" /> */}
-					<p>{label}</p>
+				<a href={url} class='flex flex-flow font-light italic'>
+					<span class='flex flex-flow items-center justify-center'>
+						{icon && <Icon class='h-4 mr-1' name={icon as IconName} />}
+						{label}
+					</span>
 				</a>
 			))
 		}
 	</div>
-	<span class='divider'></span>
-</div>
 
-<div id='skills'>
-	<div class='sets'>
+	<hr class='[grid-area:div-links-skills] w-4/5 mx-auto my-3' />
+
+	<!-- Skills -->
+	<div class='[grid-area:skills] w-4/5 mx-auto grid [grid-template-columns:auto_auto] gap-x-2.5 gap-y-1.5 text-sm'>
 		{
 			skillSets.map(({ title, skills }) => {
 				return (
 					<>
-						<h2 class='title'>{title}</h2>
+						<h2 class='text-right font-semibold align-middle'>{title}</h2>
 
-						<div class='skills'>
+						<div class='flex flex-flow flex-wrap justify-start gap-1'>
 							{skills.map((label) => (
-								<div class='skill'>
+								<div class='text-xs p-[0.2rem] rounded bg-cyber-lavender print:[-webkit-print-color-adjust:exact] print:[print-color-adjust:exact]'>
 									<p>{label}</p>
 								</div>
 							))}
@@ -84,44 +99,63 @@ const { name, position, links, skillSets, sections } = Astro.props
 		}
 	</div>
 
-	<span class='divider'></span>
-</div>
+	<hr class='[grid-area:div-skills-sections] w-4/5 mx-auto my-3' />
 
-<div id='sections'>
-	{
-		sections
-			.filter(({ show }) => show)
-			.map(({ title, icon, contents }) => (
-				<section>
-					<div class='title'>
-						{/* TODO: Add icon */}
-						{/* <Icon name={icon} class="icon" /> */}
-						<h2>{title}</h2>
-					</div>
+	<div class='[grid-area:sections] w-11/12 mx-auto'>
+		{
+			sections
+				.filter(({ show }) => show)
+				.map(({ title, icon, contents }) => (
+					<section class='mb-3 last:mb-0'>
+						{/* Section title */}
+						<div class='flex flex-flow items-start w-4/12 mb-2 border-b-[1px] border-gray-300'>
+							<span class='flex flex-flow items-center justify-center pb-1'>
+								{icon && <Icon class='mr-1' size={24} name={icon as IconName} />}
+								<h2 class='text-lg'>{title}</h2>
+							</span>
+						</div>
 
-					<div class='content'>
 						{contents
 							.filter(({ show }) => show)
 							.map(({ title, date, place: { url, label }, notes }) => (
-								<div>
-									<h3 class='title'>{title}</h3>
-									<div class='info'>
-										<p class='date'>{date}</p>
-										<p class='place'>
+								<div class='mb-4 break-inside-avoid'>
+									{/* Content title */}
+									<h3 class='font-bold italic'>{title}</h3>
+
+									{/* Content subtitle */}
+									<div class='flex flex-flow justify-start mb-2 text-xs gap-2'>
+										<p>{date}</p>
+										<p class='text-gray-600'>
 											<a href={url}>{label}</a>
 										</p>
 									</div>
+
+									{/* Content notes */}
 									{notes && (
-										<div class='notes'>
+										<div class='notes text-sm text-justify'>
 											{notes.map((note) =>
-												note.startsWith('> ') ? <p class='item'>{note.slice(2)}</p> : <p>{note}</p>,
+												note.startsWith('> ') ? (
+													<p class="list-item list-none list-outside mb-1 ml-[1.25rem] before:content-['—'] before:absolute before:ml-[-1.25rem]">
+														<Fragment set:html={note.slice(2)} />
+													</p>
+												) : (
+													<p class='my-1'>
+														<Fragment set:html={note} />
+													</p>
+												),
 											)}
 										</div>
 									)}
 								</div>
 							))}
-					</div>
-				</section>
-			))
+					</section>
+				))
+		}
+	</div>
+</article>
+
+<style is:global>
+	.notes > p > a {
+		color: #8e9aaf; /*var(--manatee);*/
 	}
-</div>
+</style>

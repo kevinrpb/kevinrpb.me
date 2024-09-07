@@ -21,6 +21,7 @@
 		"@iconify-json/cib": "^1.2.0",
 		"@iconify-json/material-symbols": "^1.2.1",
 		"@iconify-json/material-symbols-light": "^1.2.1",
+		"@iconify-json/mdi": "^1.2.0",
 		"@tailwindcss/typography": "^0.5.15",
 		"astro": "^4.15.4",
 		"astro-icon": "^1.1.1",

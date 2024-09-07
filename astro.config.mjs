@@ -19,7 +19,8 @@ export default defineConfig({
 			iconDir: 'src/assets/icons',
 			include: {
 				cbi: ['github', 'mail-ru', 'mastodon'],
-				'material-symbols': ['lab-profile-outline-rounded'],
+				'material-symbols': ['link', 'lab-profile-outline-rounded', 'alternate-email-rounded', 'globe'],
+				mdi: ['briefcase-outline', 'academic-cap-outline', 'heart-outline'],
 			},
 		}),
 		react(),

@@ -15,6 +15,10 @@ module.exports = {
 				'imperial-red': '#ef253c',
 				'amaranth-red': '#d70427',
 				'blue-haze': '#c4c6d9',
+				'cyber-lavender': '#e6e6ff'
+			},
+			fontSize: {
+				'2xs': ['0.65rem', '0.8rem']
 			},
 			gridTemplateColumns: {
 				'home-card': '2fr 5fr',
