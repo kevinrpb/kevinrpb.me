@@ -1,0 +1,14 @@
+---
+import { Icon as AstroIcon } from 'astro-icon/components'
+
+export type IconName = 'cib:github' | 'cib:mail-ru' | 'cib:mastodon' | 'material-symbols:lab-profile-outline-rounded'
+
+export interface Props {
+	name: IconName
+	class?: string
+}
+
+const { name, ...rest } = Astro.props
+---
+
+<AstroIcon name={name} {...rest} />

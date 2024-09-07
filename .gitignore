@@ -1,6 +1,9 @@
 # macOS-specific files
 .DS_Store
 
+# vercel adapter
+.vercel/
+
 # generated types
 .astro/
 
