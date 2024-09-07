@@ -1,21 +1,33 @@
 {
-  "name": "kevinrpb.me",
-  "version": "7.0.0",
-  "private": true,
-  "description": "kevinrpb.me",
-  "author": "Kevin Romero Peces-Barba",
-  "scripts": {
-    "dev": "astro dev",
-    "start": "astro dev",
-    "build": "astro check && astro build",
-    "preview": "astro preview",
-    "astro": "astro"
-  },
-  "packageManager": "pnpm@9.9.0",
-  "dependencies": {
-    "astro": "^4.15.4",
-    "@astrojs/check": "^0.9.3",
-    "typescript": "^5.5.4"
-  },
-  "devDependencies": {}
+	"name": "kevinrpb.me",
+	"version": "7.0.0",
+	"private": true,
+	"description": "kevinrpb.me",
+	"author": "Kevin Romero Peces-Barba",
+	"scripts": {
+		"dev": "astro dev",
+		"start": "astro dev",
+		"build": "astro check && astro build",
+		"preview": "astro preview",
+		"astro": "astro"
+	},
+	"packageManager": "pnpm@9.9.0",
+	"dependencies": {
+		"@astrojs/check": "^0.9.3",
+		"@astrojs/mdx": "^3.1.5",
+		"@astrojs/react": "^3.6.2",
+		"@astrojs/tailwind": "^5.1.0",
+		"astro": "^4.15.4",
+		"react": "^18.3.1",
+		"react-dom": "^18.3.1",
+		"sass": "^1.78.0",
+		"tailwindcss": "^3.4.10",
+		"typescript": "^5.5.4"
+	},
+	"devDependencies": {
+		"@types/react": "^18.3.5",
+		"@types/react-dom": "^18.3.0",
+		"prettier": "^3.3.3",
+		"prettier-plugin-astro": "^0.14.1"
+	}
 }
