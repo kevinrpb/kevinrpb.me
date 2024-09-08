@@ -2,13 +2,22 @@
 import Layout from '@/layouts/BaseLayout.astro'
 
 import PrintablePage from '@/components/PrintablePage.astro'
+import Header from '@/components/Header.astro'
 import Resume from '@/components/Resume.astro'
 
 import resumeData from '@/data/resume.json'
 ---
 
-<Layout title="Kevin's resume">
-	<PrintablePage transition:name='main-element'>
+<Layout title="Kevin's resume" class='flex flex-col gap-2 max-md:gap-0'>
+	<Header
+		class:list={[
+			'md:mt-4 md:mx-auto',
+			'max-md:flex-1 max-md:m-0 max-md:rounded-none max-md:bg-opacity-100 max-md:backdrop-blur-none max-md:drop-shadow-none',
+			'print:display-none',
+		]}
+	/>
+
+	<PrintablePage transition:name='main-element' transition:animate='fade'>
 		<Resume data={resumeData} />
 	</PrintablePage>
 </Layout>

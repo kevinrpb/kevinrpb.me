@@ -7,9 +7,10 @@ import BackgroundCanvas from '@/components/BackgroundCanvas'
 interface Props {
 	title: string
 	background?: boolean
+	class?: string
 }
 
-const { title, background = true } = Astro.props
+const { title, background = true, class: className = '' } = Astro.props
 ---
 
 <!doctype html>
@@ -18,7 +19,7 @@ const { title, background = true } = Astro.props
 		<Head title={title} />
 		<ViewTransitions fallback='swap' />
 	</head>
-	<body class='bg-ebony-clay'>
+	<body class:list={[className, 'bg-ebony-clay']}>
 		<!-- Background -->
 		{
 			background && (

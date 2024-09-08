@@ -1,0 +1,40 @@
+---
+import Card from './Card.astro'
+
+const pathname = new URL(Astro.request.url).pathname
+const currentPath = pathname.replace(/\/+$/, '') // Remove trailing slash if present
+
+const navItems = [
+	{ label: 'Home', href: '/' },
+	{ label: 'Resume', href: '/cv' },
+]
+
+export interface Props {
+	class?: string
+}
+
+const { class: className = '', ...rest } = Astro.props
+---
+
+<header class='flex flex-flow' {...rest}>
+	<Card class:list={[className, 'flow flex-flow gap-0 px-4']} flex='flow'>
+		<nav class='flex flex-flow gap-4'>
+			{
+				navItems.map(({ label, href }) => {
+					const isActive = currentPath == href.replace(/\/+$/, '') // Remove trailing slash if present
+					const activeClasses = isActive ? ' underline ' : ''
+
+					return (
+						<a
+							class:list={[activeClasses, 'decoration-solid underline-offset-4 hover:underline']}
+							href={href}
+							data-path={currentPath}
+						>
+							{label}
+						</a>
+					)
+				})
+			}
+		</nav>
+	</Card>
+</header>

@@ -9,6 +9,7 @@ import vercel from '@astrojs/vercel/serverless'
 export default defineConfig({
 	site: 'https://kevinrpb.me',
 	output: 'hybrid',
+	trailingSlash: 'never',
 	adapter: vercel({
 		webAnalytics: {
 			enabled: true,

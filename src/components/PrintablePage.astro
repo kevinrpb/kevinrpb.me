@@ -1,13 +1,18 @@
 ---
-const { ...rest } = Astro.props
+export interface Props {
+	class?: string
+}
+
+const { class: className = '', ...rest } = Astro.props
 ---
 
 <main
 	class:list={[
+		className,
 		// Regular (mobile+)
-		'w-screen max-w-[1000px] mx-auto p-[1cm] pt-0 bg-white',
+		'w-screen max-w-[1000px] mx-auto p-[1cm] bg-white',
 		// Medium+
-		'md:w-[80vw] md:my-8 md:pt-[1cm] md:rounded md:drop-shadow',
+		'md:w-[80vw] md:rounded md:drop-shadow',
 		// Large+
 		'lg:w-[70vw]',
 		// XLarge+
@@ -25,10 +30,10 @@ const { ...rest } = Astro.props
 		body {
 			background: none;
 			background-color: unset !important;
-		}
 
-		body canvas {
-			display: none !important;
+			canvas, header {
+				display: none !important;
+			}
 		}
 	}
 </style>

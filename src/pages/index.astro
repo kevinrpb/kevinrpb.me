@@ -2,89 +2,69 @@
 import { Image } from 'astro:assets'
 
 import Layout from '@/layouts/BaseLayout.astro'
+import Header from '@/components/Header.astro'
 import Card from '@/components/Card.astro'
 import CardLink from '@/components/CardLink.astro'
 
 import kevinrpbImg from '@/assets/images/kevin.png'
 ---
 
-<Layout title='Home'>
-	<main class='min-h-[100vh] flex flex-col items-center md:justify-center' transition:name='main-element'>
-		<Card>
-			<section
-				class='grid grid-cols-1 md:grid-cols-home-card md:grid-rows-home-card gap-4 md:gapx-4 xl:gap-0 items-center justify-center'
-			>
-				<Image
-					class='w-40 md:w-full lg:w-40 xl:w-60 col-start-1 col-span-1 row-start-1 md:row-span-4 mx-auto my-4 rounded-full border-8 border-space-cadet drop-shadow-xl'
-					src={kevinrpbImg}
-					alt="Kevin's profile picture"
-					loading='eager'
-				/>
+<Layout title='Home' class='h-screen flex flex-col gap-2 md:items-center md:justify-center'>
+	<Header class='flex-1 md:mx-auto max-md:mt-4' />
 
-				<h1
-					class='col-start-1 md:col-start-2 col-span-1 md:row-start-2 row-span-1 text-3xl lg:text-4xl xl:text-5xl text-center font-bold text-gray-800'
+	<main class='flex flex-col items-center md:justify-center' transition:name='main-element' transition:animate='fade'>
+		<Card class='mt-0 md:p-12'>
+			<article>
+				<section
+					class='grid grid-cols-1 md:grid-cols-home-card md:grid-rows-home-card gap-4 md:gapx-4 xl:gap-0 items-center justify-center'
 				>
-					Kevin Romero Peces-Barba
-				</h1>
+					<Image
+						class='w-40 md:w-full lg:w-40 xl:w-60 col-start-1 col-span-1 row-start-1 md:row-span-4 mx-auto my-4 rounded-full border-8 border-space-cadet drop-shadow-xl'
+						src={kevinrpbImg}
+						alt="Kevin's profile picture"
+						loading='eager'
+					/>
 
-				<nav
-					class='col-start-1 md:col-start-2 col-span-1 md:row-start-3 row-span-1 flex flex-row flex-wrap gap-y-2 lg:p-4 items-center justify-around'
-				>
-					<CardLink
-						id='mail_card'
-						href='mailto:hello@kevinrpb.me'
-						label='Email'
-						icon='material-symbols:alternate-email-rounded'
-						ariaLabel='Link to send Kevin an email.'
-					/>
-					<CardLink
-						href='https://github.com/kevinrpb'
-						label='GitHub'
-						icon='cib:github'
-						ariaLabel="Link to Kevin's Github profile."
-					/>
-					<CardLink
-						href='https://mastodon.social/@kevinrpb'
-						label='Masto'
-						icon='cib:mastodon'
-						ariaLabel="Link to Kevin's Mastodon profile."
-					/>
-					<CardLink
-						href='/cv'
-						label='Resume'
-						icon='material-symbols:lab-profile-outline-rounded'
-						ariaLabel="Link to Kevin's resume page."
-					/>
-					{
-						/* <CardLink
-						href='/blog'
-						class='pill button shadow'
-						aria-label="Link to Kevin's blog."
+					<h1
+						class='col-start-1 md:col-start-2 col-span-1 md:row-start-2 row-span-1 text-3xl lg:text-4xl xl:text-5xl text-center font-bold text-gray-800'
 					>
-						<Icon name='FaBlog' class='icon' />
-						Blog
-					</CardLink> */
-					}
-					{
-						/*<CardLink
-						href='/portfolio'
-						class='pill button shadow'
-						aria-label="Link to Kevin's portfolio."
-					>
-						<Icon name='FaFolder' class='icon' />
-						Portfolio
-					</CardLink> */
-					}
-				</nav>
-			</section>
+						Kevin Romero Peces-Barba
+					</h1>
 
-			<section class='prose max-w-none'>
-				<p>
-					Hi! This is Kevin 😀. I&apos;m a software engineer from Spain. You can see what I&apos;m up to in my <a
-						href='https://github.com/kevinrpb'>GitHub</a
-					> or <a href='https://mastodon.social/@kevinrpb'>Mastodon</a> profiles.
-				</p>
-			</section>
+					<nav
+						class='col-start-1 md:col-start-2 col-span-1 md:row-start-3 row-span-1 flex flex-row flex-wrap gap-y-2 lg:p-4 items-center justify-around'
+					>
+						<CardLink
+							id='mail_card'
+							href='mailto:hello@kevinrpb.me'
+							label='Email'
+							icon='material-symbols:alternate-email-rounded'
+							ariaLabel='Link to send Kevin an email.'
+						/>
+						<CardLink
+							href='https://github.com/kevinrpb'
+							label='GitHub'
+							icon='cib:github'
+							ariaLabel="Link to Kevin's Github profile."
+						/>
+						<CardLink
+							href='https://mastodon.social/@kevinrpb'
+							label='Masto'
+							icon='cib:mastodon'
+							ariaLabel="Link to Kevin's Mastodon profile."
+						/>
+					</nav>
+				</section>
+
+				<section class='max-w-none mt-4 prose text-justify'>
+					<p>
+						Hi! This is Kevin 😀. I&apos;m a software engineer from Spain. You can see what I&apos;m up to in my <a
+							href='https://github.com/kevinrpb'
+							class='underline-offset-4'>GitHub</a
+						> or <a href='https://mastodon.social/@kevinrpb' class='underline-offset-4'>Mastodon</a> profiles.
+					</p>
+				</section>
+			</article>
 		</Card>
 	</main>
 </Layout>
