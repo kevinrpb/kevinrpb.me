@@ -11,11 +11,6 @@ importers:
       '@astrojs/check':
         specifier: ^0.9.3
         version: 0.9.3(prettier-plugin-astro@0.14.1)(prettier@3.3.3)(typescript@5.5.4)
-<<<<<<< HEAD
-      astro:
-        specifier: ^4.15.4
-        version: 4.15.4(@types/node@22.5.4)(rollup@4.21.2)(sass@1.78.0)(typescript@5.5.4)
-=======
       '@astrojs/mdx':
         specifier: ^3.1.5
         version: 3.1.5(astro@4.15.4(@types/node@22.5.4)(rollup@4.21.2)(sass@1.78.0)(typescript@5.5.4))
@@ -64,7 +59,6 @@ importers:
       tailwindcss:
         specifier: ^3.4.10
         version: 3.4.10
->>>>>>> Setup dependencies and formatter
       typescript:
         specifier: ^5.5.4
         version: 5.5.4
@@ -751,16 +745,9 @@ packages:
   '@types/nlcst@2.0.3':
     resolution: {integrity: sha512-vSYNSDe6Ix3q+6Z7ri9lyWqgGhJTmzRjZRqyq15N0Z/1/UnVsno9G/N40NBijoYx2seFDIl0+B2mgAb9mezUCA==}
 
-<<<<<<< HEAD
-<<<<<<< HEAD
-  '@types/node@22.5.4':
-    resolution: {integrity: sha512-FDuKUJQm/ju9fT/SeX/6+gBzoPzlVCzfzmGkwKvRHQVxi4BntVbyIwf6a4Xn62mrvndLiml6z/UBXIdEVjQLXg==}
-=======
-=======
   '@types/node@22.5.4':
     resolution: {integrity: sha512-FDuKUJQm/ju9fT/SeX/6+gBzoPzlVCzfzmGkwKvRHQVxi4BntVbyIwf6a4Xn62mrvndLiml6z/UBXIdEVjQLXg==}
 
->>>>>>> Setup index page content
   '@types/prop-types@15.7.12':
     resolution: {integrity: sha512-5zvhXYtRNRluoE/jAp4GVsSduVUzNWKkOZrCDBWYtE7biZywwdC2AcEzg+cSMLFRfVgeAFqpfNabiPjxFddV1Q==}
 
@@ -775,7 +762,6 @@ packages:
 
   '@types/unist@2.0.11':
     resolution: {integrity: sha512-CmBKiL6NNo/OqgmMn95Fk9Whlp2mtvIv+KNpQKN2F4SjvrEesubTRWGYSg+BnWZOnlCaSTU1sMpsBOzgbYhnsA==}
->>>>>>> Setup dependencies and formatter
 
   '@types/unist@3.0.3':
     resolution: {integrity: sha512-ko/gIFJRv177XgZsZcBwnqJN5x/Gien8qNOn0D5bQU/zAzVf9Zt3BlcUiLqhV9y4ARk0GbT3tnUiPNgnTXzc/Q==}
@@ -2328,12 +2314,9 @@ packages:
     engines: {node: '>=14.0.0'}
     hasBin: true
 
-<<<<<<< HEAD
-=======
   scheduler@0.23.2:
     resolution: {integrity: sha512-UOShsPwz7NrMUqhR6t0hWjFduvOzbtv7toDH1/hIrfRNIDBnnBWd0CwJTGvTpngVlmwGCdP9/Zl/tVrDqcuYzQ==}
 
->>>>>>> Setup dependencies and formatter
   section-matter@1.0.0:
     resolution: {integrity: sha512-vfD3pmTzGpufjScBh50YHKzEu2lxBWhVEHsNGoEXmCmn2hKGfeNLYMzCJpe8cD7gqX7TJluOVpBkAequ6dgMmA==}
     engines: {node: '>=4'}
@@ -2433,8 +2416,6 @@ packages:
     resolution: {integrity: sha512-vavAMRXOgBVNF6nyEEmL3DBK19iRpDcoIwW+swQ+CbGiu7lju6t+JklA1MHweoWtadgt4ISVUsXLyDq34ddcwA==}
     engines: {node: '>=4'}
 
-<<<<<<< HEAD
-=======
   style-to-object@0.4.4:
     resolution: {integrity: sha512-HYNoHZa2GorYNyqiCaBgsxvcJIn7OHq6inEga+E6Ke3m5JkoqpQbnFssk4jwe+K7AhGa2fcha4wSOf1Kn01dMg==}
 
@@ -2446,7 +2427,6 @@ packages:
     engines: {node: '>=16 || 14 >=14.17'}
     hasBin: true
 
->>>>>>> Setup dependencies and formatter
   suf-log@2.5.3:
     resolution: {integrity: sha512-KvC8OPjzdNOe+xQ4XWJV2whQA0aM1kGVczMQ8+dStAO6KfEB140JEVQ9dE76ONZ0/Ylf67ni4tILPJB41U0eow==}
 
@@ -2530,19 +2510,11 @@ packages:
     engines: {node: '>=14.17'}
     hasBin: true
 
-<<<<<<< HEAD
-<<<<<<< HEAD
-  undici-types@6.19.8:
-    resolution: {integrity: sha512-ve2KP6f/JnbPBFyobGHuerC9g1FYGn/F8n1LWTwNxCEzd6IfqTwUQcNXgEtmmQ6DlRrC1hrSrBnCZPokRrDHjw==}
-=======
-=======
   ufo@1.5.4:
     resolution: {integrity: sha512-UsUk3byDzKd04EyoZ7U4DOlxQaD14JUKQl6/P7wiX4FNvUfm3XL246n9W5AmqwW5RSFJ27NAuM0iLscAOYUiGQ==}
 
->>>>>>> Setup index page content
   ultrahtml@1.5.3:
     resolution: {integrity: sha512-GykOvZwgDWZlTQMtp5jrD4BVL+gNn2NVlVafjcFUJ7taY20tqYdwdoWBFy6GBJsNTZe1GkGPkSl5knQAjtgceg==}
->>>>>>> Setup dependencies and formatter
 
   undici-types@6.19.8:
     resolution: {integrity: sha512-ve2KP6f/JnbPBFyobGHuerC9g1FYGn/F8n1LWTwNxCEzd6IfqTwUQcNXgEtmmQ6DlRrC1hrSrBnCZPokRrDHjw==}
@@ -3599,23 +3571,11 @@ snapshots:
     dependencies:
       '@types/unist': 3.0.3
 
-<<<<<<< HEAD
-<<<<<<< HEAD
-  '@types/node@22.5.4':
-    dependencies:
-      undici-types: 6.19.8
-    optional: true
-
-  '@types/unist@3.0.3': {}
-=======
-=======
   '@types/node@22.5.4':
     dependencies:
       undici-types: 6.19.8
 
->>>>>>> Setup index page content
   '@types/prop-types@15.7.12': {}
->>>>>>> Setup dependencies and formatter
 
   '@types/react-dom@18.3.0':
     dependencies:
@@ -3800,15 +3760,8 @@ snapshots:
 
   array-iterate@2.0.1: {}
 
-<<<<<<< HEAD
-  astro@4.15.4(@types/node@22.5.4)(rollup@4.21.2)(sass@1.78.0)(typescript@5.5.4):
-=======
   astring@1.9.0: {}
 
-<<<<<<< HEAD
-  astro@4.15.4(rollup@4.21.2)(sass@1.78.0)(typescript@5.5.4):
->>>>>>> Setup dependencies and formatter
-=======
   astro-icon@1.1.1:
     dependencies:
       '@iconify/tools': 4.0.6
@@ -3819,7 +3772,6 @@ snapshots:
       - supports-color
 
   astro@4.15.4(@types/node@22.5.4)(rollup@4.21.2)(sass@1.78.0)(typescript@5.5.4):
->>>>>>> Setup index page content
     dependencies:
       '@astrojs/compiler': 2.10.3
       '@astrojs/internal-helpers': 0.4.1
@@ -3879,18 +3831,8 @@ snapshots:
       tsconfck: 3.1.3(typescript@5.5.4)
       unist-util-visit: 5.0.0
       vfile: 6.0.3
-<<<<<<< HEAD
-<<<<<<< HEAD
       vite: 5.4.3(@types/node@22.5.4)(sass@1.78.0)
       vitefu: 1.0.2(vite@5.4.3(@types/node@22.5.4)(sass@1.78.0))
-=======
-      vite: 5.4.3(sass@1.78.0)
-      vitefu: 1.0.2(vite@5.4.3(sass@1.78.0))
->>>>>>> Setup dependencies and formatter
-=======
-      vite: 5.4.3(@types/node@22.5.4)(sass@1.78.0)
-      vitefu: 1.0.2(vite@5.4.3(@types/node@22.5.4)(sass@1.78.0))
->>>>>>> Setup index page content
       which-pm: 3.0.0
       xxhash-wasm: 1.0.2
       yargs-parser: 21.1.1
@@ -4582,12 +4524,6 @@ snapshots:
 
   http-cache-semantics@4.1.1: {}
 
-<<<<<<< HEAD
-<<<<<<< HEAD
-  immutable@4.3.7:
-    optional: true
-=======
-=======
   https-proxy-agent@5.0.1:
     dependencies:
       agent-base: 6.0.2
@@ -4599,9 +4535,7 @@ snapshots:
     dependencies:
       safer-buffer: 2.1.2
 
->>>>>>> Setup index page content
   immutable@4.3.7: {}
->>>>>>> Setup dependencies and formatter
 
   import-meta-resolve@4.1.0: {}
 
@@ -5489,20 +5423,11 @@ snapshots:
       '@astrojs/compiler': 2.10.3
       prettier: 3.3.3
       sass-formatter: 0.7.9
-<<<<<<< HEAD
-    optional: true
-=======
->>>>>>> Setup dependencies and formatter
 
   prettier@2.8.7:
     optional: true
 
-<<<<<<< HEAD
-  prettier@3.3.3:
-    optional: true
-=======
   prettier@3.3.3: {}
->>>>>>> Setup dependencies and formatter
 
   prismjs@1.29.0: {}
 
@@ -5699,12 +5624,7 @@ snapshots:
     dependencies:
       queue-microtask: 1.2.3
 
-<<<<<<< HEAD
-  s.color@0.0.15:
-    optional: true
-=======
   s.color@0.0.15: {}
->>>>>>> Setup dependencies and formatter
 
   safe-buffer@5.2.1: {}
 
@@ -5713,24 +5633,16 @@ snapshots:
   sass-formatter@0.7.9:
     dependencies:
       suf-log: 2.5.3
-<<<<<<< HEAD
-    optional: true
-=======
->>>>>>> Setup dependencies and formatter
 
   sass@1.78.0:
     dependencies:
       chokidar: 3.6.0
       immutable: 4.3.7
       source-map-js: 1.2.0
-<<<<<<< HEAD
-    optional: true
-=======
 
   scheduler@0.23.2:
     dependencies:
       loose-envify: 1.4.0
->>>>>>> Setup dependencies and formatter
 
   section-matter@1.0.0:
     dependencies:
@@ -5842,12 +5754,6 @@ snapshots:
 
   strip-bom@3.0.0: {}
 
-<<<<<<< HEAD
-  suf-log@2.5.3:
-    dependencies:
-      s.color: 0.0.15
-    optional: true
-=======
   style-to-object@0.4.4:
     dependencies:
       inline-style-parser: 0.1.1
@@ -5869,7 +5775,6 @@ snapshots:
   suf-log@2.5.3:
     dependencies:
       s.color: 0.0.15
->>>>>>> Setup dependencies and formatter
 
   supports-color@5.5.0:
     dependencies:
@@ -5964,17 +5869,9 @@ snapshots:
 
   typescript@5.5.4: {}
 
-<<<<<<< HEAD
-<<<<<<< HEAD
-  undici-types@6.19.8:
-    optional: true
-=======
-=======
   ufo@1.5.4: {}
 
->>>>>>> Setup index page content
   ultrahtml@1.5.3: {}
->>>>>>> Setup dependencies and formatter
 
   undici-types@6.19.8: {}
 
@@ -6059,15 +5956,7 @@ snapshots:
       '@types/unist': 3.0.3
       vfile-message: 4.0.2
 
-<<<<<<< HEAD
-<<<<<<< HEAD
   vite@5.4.3(@types/node@22.5.4)(sass@1.78.0):
-=======
-  vite@5.4.3(sass@1.78.0):
->>>>>>> Setup dependencies and formatter
-=======
-  vite@5.4.3(@types/node@22.5.4)(sass@1.78.0):
->>>>>>> Setup index page content
     dependencies:
       esbuild: 0.21.5
       postcss: 8.4.45
@@ -6077,21 +5966,9 @@ snapshots:
       fsevents: 2.3.3
       sass: 1.78.0
 
-<<<<<<< HEAD
-<<<<<<< HEAD
   vitefu@1.0.2(vite@5.4.3(@types/node@22.5.4)(sass@1.78.0)):
     optionalDependencies:
       vite: 5.4.3(@types/node@22.5.4)(sass@1.78.0)
-=======
-  vitefu@1.0.2(vite@5.4.3(sass@1.78.0)):
-    optionalDependencies:
-      vite: 5.4.3(sass@1.78.0)
->>>>>>> Setup dependencies and formatter
-=======
-  vitefu@1.0.2(vite@5.4.3(@types/node@22.5.4)(sass@1.78.0)):
-    optionalDependencies:
-      vite: 5.4.3(@types/node@22.5.4)(sass@1.78.0)
->>>>>>> Setup index page content
 
   volar-service-css@0.0.61(@volar/language-service@2.4.2):
     dependencies:
