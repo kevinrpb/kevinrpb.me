@@ -1,0 +1,39 @@
+---
+export interface Props {
+	class?: string
+}
+
+const { class: className = '', ...rest } = Astro.props
+---
+
+<main
+	class:list={[
+		className,
+		// Regular (mobile+)
+		'w-screen max-w-[1000px] mx-auto p-[1cm] bg-white',
+		// Medium+
+		'md:w-[80vw] md:rounded md:drop-shadow',
+		// Large+
+		'lg:w-[70vw]',
+		// XLarge+
+		'xl:w-[60vw]',
+		// Print
+		'print:w-screen print:max-w-full print:h-screen print:m-0 print:p-0 print:rounded-none print:drop-shadow-none',
+	]}
+	{...rest}
+>
+	<slot />
+</main>
+
+<style lang='scss' is:global>
+	@media print {
+		body {
+			background: none;
+			background-color: unset !important;
+
+			canvas, header {
+				display: none !important;
+			}
+		}
+	}
+</style>

@@ -1,0 +1,26 @@
+---
+import Icon, { type IconName } from './Icon.astro'
+
+export interface Props {
+	href: string
+	label: string
+	icon?: IconName
+	ariaLabel: string
+}
+
+const { href, label, icon, ariaLabel } = Astro.props
+---
+
+<a
+	class:list={[
+		'flex flex-row items-center justify-center px-2 flex-1',
+		'prose no-underline rounded-full bg-blue-haze border-4 border-white drop-shadow-xl',
+	]}
+	href={href}
+	aria-label={ariaLabel}
+>
+	<span class='flex flex-flow items-center justify-center'>
+		{icon && <Icon class='mr-1' name={icon} />}
+		{label}
+	</span>
+</a>

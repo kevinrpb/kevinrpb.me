@@ -1,0 +1,30 @@
+---
+export interface Props {
+	class?: string
+	flex?: 'flow' | 'col'
+}
+
+const { class: className = '', flex = 'flow' } = Astro.props
+---
+
+<div
+	class:list={[
+		className,
+		// flex
+		flex == 'flow' ? 'flex-flow' : 'flex-col',
+		// Regular (mobile+)
+		'max-w-[1000px] flex mx-4 p-2 bg-white rounded bg-opacity-50 backdrop-blur drop-shadow',
+		// Medium+
+		'md:w-[80vw] md:mx-auto',
+		// Large+
+		'lg:w-[70vw]',
+		// XLarge+
+		'xl:w-[60vw]',
+		// Print
+		'print:w-screen print:max-w-full print:h-screen print:m-0 print:p-0 print:rounded-none print:drop-shadow-none',
+	]}
+>
+	<slot>
+		<p>Hey you forgot to give me some content!</p>
+	</slot>
+</div>

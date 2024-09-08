@@ -1,0 +1,69 @@
+---
+import { Image } from 'astro:assets'
+
+import Layout from '@/layouts/BaseLayout.astro'
+import Header from '@/components/Header.astro'
+import Card from '@/components/Card.astro'
+import CardLink from '@/components/CardLink.astro'
+
+import kevinrpbImg from '@/assets/images/kevin.png'
+---
+
+<Layout title='Home' class='h-screen flex flex-col gap-2 md:items-center md:justify-center'>
+	<Header class='flex-1 md:mx-auto max-md:mt-4' />
+
+	<main class='flex flex-col items-center md:justify-center' transition:name='main-element' transition:animate='fade'>
+		<Card class='mt-0 md:p-12'>
+			<article>
+				<section
+					class='grid grid-cols-1 md:grid-cols-home-card md:grid-rows-home-card gap-4 md:gapx-4 xl:gap-0 items-center justify-center'
+				>
+					<Image
+						class='w-40 md:w-full lg:w-40 xl:w-60 col-start-1 col-span-1 row-start-1 md:row-span-4 mx-auto my-4 rounded-full border-8 border-space-cadet drop-shadow-xl'
+						src={kevinrpbImg}
+						alt="Kevin's profile picture"
+						loading='eager'
+					/>
+
+					<h1
+						class='col-start-1 md:col-start-2 col-span-1 md:row-start-2 row-span-1 w-full h-full flex flex-row items-end justify-center md:pb-4 text-3xl lg:text-4xl lg:px-2 text-center font-bold text-gray-800'
+					>
+						Kevin Romero Peces-Barba
+					</h1>
+
+					<nav
+						class='col-start-1 md:col-start-2 col-span-1 md:row-start-3 row-span-1 flex flex-col flex-wrap items-stretch gap-2 sm:h-full sm:flex-row sm:items-start lg:p-4 '
+					>
+						<CardLink
+							href='mailto:hello@kevinrpb.me'
+							label='Email'
+							icon='material-symbols:alternate-email-rounded'
+							ariaLabel='Link to send Kevin an email.'
+						/>
+						<CardLink
+							href='https://github.com/kevinrpb'
+							label='GitHub'
+							icon='cib:github'
+							ariaLabel="Link to Kevin's Github profile."
+						/>
+						<CardLink
+							href='https://mastodon.social/@kevinrpb'
+							label='Mastodon'
+							icon='cib:mastodon'
+							ariaLabel="Link to Kevin's Mastodon profile."
+						/>
+					</nav>
+				</section>
+
+				<section class='max-w-none mt-4 prose text-justify'>
+					<p>
+						Hi! This is Kevin 😀. I&apos;m a software engineer from Spain. You can see what I&apos;m up to in my <a
+							href='https://github.com/kevinrpb'
+							class='underline-offset-4'>GitHub</a
+						> or <a href='https://mastodon.social/@kevinrpb' class='underline-offset-4'>Mastodon</a> profiles.
+					</p>
+				</section>
+			</article>
+		</Card>
+	</main>
+</Layout>

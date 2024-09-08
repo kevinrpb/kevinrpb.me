@@ -1,0 +1,33 @@
+---
+import { ViewTransitions } from 'astro:transitions'
+
+import Head from '@/components/Head.astro'
+import BackgroundCanvas from '@/components/BackgroundCanvas'
+
+interface Props {
+	title: string
+	background?: boolean
+	class?: string
+}
+
+const { title, background = true, class: className = '' } = Astro.props
+---
+
+<!doctype html>
+<html lang='en' transition:animate='none'>
+	<head>
+		<Head title={title} />
+		<ViewTransitions fallback='swap' />
+	</head>
+	<body class:list={[className, 'bg-ebony-clay']}>
+		<!-- Background -->
+		{
+			background && (
+				<BackgroundCanvas className='fixed -z-50' client:load transition:name='background-canvas' transition:persist />
+			)
+		}
+
+		<!-- Content -->
+		<slot />
+	</body>
+</html>
