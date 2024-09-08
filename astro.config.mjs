@@ -20,7 +20,7 @@ export default defineConfig({
 			iconDir: 'src/assets/icons',
 			include: {
 				cbi: ['github', 'mail-ru', 'mastodon'],
-				'material-symbols': ['link', 'lab-profile-outline-rounded', 'alternate-email-rounded', 'globe'],
+				'material-symbols': ['link', 'lab-profile-outline-rounded', 'alternate-email-rounded', 'globe', 'download'],
 				mdi: ['briefcase-outline', 'academic-cap-outline', 'heart-outline'],
 			},
 		}),
