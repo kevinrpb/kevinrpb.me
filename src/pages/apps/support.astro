@@ -1,0 +1,22 @@
+---
+import Layout from '@/layouts/BaseLayout.astro'
+import Header from '@/components/Header.astro'
+import Card from '@/components/Card.astro'
+import SupportForm from '@/components/SupportForm'
+---
+
+<Layout title='Apps' class='flex flex-col pt-4 gap-2'>
+	<Header class='md:mx-auto' />
+
+	<main class='flex flex-col items-stretch md:justify-center' transition:name='main-element' transition:animate='fade'>
+		<Card class='flex flex-col'>
+			<article class='flex flex-col p-8 gap-4'>
+				<h1 class='text-4xl mb-8 text-center'>App Support</h1>
+
+				<section class:list={['w-full mx-auto', 'md:w-3/5']}>
+					<SupportForm client:load />
+				</section>
+			</article>
+		</Card>
+	</main>
+</Layout>

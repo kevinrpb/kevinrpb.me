@@ -23,19 +23,21 @@ const { app } = Astro.params
 const { appStoreUrl, preorder, ...rest } = paths.apps.find((appData) => appData.app === app)!
 ---
 
-<Layout title='Apps' class='flex flex-col gap-2 max-md:gap-0'>
-	<Header class='md:mx-auto my-4' />
+<Layout title='Apps' class='flex flex-col pt-4 gap-2'>
+	<Header />
 
 	<main class='flex flex-col items-stretch md:justify-center' transition:name='main-element' transition:animate='fade'>
 		<article>
 			<Card class:list={['flex flex-col p-8', '']}>
-				<nav class='flex flex-flow items-center justify-start'>
+				<nav class='flex flex-flow items-center justify-between'>
 					<a class='underline underline-offset-4' href='/apps'>
 						<span class='flex flex-flow items-center justify-center'>
 							<Icon class='mr-1' name={'material-symbols:arrow-left-alt-rounded'} />
 							All apps
 						</span>
 					</a>
+
+					<a class='underline underline-offset-4' href={`/apps/support?app=${app}`}>Support</a>
 				</nav>
 
 				<AppSummary class='pt-8' {...{ image: appToIcon[app], ...rest }} />

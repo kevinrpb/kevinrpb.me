@@ -16,10 +16,10 @@ module.exports = {
 				'amaranth-red': '#d70427',
 				'blue-haze': '#c4c6d9',
 				'cyber-lavender': '#e6e6ff',
-				'pastel-green': '#c1e1c1'
+				'pastel-green': '#c1e1c1',
 			},
 			fontSize: {
-				'2xs': ['0.65rem', '0.8rem']
+				'2xs': ['0.65rem', '0.8rem'],
 			},
 			gridTemplateColumns: {
 				'home-card': '2fr 5fr',
@@ -32,5 +32,5 @@ module.exports = {
 			},
 		},
 	},
-	plugins: [require('@tailwindcss/typography')],
+	plugins: [require('@tailwindcss/typography'), require('@tailwindcss/forms')],
 }
