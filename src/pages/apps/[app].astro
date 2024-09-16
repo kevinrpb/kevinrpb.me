@@ -29,7 +29,7 @@ const { appStoreUrl, preorder, ...rest } = paths.apps.find((appData) => appData.
 	<main class='flex flex-col items-stretch md:justify-center' transition:name='main-element' transition:animate='fade'>
 		<article>
 			<Card class:list={['flex flex-col p-8', '']}>
-				<nav class='flex flex-flow items-center justify-between'>
+				<nav class='flex flex-flow items-center gap-2'>
 					<a class='underline underline-offset-4' href='/apps'>
 						<span class='flex flex-flow items-center justify-center'>
 							<Icon class='mr-1' name={'material-symbols:arrow-left-alt-rounded'} />
@@ -37,6 +37,7 @@ const { appStoreUrl, preorder, ...rest } = paths.apps.find((appData) => appData.
 						</span>
 					</a>
 
+					<a class='ml-auto underline underline-offset-4' href={`/apps/${app}/privacy`}>Privacy</a>
 					<a class='underline underline-offset-4' href={`/apps/support?app=${app}`}>Support</a>
 				</nav>
 

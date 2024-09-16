@@ -99,7 +99,7 @@ const StatusSpan: React.FC<{ status: FormStatus }> = ({ status }) => {
 	}
 }
 
-const SupportForm: React.FC = (props) => {
+const SupportForm: React.FC = () => {
 	const [app, setApp] = useState('')
 	const [name, setName] = useState('')
 	const [email, setEmail] = useState('')
@@ -177,7 +177,7 @@ const SupportForm: React.FC = (props) => {
 	return (
 		<form className="flex flex-col gap-4" onSubmit={onSubmit}>
 			<SelectField title="App*" values={apps} value={app} onChange={setApp} />
-			<TextField title="Name" type="text" placeholder="Jay Walker" value={email} onChange={setEmail} />
+			<TextField title="Name" type="text" placeholder="Jay Walker" value={name} onChange={setName} />
 			<TextField title="Email" type="email" placeholder="jaywalking@example.org" value={email} onChange={setEmail} />
 			<TextArea title="Message*" placeholder="What do you need support with?" value={message} onChange={setMessage} />
 

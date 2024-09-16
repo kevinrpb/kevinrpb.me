@@ -1,0 +1,25 @@
+---
+import Layout from '@/layouts/BaseLayout.astro'
+import Header from '@/components/Header.astro'
+import Card from '@/components/Card.astro'
+---
+
+<Layout title='Apps' class='flex flex-col pt-4 gap-2'>
+	<Header />
+
+	<main class='flex flex-col items-stretch md:justify-center' transition:name='main-element' transition:animate='fade'>
+		<Card class:list={['flex flex-col p-8', '']}>
+			<article
+				class:list={[
+					'w-full max-w-full prose',
+					'prose-h1:font-bold prose-h1:text-3xl prose-headings:underline prose-headings:my-2',
+					'prose-p:my-2 prose-p:text-justify',
+					'prose-ul:my-0 prose-li:my-0',
+					'prose-img:rounded-xl',
+				]}
+			>
+				<slot />
+			</article>
+		</Card>
+	</main>
+</Layout>
