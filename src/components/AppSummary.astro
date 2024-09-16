@@ -1,0 +1,50 @@
+---
+import { Image } from 'astro:assets'
+
+export interface Props {
+	app: string
+	title: string
+	image: ImageMetadata
+	description: string
+	moreInfoUrl?: string
+	class?: string
+}
+
+const { app, title, image, description, moreInfoUrl, class: className = '' } = Astro.props
+---
+
+<section
+	class:list={[
+		className,
+		"grid [grid-template-areas:'image''title''description'] gap-4",
+		"md:[grid-template-areas:'image_title''image_description'] md:[grid-template-columns:200px_auto]",
+		'lg:[grid-template-columns:250px_auto]',
+	]}
+>
+	<Image
+		class:list={['[grid-area:image] w-40 mx-auto rounded-3xl drop-shadow', 'lg:w-52']}
+		src={image}
+		alt="Kevin's profile picture"
+		loading='eager'
+	/>
+
+	<h2
+		class:list={[
+			'[grid-area:title] flex flex-flow items-center justify-center text-5xl text-center underline',
+			'md:items-end md:justify-start',
+		]}
+	>
+		<a href='/apps/twitch-chat'>{title}</a>
+	</h2>
+
+	<p class:list={['[grid-area:description] prose text-justify']}>
+		{description}
+		{
+			moreInfoUrl && (
+				<a class='underline' href={moreInfoUrl}>
+					More info...
+				</a>
+			)
+		}
+	</p>
+</section>

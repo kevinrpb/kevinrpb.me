@@ -1,0 +1,22 @@
+---
+import { Image } from 'astro:assets'
+
+import downloadBadge from '@/assets/badges/black.svg'
+import preorderBadge from '@/assets/badges/pre-order-on-black.svg'
+
+export interface Props {
+	url: string
+	preorder?: boolean
+	class?: string
+}
+
+const { url, preorder = false, class: className = '' } = Astro.props
+---
+
+<a href={url} class:list={[className]}>
+	<Image
+		src={preorder ? preorderBadge : downloadBadge}
+		alt='Download on the App Store'
+		style='width: 246px; height: 82px; vertical-align: middle; object-fit: contain;'
+	/>
+</a>

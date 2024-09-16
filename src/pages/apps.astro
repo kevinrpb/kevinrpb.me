@@ -1,0 +1,30 @@
+---
+import Layout from '@/layouts/BaseLayout.astro'
+import Header from '@/components/Header.astro'
+import Card from '@/components/Card.astro'
+import AppSummary from '@/components/AppSummary.astro'
+
+import paths from '@/data/paths.json'
+
+import twitchChatIcon from '@/assets/icons/apps/twitch-chat-icon-1024.png'
+
+const appToIcon: Record<string, ImageMetadata> = {
+	'twitch-chat': twitchChatIcon,
+}
+---
+
+<Layout title='Apps' class='flex flex-col gap-2 max-md:gap-0'>
+	<Header class='md:mx-auto my-4' />
+
+	<main class='flex flex-col items-stretch md:justify-center' transition:name='main-element' transition:animate='fade'>
+		<article class='flex flex-col gap-4'>
+			{
+				paths.apps.map(({ app, ...rest }) => (
+					<Card>
+						<AppSummary class='p-8' {...{ app, image: appToIcon[app], readMoreUrl: `/apps/${app}`, ...rest }} />
+					</Card>
+				))
+			}
+		</article>
+	</main>
+</Layout>

@@ -1,17 +1,14 @@
 ---
 export interface Props {
 	class?: string
-	flex?: 'flow' | 'col'
 }
 
-const { class: className = '', flex = 'flow' } = Astro.props
+const { class: className = '' } = Astro.props
 ---
 
 <div
 	class:list={[
 		className,
-		// flex
-		flex == 'flow' ? 'flex-flow' : 'flex-col',
 		// Regular (mobile+)
 		'max-w-[1000px] flex mx-4 p-2 bg-white rounded bg-opacity-50 backdrop-blur drop-shadow',
 		// Medium+

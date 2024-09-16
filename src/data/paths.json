@@ -1,0 +1,25 @@
+{
+	"nav": [
+		{
+			"label": "Home",
+			"href": "/"
+		},
+		{
+			"label": "Apps",
+			"href": "/apps"
+		},
+		{
+			"label": "Resume",
+			"href": "/cv"
+		}
+	],
+	"apps": [
+		{
+			"app": "twitch-chat",
+			"title": "Twitch Chat",
+			"preorder": true,
+			"appStoreUrl": "https://apps.apple.com/us/app/twitchchat/id123456789",
+			"description": "The native Twitch chat client for iOS. Take part in your communities while feeling at home in your device. Enjoy all your FFZ and BTTV emotes anywhere you are."
+		}
+	]
+}

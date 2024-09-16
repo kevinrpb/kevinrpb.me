@@ -1,0 +1,47 @@
+---
+import Layout from '@/layouts/BaseLayout.astro'
+import Header from '@/components/Header.astro'
+import Card from '@/components/Card.astro'
+import Icon from '@/components/Icon.astro'
+import AppSummary from '@/components/AppSummary.astro'
+import AppStoreBadge from '@/components/AppStoreBadge.astro'
+
+import paths from '@/data/paths.json'
+
+import twitchChatIcon from '@/assets/icons/apps/twitch-chat-icon-1024.png'
+
+const appToIcon: Record<string, ImageMetadata> = {
+	'twitch-chat': twitchChatIcon,
+}
+
+export const getStaticPaths = () =>
+	paths.apps.map(({ app }) => ({
+		params: { app },
+	}))
+
+const { app } = Astro.params
+const { appStoreUrl, preorder, ...rest } = paths.apps.find((appData) => appData.app === app)!
+---
+
+<Layout title='Apps' class='flex flex-col gap-2 max-md:gap-0'>
+	<Header class='md:mx-auto my-4' />
+
+	<main class='flex flex-col items-stretch md:justify-center' transition:name='main-element' transition:animate='fade'>
+		<article>
+			<Card class:list={['flex flex-col p-8', '']}>
+				<nav class='flex flex-flow items-center justify-start'>
+					<a class='underline underline-offset-4' href='/apps'>
+						<span class='flex flex-flow items-center justify-center'>
+							<Icon class='mr-1' name={'material-symbols:arrow-left-alt-rounded'} />
+							All apps
+						</span>
+					</a>
+				</nav>
+
+				<AppSummary class='pt-8' {...{ image: appToIcon[app], ...rest }} />
+
+				<AppStoreBadge class='self-center py-4' url={appStoreUrl} preorder={preorder} />
+			</Card>
+		</article>
+	</main>
+</Layout>
