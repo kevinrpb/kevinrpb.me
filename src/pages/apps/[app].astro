@@ -23,8 +23,8 @@ const { app } = Astro.params
 const { appStoreUrl, preorder, ...rest } = paths.apps.find((appData) => appData.app === app)!
 ---
 
-<Layout title='Apps' class='flex flex-col pt-4 gap-2'>
-	<Header />
+<Layout title='Apps' class='flex flex-col gap-2'>
+	<Header class='mt-4' />
 
 	<main class='flex flex-col items-stretch md:justify-center' transition:name='main-element' transition:animate='fade'>
 		<article>

@@ -8,7 +8,7 @@ appName: TwitchChat
 
 Last updated: September 16, 2024
 
-This Privacy Policy describes the App policies and procedures on the collection, use and disclosure of Your information when You use the App and tells You about Your privacy rights and how the law protects You. To view the privacy policy for this website, please refer to [Privacy Policy](https://kevinrpb.me/policy).
+This Privacy Policy describes the App policies and procedures on the collection, use and disclosure of Your information when You use the App and tells You about Your privacy rights and how the law protects You. To view the privacy policy for this website, please refer to [Privacy Policy](https://kevinrpb.me/privacy).
 
 The TwitchChat App does not collect any of your personal data, but We may collect aggregated Usage Data to improve it.
 
