@@ -1,5 +1,5 @@
 ---
-import { ViewTransitions } from 'astro:transitions'
+import { ClientRouter } from 'astro:transitions'
 
 import Head from '@/components/Head.astro'
 import BackgroundCanvas from '@/components/BackgroundCanvas'
@@ -17,7 +17,7 @@ const { title, background = true, class: className = '' } = Astro.props
 <html lang='en'>
 	<head>
 		<Head title={title} />
-		<ViewTransitions fallback='swap' />
+		<ClientRouter fallback='swap' />
 	</head>
 	<body class:list={[className, 'bg-ebony-clay']}>
 		<!-- Background -->
