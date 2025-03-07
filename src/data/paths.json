@@ -2,15 +2,18 @@
 	"nav": [
 		{
 			"label": "Home",
-			"href": "/"
+			"href": "/",
+			"enabled": true
 		},
 		{
 			"label": "Apps",
-			"href": "/apps"
+			"href": "/apps",
+			"enabled": false
 		},
 		{
 			"label": "Resume",
-			"href": "/cv"
+			"href": "/cv",
+			"enabled": true
 		}
 	],
 	"apps": [
