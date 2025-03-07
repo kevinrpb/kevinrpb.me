@@ -3,7 +3,7 @@ import { defineConfig } from 'astro/config'
 import icon from 'astro-icon'
 import react from '@astrojs/react'
 import tailwind from '@astrojs/tailwind'
-import vercel from '@astrojs/vercel/serverless'
+import vercel from '@astrojs/vercel'
 
 import mdx from '@astrojs/mdx';
 
