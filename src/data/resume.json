@@ -13,9 +13,9 @@
 			"label": "kevinrpb"
 		},
 		{
-			"url": "mailto:kevin@kevinrpb.me",
+			"url": "mailto:hello@kevinrpb.me",
 			"icon": "material-symbols:alternate-email-rounded",
-			"label": "kevin@kevinrpb.me"
+			"label": "hello@kevinrpb.me"
 		}
 	],
 	"skillSets": [
@@ -65,6 +65,20 @@
 			"show": true,
 			"contents": [
 				{
+					"title": "Game Developer (Contract)",
+					"date": "October 2024 - Present",
+					"show": true,
+					"place": {
+						"label": "Xtonomous LLC"
+					},
+					"notes": [
+						"Part of the team developing the indie game <a href='https://skeleseller.com/'>Skeleseller</a>. Some of my tasks are:",
+						"> Working on and testing core game systems, ensuring they fulfill player expectations.",
+						"> Implementing a cohesive set of UI elements and panels to display the game information and actions to players.",
+						"> Building ergonomic developer tools to support localization in the game."
+					]
+				},
+				{
 					"title": "Software Developer Engineer II",
 					"date": "October 2022 - July 2024",
 					"show": true,
@@ -73,7 +87,7 @@
 						"label": "Amazon Services Spain"
 					},
 					"notes": [
-						"Worked developing services and features for both external and interal customers. This included:",
+						"Worked developing services and features for both external and internal customers. This included:",
 						"> Delivering features and widgets displayed on the product page on Amazon using modern technologies based on TypeScript, as well as mature ones like JSP.",
 						"> Implementing backend services supporting those features, using both in-house solutions and AWS services.",
 						"> Implementing metrics and monitoring stacks for feature validation and operational resiliency.",
@@ -106,7 +120,7 @@
 					"notes": [
 						"Collaborated with the University's Applied Artificial Intelligence Group (GIAA) and a telecommunications provider. My work consisted in:",
 						"> Conducting research on the applications of machine learning for the analysis and usage of the company's data.",
-						"> Providing counsel and advice to undegraduate students working on their B.S. theses."
+						"> Providing counsel and advice to undergraduate students working on their B.S. theses."
 					]
 				},
 				{
@@ -154,22 +168,8 @@
 					]
 				},
 				{
-					"title": "Multimedia Intern",
-					"date": "Sep 2016 - Jun 2017",
-					"show": true,
-					"place": {
-						"url": "https://uc3m.es",
-						"label": "University Carlos III of Madrid"
-					},
-					"notes": [
-						"Provided technical support in the multimedia rooms of the University for events and classes. This covered:",
-						"> Setting up and controlling multimedia equipment such as cameras, microphones, and mix tables.",
-						"> Recording and editing multimedia material to create web-ready video content."
-					]
-				},
-				{
-					"title": "Helpdesk Intern",
-					"date": "Jan 2016 - Sep 2016",
+					"title": "Helpdesk / Multimedia Intern",
+					"date": "Jan 2016 - Jun 2017",
 					"show": true,
 					"place": {
 						"url": "https://uc3m.es",
@@ -179,7 +179,10 @@
 						"Provided technical support to professors and staff in the university. This included:",
 						"> Setting up software requirements for new computers and other devices such as printers or scanners.",
 						"> Repairing and replacing faulty components in computers.",
-						"> Troubleshooting software problems with operative systems and applications such as office suites, browsers, and email clients."
+						"> Troubleshooting software problems with operative systems and applications such as office suites, browsers, and email clients.",
+						"Provided technical support in the multimedia rooms of the University for events and classes. This covered:",
+						"> Setting up and controlling multimedia equipment such as cameras, microphones, and mix tables.",
+						"> Recording and editing multimedia material to create web-ready video content."
 					]
 				}
 			]
@@ -221,7 +224,7 @@
 		{
 			"title": "Abroad",
 			"icon": "material-symbols:globe",
-			"show": true,
+			"show": false,
 			"contents": [
 				{
 					"title": "B.S. in Computer Science & Engineering",
