@@ -60,7 +60,7 @@
 	],
 	"sections": [
 		{
-			"title": "Work Experience",
+			"title": "Recent Experience",
 			"icon": "mdi:briefcase-outline",
 			"show": true,
 			"contents": [
@@ -122,7 +122,14 @@
 						"> Conducting research on the applications of machine learning for the analysis and usage of the company's data.",
 						"> Providing counsel and advice to undergraduate students working on their B.S. theses."
 					]
-				},
+				}
+			]
+		},
+		{
+			"title": "Past Roles",
+			"icon": "mdi:briefcase-outline",
+			"show": true,
+			"contents": [
 				{
 					"title": "Computer Technical Specialist",
 					"date": "December 2019 - July 2020",
@@ -132,10 +139,7 @@
 						"label": "University Carlos III of Madrid"
 					},
 					"notes": [
-						"Collaborated with the University's GIAA and a telecommunications provider to complete my B.S. thesis project. My work comprised:",
-						"> Analyzing mobile traffic data patterns.",
-						"> Developing a visualization web application to aide management on taking decisions.",
-						"> Conducting research on mobile traffic analysis and forecasting using machine learning models."
+						"Collaborated with the University's GIAA and a national telecom to complete my B.S. thesis project."
 					]
 				},
 				{
@@ -147,9 +151,7 @@
 						"label": "Babel S.I."
 					},
 					"notes": [
-						"Contributed in the development of mobile applications for clients. These projects were iOS apps based on Swift. This included:",
-						"> Designing the architectural structure of the app, following modern patterns (MVVM, Clean).",
-						"> Implementing user interfaces and business logic, as well as the interaction between both, following reactive programming techniques (RxSwift)."
+						"Contributed in the development of mobile iOS applications for clients using Swift."
 					]
 				},
 				{
@@ -161,10 +163,7 @@
 						"label": "University Carlos III of Madrid"
 					},
 					"notes": [
-						"Worked on creating a Web Application with the purpose of business management. The project involved:",
-						"> Setting up a web server based on NodeJS and using modern frameworks such as ExpressJS.",
-						"> Managing the environment to work with a MongoDB database.",
-						"> Developing a modern, responsive website to act as the frontend to the app, taking advantage of frameworks like jQuery and MaterializeCSS."
+						"Worked on creating a Web Application with the purpose of business management."
 					]
 				},
 				{
@@ -176,13 +175,7 @@
 						"label": "University Carlos III of Madrid"
 					},
 					"notes": [
-						"Provided technical support to professors and staff in the university. This included:",
-						"> Setting up software requirements for new computers and other devices such as printers or scanners.",
-						"> Repairing and replacing faulty components in computers.",
-						"> Troubleshooting software problems with operative systems and applications such as office suites, browsers, and email clients.",
-						"Provided technical support in the multimedia rooms of the University for events and classes. This covered:",
-						"> Setting up and controlling multimedia equipment such as cameras, microphones, and mix tables.",
-						"> Recording and editing multimedia material to create web-ready video content."
+						"Provided technical support to professors and staff in the university."
 					]
 				}
 			]
