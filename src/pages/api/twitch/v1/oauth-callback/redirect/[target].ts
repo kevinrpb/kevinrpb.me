@@ -1,28 +1,35 @@
 import type { APIRoute } from 'astro'
 
-const uriBuilders: Record<string, (queryString: string) => string> = {
+const targetNames = ['web', 'app.twitch-chat', 'app.twitch-chat-lite'] as const
+type Target = (typeof targetNames)[number]
+
+const parseTarget = (target: string): Target | undefined => targetNames.find((name) => name === target)
+
+const uriBuilders: Record<Target, (queryString: string) => string> = {
 	web: (queryString: string) => {
 		return `https://kevinrpb.me/twitch/v1/oauth-callback?${queryString}`
 	},
-	app: (queryString: string) => {
+	'app.twitch-chat': (queryString: string) => {
 		return `me.kevinrpb.TwitchChat://oauth-callback?${queryString}`
+	},
+	'app.twitch-chat-lite': (queryString: string) => {
+		return `me.kevinrpb.TwitchChatLite://oauth-callback?${queryString}`
 	},
 }
 
 export const GET: APIRoute = async ({ params, url }) => {
 	try {
 		const target = params.target
-
 		if (!target) {
 			return Response.json({ error: 'Missing target.' }, { status: 400 })
 		}
 
-		const uriBuilder = uriBuilders[target]
-
-		if (!uriBuilders[target]) {
+		const parsedTarget = parseTarget(target)
+		if (parsedTarget === undefined) {
 			return Response.json({ error: `Target <${target}> not supported.` }, { status: 400 })
 		}
 
+		const uriBuilder = uriBuilders[parsedTarget!]
 		const newURL = uriBuilder(url.searchParams.toString())
 
 		return Response.redirect(newURL)
@@ -31,6 +38,11 @@ export const GET: APIRoute = async ({ params, url }) => {
 	}
 }
 
-export const getStaticPaths = () => [{ params: { target: 'web' } }, { params: { target: 'app' } }]
+export const getStaticPaths = () =>
+	targetNames.map((name) => ({
+		params: {
+			target: name,
+		},
+	}))
 
-export const prerender = false
+export const prerender = true
