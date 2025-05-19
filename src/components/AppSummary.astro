@@ -17,8 +17,8 @@ const { app, title, image, description, moreInfoUrl, class: className = '' } = A
 	class:list={[
 		className,
 		"grid [grid-template-areas:'image''title''description'] gap-4",
-		"md:[grid-template-areas:'image_title''image_description'] md:[grid-template-columns:200px_auto]",
-		'lg:[grid-template-columns:250px_auto]',
+		"md:[grid-template-areas:'image_title''image_description'] md:grid-cols-[200px_auto]",
+		'lg:grid-cols-[250px_auto]',
 	]}
 >
 	<Image
