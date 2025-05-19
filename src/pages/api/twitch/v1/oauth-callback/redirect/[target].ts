@@ -1,18 +1,18 @@
 import type { APIRoute } from 'astro'
 
-const targetNames = ['web-kevinrpb.me', 'app-me.kevinrpb.TwitchChat', 'app-me.kevinrpb.TwitchChatLite'] as const
+const targetNames = ['web:kevinrpb.me', 'app:me.kevinrpb.TwitchChat', 'app:me.kevinrpb.TwitchChatLite'] as const
 type Target = (typeof targetNames)[number]
 
 const parseTarget = (target: string): Target | undefined => targetNames.find((name) => name === target)
 
 const uriBuilders: Record<Target, (queryString: string) => string> = {
-	'web-kevinrpb.me': (queryString: string) => {
+	'web:kevinrpb.me': (queryString: string) => {
 		return `https://kevinrpb.me/twitch/v1/oauth-callback?${queryString}`
 	},
-	'app-me.kevinrpb.TwitchChat': (queryString: string) => {
+	'app:me.kevinrpb.TwitchChat': (queryString: string) => {
 		return `me.kevinrpb.TwitchChat://oauth-callback?${queryString}`
 	},
-	'app-me.kevinrpb.TwitchChatLite': (queryString: string) => {
+	'app:me.kevinrpb.TwitchChatLite': (queryString: string) => {
 		return `me.kevinrpb.TwitchChatLite://oauth-callback?${queryString}`
 	},
 }
