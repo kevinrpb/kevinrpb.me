@@ -46,3 +46,11 @@ export const createShootingStars = (canvas: Canvas, min: number, max: number, p:
 
 	return stars
 }
+
+export const unwrap = <T>(maybeT: T | undefined | null): T => {
+	if (maybeT === null || maybeT === undefined) {
+		throw new Error('invalid instance')
+	}
+
+	return maybeT
+}
