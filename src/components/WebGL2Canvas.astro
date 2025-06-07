@@ -1,0 +1,50 @@
+---
+interface Props {
+	id: string
+	source: string
+}
+
+const { id, source } = Astro.props
+---
+
+<webgl2-canvas class="block w-full h-full" data-id={id} , data-source={source}>
+	<canvas id={id} class="block w-full h-full"></canvas>
+</webgl2-canvas>
+
+<script>
+	import { WebGL2Canvas } from '@/lib/graphics/webgl/'
+	import { ShadertoyProgram } from '@/lib/graphics/webgl/shadertoy'
+
+	class WebGL2CanvasElement extends HTMLElement {
+		private canvas?: WebGL2Canvas
+		private animationFrameId?: number
+
+		connectedCallback() {
+			const { id, source } = this.dataset
+
+			if (!id || !source) {
+				throw new Error(`Something went wrong. id: <${id}>, source: <${source}>`)
+			}
+
+			this.canvas = new WebGL2Canvas(id, new ShadertoyProgram(source))
+			this.canvas.setup()
+
+			this.animationFrameId = window.requestAnimationFrame(this.loop.bind(this))
+		}
+
+		private loop() {
+			try {
+				this.canvas?.draw()
+
+				this.animationFrameId = window.requestAnimationFrame(this.loop.bind(this))
+			} catch (error) {
+				console.error(`Error while drawing: ${error}`)
+				if (this.animationFrameId) {
+					window.cancelAnimationFrame(this.animationFrameId)
+				}
+			}
+		}
+	}
+
+	customElements.define('webgl2-canvas', WebGL2CanvasElement)
+</script>
