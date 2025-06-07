@@ -8,22 +8,23 @@ interface Props {
 	title: string
 	background?: boolean
 	class?: string
+	htmlClass?: string
 }
 
-const { title, background = true, class: className = '' } = Astro.props
+const { title, background = true, class: className = '', htmlClass = '' } = Astro.props
 ---
 
 <!doctype html>
-<html lang='en'>
+<html lang="en" class={htmlClass}>
 	<head>
 		<Head title={title} />
-		<ClientRouter fallback='swap' />
+		<ClientRouter fallback="swap" />
 	</head>
 	<body class:list={[className, 'bg-ebony-clay']}>
 		<!-- Background -->
 		{
 			background && (
-				<BackgroundCanvas className='fixed -z-50' client:load transition:name='background-canvas' transition:persist />
+				<BackgroundCanvas className="fixed -z-50" client:load transition:name="background-canvas" transition:persist />
 			)
 		}
 
