@@ -87,7 +87,8 @@ export class ShadertoyProgram implements WebGL2CanvasProgram {
 		gl.vertexAttribPointer(vertexInPosition, 2, gl.FLOAT, false, 0, 0)
 		gl.enableVertexAttribArray(vertexInPosition)
 
-		gl.drawArrays(gl.TRIANGLES, 0, this.vertices.length)
+		// 'count' here is the count of vertices, not the length of the buffer.
+		gl.drawArrays(gl.TRIANGLES, 0, this.vertices.length / 2)
 	}
 
 	teardown(gl: WebGL2RenderingContext) {
