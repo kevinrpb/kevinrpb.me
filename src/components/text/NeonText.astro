@@ -1,0 +1,106 @@
+---
+export interface Props {
+	color?: 'white' | 'pink' | 'green' | 'blue'
+	animation?: 'none' | 'flicker' | 'pulsate'
+	class?: string
+}
+
+const { color: neonColor = 'white', animation = 'none', class: className = '' } = Astro.props
+const animationClass = animation === 'none' ? '' : animation
+---
+
+<p class:list={[`neon-text ${neonColor} ${animationClass}`, className]}>
+	<slot />
+</p>
+
+<style>
+	:root {
+		--neon-color: #fff;
+	}
+
+	/* Adapted from https://css-tricks.com/how-to-create-neon-text-with-css/ */
+	.neon-text {
+		color: #fff;
+		text-shadow:
+			0 0 7px #fff,
+			0 0 10px #fff,
+			0 0 21px #fff,
+			0 0 42px var(--neon-color),
+			0 0 82px var(--neon-color),
+			0 0 92px var(--neon-color),
+			0 0 102px var(--neon-color),
+			0 0 151px var(--neon-color);
+	}
+
+	.neon-text.pink {
+		--neon-color: #f09;
+	}
+
+	.neon-text.green {
+		--neon-color: #0fa;
+	}
+
+	.neon-text.blue {
+		--neon-color: rgb(34, 127, 214);
+	}
+
+	@keyframes neon-flicker {
+		0%,
+		18%,
+		22%,
+		25%,
+		53%,
+		57%,
+		100% {
+			text-shadow:
+				0 0 4px #fff,
+				0 0 11px #fff,
+				0 0 19px #fff,
+				0 0 40px var(--neon-color),
+				0 0 80px var(--neon-color),
+				0 0 90px var(--neon-color),
+				0 0 100px var(--neon-color),
+				0 0 150px var(--neon-color);
+		}
+		20%,
+		24%,
+		55% {
+			text-shadow: none;
+		}
+	}
+
+	@keyframes neon-pulsate {
+		100% {
+			/* Larger blur radius */
+			text-shadow:
+				0 0 4px #fff,
+				0 0 11px #fff,
+				/* 0 0 19px #fff, */
+				0 0 40px var(--neon-color),
+				0 0 80px var(--neon-color),
+				0 0 90px var(--neon-color),
+				0 0 100px var(--neon-color),
+				0 0 150px var(--neon-color);
+		}
+		0% {
+			/* A slightly smaller blur radius */
+			text-shadow:
+				0 0 4px #fff,
+				0 0 10px #fff,
+				/* 0 0 18px #fff, */
+				0 0 38px var(--neon-color),
+				0 0 73px var(--neon-color),
+				0 0 80px var(--neon-color),
+				0 0 94px var(--neon-color),
+				0 0 140px var(--neon-color);
+		}
+	}
+
+	.neon-text.flicker {
+		animation: neon-flicker 1.5s infinite alternate;
+	}
+
+	.neon-text.pulsate {
+		animation: neon-pulsate 0.11s infinite alternate;
+	}
+</style>
