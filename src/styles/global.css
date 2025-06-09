@@ -1,7 +1,8 @@
-@import "tailwindcss";
+@import url('https://fonts.googleapis.com/css2?family=Meow+Script&display=swap');
+@import 'tailwindcss';
 
 @config "../../tailwind.config.cjs";
 
-* {
-	font-family: -apple-system, Helvetica Neue, Helvetica, Segoe UI, sans-serif;
+@theme {
+	--font-meow-script: 'Meow Script', cursive;
 }

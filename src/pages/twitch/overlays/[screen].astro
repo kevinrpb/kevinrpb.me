@@ -1,0 +1,91 @@
+---
+import Layout from '@/layouts/BaseLayout.astro'
+import ShadertoyCanvas from '@/components/webgl/ShadertoyCanvas.astro'
+import Card from '@/components/Card.astro'
+import NeonText from '@/components/text/NeonText.astro'
+
+interface Section {
+	text: string
+	color: 'pink'
+	size: 'xl' | '2xl' | '3xl' | '4xl' | '5xl' | '6xl' | '7xl' | '8xl' | '9xl'
+}
+
+interface OverlayScreen {
+	title: string
+	sections: Section[]
+}
+
+export const SCREENS: Record<string, OverlayScreen> = {
+	'starting-soon': {
+		title: 'Starting Soon',
+		sections: [
+			{
+				text: 'Starting Soon',
+				color: 'pink',
+				size: '9xl',
+			},
+			{
+				text: 'Welcome to twitch.tv/kevinrpb',
+				color: 'pink',
+				size: '4xl',
+			},
+		],
+	},
+	'brb': {
+		title: 'BRB',
+		sections: [
+			{
+				text: 'Be Right Back',
+				color: 'pink',
+				size: '9xl',
+			},
+			{
+				text: 'Thank you for waiting',
+				color: 'pink',
+				size: '4xl',
+			},
+		],
+	},
+	'outro': {
+		title: 'Outro',
+		sections: [
+			{
+				text: 'Bye Bye !',
+				color: 'pink',
+				size: '9xl',
+			},
+			{
+				text: 'Follow for more streams',
+				color: 'pink',
+				size: '4xl',
+			},
+		],
+	},
+}
+
+export const getStaticPaths = () => Object.keys(SCREENS).map((screen) => ({ params: { screen } }))
+
+const { screen } = Astro.params
+const { title, sections } = SCREENS[screen]
+---
+
+<Layout
+	title={title}
+	background={false}
+	class="w-full h-full flex flex-col gap-2 md:items-center md:justify-center"
+	htmlClass="w-full h-full"
+>
+	<ShadertoyCanvas shaderId="gradient-1" class="fixed -z-50" />
+
+	<main class="flex flex-col items-center md:justify-center">
+		<Card class="flex flex-flow flex-col items-center justify-center gap-18 py-18 rounded-xl font-meow-script">
+			{
+				sections.map(({ text, color, size }) => (
+					<NeonText color={color} animation="pulsate" class={`text-${size} text-center`}>
+						{text}
+					</NeonText>
+				))
+			}
+		</Card>
+	</main>
+</Layout>
