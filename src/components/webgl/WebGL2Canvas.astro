@@ -1,18 +1,20 @@
 ---
 interface Props {
 	id: string
+	program?: 'shadertoy'
 	source: string
+	class?: string
 }
 
-const { id, source } = Astro.props
+const { id, source, program = 'shadertoy', class: className = '' } = Astro.props
 ---
 
-<webgl2-canvas class="block w-full h-full" data-id={id} , data-source={source}>
+<webgl2-canvas class:list={[className, 'block w-full h-full']} data-id={id} data-program={program} data-source={source}>
 	<canvas id={id} class="block w-full h-full"></canvas>
 </webgl2-canvas>
 
 <script>
-	import { WebGL2Canvas } from '@/lib/graphics/webgl/'
+	import { WebGL2Canvas, type WebGL2CanvasProgram } from '@/lib/graphics/webgl/'
 	import { ShadertoyProgram } from '@/lib/graphics/webgl/shadertoy'
 
 	class WebGL2CanvasElement extends HTMLElement {
@@ -20,13 +22,13 @@ const { id, source } = Astro.props
 		private animationFrameId?: number
 
 		connectedCallback() {
-			const { id, source } = this.dataset
+			const { id, program, source } = this.dataset
 
-			if (!id || !source) {
-				throw new Error(`Something went wrong. id: <${id}>, source: <${source}>`)
+			if (!id || !program || !source) {
+				throw new Error(`Something went wrong. id: <${id}>, program: <${program}>, source: <${source}>`)
 			}
 
-			this.canvas = new WebGL2Canvas(id, new ShadertoyProgram(source))
+			this.canvas = new WebGL2Canvas(id, this.getCanvasProgram(program, source))
 			this.canvas.setup()
 
 			this.animationFrameId = window.requestAnimationFrame(this.loop.bind(this))
@@ -42,6 +44,15 @@ const { id, source } = Astro.props
 				if (this.animationFrameId) {
 					window.cancelAnimationFrame(this.animationFrameId)
 				}
+			}
+		}
+
+		private getCanvasProgram(program: string, source: string): WebGL2CanvasProgram {
+			switch (program) {
+				case 'shadertoy':
+					return new ShadertoyProgram(source)
+				default:
+					throw new Error(`Program <${program}> is not supported.`)
 			}
 		}
 	}

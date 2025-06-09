@@ -1,45 +1,15 @@
 ---
 import Layout from '@/layouts/BaseLayout.astro'
-import WebGL2Canvas from '@/components/WebGL2Canvas.astro'
+import ShadertoyCanvas from '@/components/webgl/ShadertoyCanvas.astro'
+import { type ShaderId, SHADER_SOURCES } from '@/data/shadertoy'
 
-export const shaderSources: Record<string, string> = {
-	'gradient-1': `
-	vec3 get_col(vec2 uv, float t) {
-		float a = 0.0;
-		float b = 0.0;
-		float c = 0.0;
-
-		for (float i = 0.0; i < 4.0; ++i) {
-			a = sin(a*b - c*uv.x);
-			b = cos(-c*a*b + t - b*uv.y);
-			c = sin(cos(a*-b) - c);
-		}
-
-		vec3 col = vec3(a, b, 0);
-
-		col = cos(1.5 * col);
-		col *= sqrt(col.y);
-
-		return col;
-	}
-
-	void mainImage(out vec4 fragColor, in vec2 fragCoord) {
-		vec2 uv = (fragCoord * 2.0 - iResolution.xy) / min(iResolution.x, iResolution.y);
-		float t = iTime * 0.3;
-
-		fragColor = vec4(get_col(uv, t), 1.0);
-	}
-	`,
-}
-
-export const getStaticPaths = () => Object.keys(shaderSources).map((id) => ({ params: { id } }))
+export const getStaticPaths = () => Object.keys(SHADER_SOURCES).map((id) => ({ params: { id } }))
 
 const { id } = Astro.params
-const shaderSource = shaderSources[id]
 ---
 
 <Layout title="Shadertoy Viewer" background={false} class="w-full h-full" htmlClass="w-full h-full">
 	<noscript>This page needs JavaScript to run the shaders. 😞</noscript>
 
-	<WebGL2Canvas id={id} source={shaderSource} />
+	<ShadertoyCanvas shaderId={id as ShaderId} />
 </Layout>

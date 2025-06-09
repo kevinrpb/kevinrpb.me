@@ -1,0 +1,14 @@
+---
+import WebGL2Canvas from '@/components/webgl/WebGL2Canvas.astro'
+import { type ShaderId, SHADER_SOURCES } from '@/data/shadertoy'
+
+export interface Props {
+	shaderId: ShaderId
+	class?: string
+}
+
+const { shaderId, class: className = '' } = Astro.props
+const shaderSource = SHADER_SOURCES[shaderId]
+---
+
+<WebGL2Canvas id={shaderId} program='shadertoy' source={shaderSource} class={className} />
