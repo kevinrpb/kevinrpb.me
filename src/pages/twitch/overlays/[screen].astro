@@ -4,69 +4,34 @@ import ShadertoyCanvas from '@/components/webgl/ShadertoyCanvas.astro'
 import Card from '@/components/Card.astro'
 import NeonText from '@/components/text/NeonText.astro'
 
-interface Section {
-	text: string
-	color: 'pink'
-	size: 'xl' | '2xl' | '3xl' | '4xl' | '5xl' | '6xl' | '7xl' | '8xl' | '9xl'
-}
-
 interface OverlayScreen {
 	title: string
-	sections: Section[]
+	mainText: string
+	secondaryText: string
 }
 
 export const SCREENS: Record<string, OverlayScreen> = {
 	'starting-soon': {
 		title: 'Starting Soon',
-		sections: [
-			{
-				text: 'Starting Soon',
-				color: 'pink',
-				size: '9xl',
-			},
-			{
-				text: 'Welcome to twitch.tv/kevinrpb',
-				color: 'pink',
-				size: '4xl',
-			},
-		],
+		mainText: 'Starting Soon',
+		secondaryText: 'Welcome to twitch.tv/kevinrpb',
 	},
-	'brb': {
+	brb: {
 		title: 'BRB',
-		sections: [
-			{
-				text: 'Be Right Back',
-				color: 'pink',
-				size: '9xl',
-			},
-			{
-				text: 'Thank you for waiting',
-				color: 'pink',
-				size: '4xl',
-			},
-		],
+		mainText: 'Be Right Back',
+		secondaryText: 'Thank you for waiting',
 	},
-	'outro': {
+	outro: {
 		title: 'Outro',
-		sections: [
-			{
-				text: 'Bye Bye !',
-				color: 'pink',
-				size: '9xl',
-			},
-			{
-				text: 'Follow for more streams',
-				color: 'pink',
-				size: '4xl',
-			},
-		],
+		mainText: 'Bye Bye !',
+		secondaryText: 'Follow for more streams',
 	},
 }
 
 export const getStaticPaths = () => Object.keys(SCREENS).map((screen) => ({ params: { screen } }))
 
 const { screen } = Astro.params
-const { title, sections } = SCREENS[screen]
+const { title, mainText, secondaryText } = SCREENS[screen]
 ---
 
 <Layout
@@ -79,13 +44,13 @@ const { title, sections } = SCREENS[screen]
 
 	<main class="flex flex-col items-center md:justify-center">
 		<Card class="flex flex-flow flex-col items-center justify-center gap-18 py-18 rounded-xl font-meow-script">
-			{
-				sections.map(({ text, color, size }) => (
-					<NeonText color={color} animation="pulsate" class={`text-${size} text-center`}>
-						{text}
-					</NeonText>
-				))
-			}
+			<NeonText color="pink" animation="pulsate" class="text-9xl text-center">
+				{mainText}
+			</NeonText>
+
+			<NeonText color="pink" animation="pulsate" class="text-4xl text-center">
+				{secondaryText}
+			</NeonText>
 		</Card>
 	</main>
 </Layout>
