@@ -1,29 +1,6 @@
 import type { APIRoute } from 'astro'
 
-const targetNames = [
-	'web:kevinrpb.me',
-	'app:me.kevinrpb.TwitchChat',
-	'app:me.kevinrpb.TwitchChatLite',
-	'web:me.kevinrpb.PigeGame',
-] as const
-type Target = (typeof targetNames)[number]
-
-const parseTarget = (target: string): Target | undefined => targetNames.find((name) => name === target)
-
-const uriBuilders: Record<Target, (queryString: string) => string> = {
-	'web:kevinrpb.me': (queryString: string) => {
-		return `https://kevinrpb.me/twitch/v1/oauth-callback?${queryString}`
-	},
-	'app:me.kevinrpb.TwitchChat': (queryString: string) => {
-		return `me.kevinrpb.TwitchChat://oauth-callback?${queryString}`
-	},
-	'app:me.kevinrpb.TwitchChatLite': (queryString: string) => {
-		return `me.kevinrpb.TwitchChatLite://oauth-callback?${queryString}`
-	},
-	'web:me.kevinrpb.PigeGame': (queryString: string) => {
-		return `https://localhost:3000/twitch/v1/oauth-callback?${queryString}`
-	}
-}
+import * as Twitch from '@/lib/twitch/auth'
 
 export const GET: APIRoute = async ({ params, url }) => {
 	try {
@@ -32,12 +9,12 @@ export const GET: APIRoute = async ({ params, url }) => {
 			return Response.json({ error: 'Missing target.' }, { status: 400 })
 		}
 
-		const parsedTarget = parseTarget(target)
+		const parsedTarget = Twitch.parseTarget(target)
 		if (parsedTarget === undefined) {
 			return Response.json({ error: `Target <${target}> not supported.` }, { status: 400 })
 		}
 
-		const uriBuilder = uriBuilders[parsedTarget!]
+		const uriBuilder = Twitch.uriBuilders[parsedTarget!]
 		const newURL = uriBuilder(url.searchParams.toString())
 
 		return Response.redirect(newURL)
@@ -48,9 +25,4 @@ export const GET: APIRoute = async ({ params, url }) => {
 
 // NOTE: prerender seems to be broken when using `Response.redirect`
 export const prerender = false
-// export const getStaticPaths = () =>
-// 	targetNames.map((name) => ({
-// 		params: {
-// 			target: name,
-// 		},
-// 	}))
+// export const getStaticPaths = Twitch.getAllowedPaths;
