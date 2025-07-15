@@ -1,0 +1,25 @@
+---
+import * as Twitch from '@/lib/twitch/auth'
+
+export const getStaticPaths = Twitch.getAllowedPaths
+
+const { target } = Astro.params
+---
+
+<p id="message" data-target={target}>Redirecting...</p>
+
+<script>
+	import { navigate } from 'astro:transitions/client'
+	import * as Twitch from '@/lib/twitch/auth'
+
+	const target = document.getElementById("message")?.dataset.target
+	if (!target) {
+		throw new Error("Couldn't parse target.")
+	}
+
+	const parsedTarget = Twitch.parseTarget(target)
+	const uriBuilder = Twitch.uriBuilders[parsedTarget!]
+	const newURL = uriBuilder(location.hash.slice(1))
+
+	navigate(newURL)
+</script>
