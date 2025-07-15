@@ -18,7 +18,8 @@ export const uriBuilders: Record<Target, (queryString: string) => string> = {
 	'app:me.kevinrpb.TwitchChatLite': (queryString: string) => {
 		return `me.kevinrpb.TwitchChatLite://oauth-callback?${queryString}`
 	},
-	// This one is technically an app, but it runs an http server to get the request because
+	// This one is technically an app, but it runs an http server to get the request because it's Godot and it can't
+	// register a custom app protocol yet.
 	'app:me.kevinrpb.SillyStreamThingy': (queryString: string) => {
 		return `http://localhost:32123/oauth-callback?${queryString}`
 	},
