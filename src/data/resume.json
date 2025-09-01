@@ -65,7 +65,16 @@
 			"show": true,
 			"contents": [
 				{
-					"title": "Game Developer (Contract)",
+					"title": "Software Developer Engineer II",
+					"date": "July 2025 - Present",
+					"show": true,
+					"place": {
+						"label": "AWS Security",
+						"url": "https://aws.amazon.com/security/"
+					}
+				},
+				{
+					"title": "Game Developer",
 					"date": "October 2024 - Present",
 					"show": true,
 					"place": {
