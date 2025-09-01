@@ -16,15 +16,15 @@ const {
 } = Astro.props
 ---
 
-<Layout title='Apps' class='flex flex-col gap-2'>
-	<Header class='mt-4' />
+<Layout title="Apps" class="flex flex-col gap-2">
+	<Header class="mt-4" />
 
-	<main class='flex flex-col items-stretch md:justify-center'>
+	<main class="flex flex-col items-stretch md:justify-center">
 		<Card class:list={['flex flex-col p-8', '']}>
-			<nav class='flex flex-flow items-center mb-4'>
-				<a class='underline underline-offset-4' href={`/apps/${app}`}>
-					<span class='flex flex-flow items-center justify-center'>
-						<Icon class='mr-1' name={'material-symbols:arrow-left-alt-rounded'} />
+			<nav class="flex flex-flow items-center mb-4">
+				<a class="underline underline-offset-4" href={`/apps/${app}`}>
+					<span class="flex flex-flow items-center justify-center">
+						<Icon class="mr-1" name={'material-symbols:arrow-left-alt-rounded'} />
 						{appName}
 					</span>
 				</a>

@@ -25,7 +25,7 @@ const { app, title, image, description, moreInfoUrl, class: className = '' } = A
 		class:list={['[grid-area:image] w-40 mx-auto rounded-3xl drop-shadow', 'lg:w-52']}
 		src={image}
 		alt="Kevin's profile picture"
-		loading='eager'
+		loading="eager"
 	/>
 
 	<h2
@@ -34,14 +34,14 @@ const { app, title, image, description, moreInfoUrl, class: className = '' } = A
 			'md:items-end md:justify-start',
 		]}
 	>
-		<a href='/apps/twitch-chat'>{title}</a>
+		<a href="/apps/twitch-chat">{title}</a>
 	</h2>
 
 	<p class:list={['[grid-area:description] prose text-justify']}>
 		{description}
 		{
 			moreInfoUrl && (
-				<a class='underline' href={moreInfoUrl}>
+				<a class="underline" href={moreInfoUrl}>
 					More info...
 				</a>
 			)

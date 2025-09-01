@@ -13,15 +13,15 @@ const appToIcon: Record<string, ImageMetadata> = {
 }
 ---
 
-<Layout title='Apps' class='flex flex-col gap-2'>
-	<Header class='mt-4' />
+<Layout title="Apps" class="flex flex-col gap-2">
+	<Header class="mt-4" />
 
-	<main class='flex flex-col items-stretch md:justify-center'>
-		<article class='flex flex-col gap-4'>
+	<main class="flex flex-col items-stretch md:justify-center">
+		<article class="flex flex-col gap-4">
 			{
 				paths.apps.map(({ app, ...rest }) => (
 					<Card>
-						<AppSummary class='p-8' {...{ app, image: appToIcon[app], moreInfoUrl: `/apps/${app}`, ...rest }} />
+						<AppSummary class="p-8" {...{ app, image: appToIcon[app], moreInfoUrl: `/apps/${app}`, ...rest }} />
 					</Card>
 				))
 			}

@@ -159,9 +159,7 @@
 						"url": "https://babel.es/",
 						"label": "Babel S.I."
 					},
-					"notes": [
-						"Contributed in the development of mobile iOS applications for clients using Swift."
-					]
+					"notes": ["Contributed in the development of mobile iOS applications for clients using Swift."]
 				},
 				{
 					"title": "Computer Technical Specialist",
@@ -171,9 +169,7 @@
 						"url": "https://uc3m.es",
 						"label": "University Carlos III of Madrid"
 					},
-					"notes": [
-						"Worked on creating a Web Application with the purpose of business management."
-					]
+					"notes": ["Worked on creating a Web Application with the purpose of business management."]
 				},
 				{
 					"title": "Helpdesk / Multimedia Intern",
@@ -183,9 +179,7 @@
 						"url": "https://uc3m.es",
 						"label": "University Carlos III of Madrid"
 					},
-					"notes": [
-						"Provided technical support to professors and staff in the university."
-					]
+					"notes": ["Provided technical support to professors and staff in the university."]
 				}
 			]
 		},
